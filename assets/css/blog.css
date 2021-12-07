@@ -1,0 +1,252 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.blog-box .box .box-text .buttons, .blog-TM .blog-text2 button {
+  width: 8.125rem;
+  height: 2.5rem;
+  border: 1px solid #41E063;
+  border-radius: 25px;
+  color: #41E063;
+  text-align: center;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.blog-box .box .box-text .buttons:hover, .blog-TM .blog-text2 button:hover {
+  background-color: #39c958;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.blog-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 73.125rem;
+  margin: 0 auto;
+}
+
+.blog-box .box {
+  margin-bottom: 1.875rem;
+}
+
+.blog-box .box .box-img {
+  width: 16.875rem;
+  height: 9.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blog-box .box .box-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 16.75rem;
+  height: 16.75rem;
+  border: 1px solid #3636364D;
+  background: #FFFFFF;
+}
+
+.blog-box .box .box-text .box-text-p {
+  text-align: center;
+  margin: 1.25rem 2.75rem 2.7rem 2.75rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.463rem;
+  color: #333333;
+}
+
+.blog-box .box .box-text .buttons {
+  margin-top: 2.688rem;
+}
+
+.blog-box .box .box-text .box-text-p2 {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.138rem;
+  color: #828282;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.blog-all {
+  background-color: #F5F5F5;
+  height: 50rem;
+  width: 100%;
+}
+
+.blog-all .blog-header {
+  height: 10.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blog-all .blog-header .line {
+  margin-bottom: 5rem;
+  width: 102px;
+  border-bottom: 2.5px solid #41E063;
+}
+
+.blog-all .blog-header .blog-text {
+  color: #333333;
+  text-align: center;
+  margin-top: 3rem;
+  margin: auto 1.625rem;
+  height: 5rem;
+  width: 8.5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.blog-TM {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  height: 46.875rem;
+  width: 73.125rem;
+}
+
+.blog-TM .blog-img {
+  display: inline-block;
+  background: url("../img/Background.svg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 41.875rem;
+  height: 34.375rem;
+  margin-right: 3.75rem;
+}
+
+.blog-TM .blog-text2 {
+  display: block;
+  width: 27.5rem;
+  height: 5.688rem;
+  text-align: left;
+  font-size: 2.188rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.blog-TM .blog-text2 h3 {
+  font-size: 2.188rem;
+  margin-bottom: 1.688rem;
+  margin-top: 3.5rem;
+  color: #333333;
+  line-height: 2.813rem;
+}
+
+.blog-TM .blog-text2 p {
+  margin-bottom: 1.688rem;
+  font-size: 16px;
+  color: #333333;
+  font-weight: normal;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.blog-TM .blog-text2 .blog-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  line-height: 20.8px;
+  color: #333333;
+}
+
+.blog-TM .blog-text2 .blog-name .blog-mtext {
+  font-weight: bold !important;
+}
