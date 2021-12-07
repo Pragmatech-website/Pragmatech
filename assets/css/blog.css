@@ -250,3 +250,7 @@ html {
 .blog-TM .blog-text2 .blog-name .blog-mtext {
   font-weight: bold !important;
 }
+
+.blog-box {
+  margin-top: 4.375rem;
+}
