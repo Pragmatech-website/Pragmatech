@@ -8,7 +8,7 @@
 
 body{
     width: 100%;
-
+    font-family: $font;
     
    
 }
@@ -49,7 +49,7 @@ header{
                 width: max-content;
                 a{
                     color: white;
-                    font-family: averta;
+                    
                     font-weight: 700;
                     font-style: normal;
                     line-height: 1.125rem;
@@ -89,7 +89,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: averta;
+        
         font-style: bold;
         font-weight: 700;
         color: $green;
@@ -136,8 +136,8 @@ header{
                 
                 
                 h1{
-                    font-family: averta;
-                    font-weight: 800;
+                   
+                    font-weight: 700;
                     font-style:normal;
                     font-size: 2.5rem;
                     line-height: 3.125rem;
@@ -148,7 +148,7 @@ header{
                     
                 }
                 p{
-                    font-family: averta;
+                    
                     font-weight: 400;
                     font-size: 1rem;
                     line-height: 1.6rem;
@@ -163,12 +163,13 @@ header{
                     width:10.625rem;
                     height: 3.125rem;
                     background-color: $green;
+                    color: white;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border-radius: 25px;
                     text-decoration: none;
-                    font-family: averta;
+                    transition: 0.5s;
                     font-weight: 700;
                     font-style: bold;
                     font-size: 1rem;
@@ -230,8 +231,317 @@ header{
     }
 }
 
+// groups section
+.active__groups{
+    width: 73.125rem;
+    height: max-content;
+    margin: 0 auto;
+    margin-top: 9.375rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__main{
+        width: 16.875rem;
+        height: 16rem;
+        margin-bottom: 1.875rem;
+        &__up{
+            width:100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            &__active{
+                font-weight: 700;
+                font-style: normal;
+                font-size: 4rem;
+                line-height: 5rem;
+                color: $darkgrey;
+
+            }
+            &__stroke{
+                    width: 4.375rem;
+                    height: 0.188rem;
+                    background-color: $green;
+                    margin-left: 0.5rem;
+                    margin-top: 0.7rem;
+            }
+        }
+
+        &__groups{
+            margin-left: 2.75rem;
+            margin-top: -1.8rem;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 3rem;
+            line-height: 3.75rem;
+            color: $darkgrey;
+        }
+        p{
+            color: $grey82;
+            font-weight: 400;
+            font-size: 0.875rem;
+            font-style: normal;
+            line-height: 1.094rem;
+            margin-top: 1.625rem;
+        }
+        a{
+            width: 10.625rem;
+            height: 2.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-style: bold;
+            font-size: 1rem;
+            line-height: 1.188rem;
+            background-color: $green;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.688rem;
+            transition:0.5s;
+            &:hover{
+                background-color: $violet;
+                transition: 0.5s;
+               
+            }
+            
+
+        }
+    }
+    &__item{
+        width: 16.875rem;
+        height: 16rem;
+        border: 1px solid $greystroke;
+        margin-bottom: 1.875rem;
+        transition:all 0.5s;
+        &:hover{
+            box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+            transform:scale(1.02);
+            transition: all 0.3s;
+            
+            
+        }
+        img{
+            width: 16.875rem;
+            height:9.75rem;
+
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            display:inline-block;
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            -moz-outline: none; 
+
+        h3{
+            margin-top: 1.125rem;
+            color: $darkgrey;
+            font-weight: 700;
+            font-size: 1.125rem;
+            font-style: normal;
+            line-height: 1.463rem;
+
+        }
+        p{
+            color:$grey82;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1.138rem;
+            margin-top: 0.938rem;
+        }
+        
+    }
+    }
+}
+
+// plannedgroups
+.planned__groups{
+    width: 100%;
+    height: 58.75rem;
+    background-color: $grey;
+    margin-top: 4.375rem;
+    position: relative;
+    &__box{
+        width: 73.125rem;
+        height: 49.75rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-right: auto;
+        margin-left: auto;
+        position: absolute;
+        top: 3.688rem;
+        left: 0;
+        right: 0;
+        bottom:0;
+        &__main{
+            width: 23.125rem;
+            height: 23.938rem;
+            &__up{
+                font-weight: 700;
+                font-style: normal;
+                font-size: 4rem;
+                line-height: 5rem;
+                color: $darkgrey;
+                margin-top: 3.25rem;
+                margin-left: -2px;
+            }
+            &__down{
+                display: flex;
+                align-items: center;
+                margin-top: -1.8rem;
+                &__stroke{
+                    width: 11.875rem;
+                    height: 0.188rem;
+                    background-color: $green;
+                    margin-top:0.313rem;
+                }
+                &__groups{
+                    margin-left: 0.688rem;
+                    
+                    font-weight: 300;
+                    font-style: normal;
+                    font-size: 3rem;
+                    line-height: 3.75rem;
+                    color: $darkgrey;
+                }
+                
+
+            }
+
+            p{
+                width:16.875rem;
+                color: $grey82;
+                font-weight: 400;
+                font-size: 0.875rem;
+                font-style: normal;
+                line-height: 1.094rem;
+                margin-top: 1.625rem;
+            }
+            a{
+                width: 10.625rem;
+                height: 2.5rem;
+                border-radius: 25px;
+                font-weight: 700;
+                font-style: bold;
+                font-size: 1rem;
+                line-height: 1.188rem;
+                background-color: $green;
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.688rem;
+                transition:0.5s;
+                &:hover{
+                    background-color: $violet;
+                    transition: 0.5s;
+                   
+                }
+                
+            }
+        }
+
+
+        &__item{
+            width: 23.125rem;
+            height: 23.938rem;
+            background-color: white;
+            margin-bottom:1.875rem;
+            img{
+                width: 23.125rem;
+                height: 11.063rem;
+
+            }
+
+            h3{
+                width: 16.25rem;
+                height: max-content;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 1.25rem;
+                line-height: 1.625rem;
+                color: $darkgrey;
+                margin-top: 1.938rem;
+                margin-left: 1.313rem;
+            }
+
+            .calendar{
+                width: 100%;
+                height: max-content;
+                display: flex;
+                align-items: center;
+                margin-left: 1.313rem;
+                margin-top: 1.75rem;
+                img{
+                    width: 1rem;
+                    height: 1rem;
+                    margin-right: 0.5rem;
+
+                }
+                p{
+                    color:$grey82;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 0.875rem;
+                    line-height: 1.138rem;
+                    
+                }
+                
+            }
+            .detail{
+                width: 100%;
+                height: max-content;
+                display: flex;
+                align-items: center;
+                margin-left: 1.313rem;
+                margin-top: 2.063rem;
+                text-decoration: none;
+                transition: 0.5s;
+                
+                h4{
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 0.875rem;
+                    line-height: 1.125rem;
+                    color:$grey4f;
+                    transition: 0.5s;
+                }
+                i{
+                    font-size: 0.625rem;
+                    color:$grey4f;
+                    margin-left: 0.875rem;
+                    margin-top: 1px;
+                    transition: 0.5s;
+                }
+                &:hover{
+                    cursor: pointer;
+                    
+                    h4{
+                        color: $green;
+                        transition: 0.5s;
+                    }
+                    i{
+                        color:$green;
+                        transform: translateX(30%);
+                        transition: 0.5s;
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 @media only screen and (min-width:960px) and (max-width:1320px){
     html{
-        font-size: 1vw;
+        font-size: 12.5px;
     }
 }
