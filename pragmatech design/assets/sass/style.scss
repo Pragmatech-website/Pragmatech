@@ -24,10 +24,8 @@ header{
 
 .navbar{
     max-width: 73.125rem;
-    height: 73px;
+    height: 6.625rem;
     margin: 0 auto;
-    display: flex;
-    padding-top: 33px;
     display: flex;
     align-items: center;
     z-index: 5;
@@ -50,11 +48,11 @@ header{
                 width: max-content;
                 a{
                     color: white;
-                    
-                    font-weight: 700;
+                    transition: 0.5s;
+                    font-weight:$weight700;
                     font-style: normal;
-                    line-height: 1.125rem;
-                    font-size: 0.938rem;
+                    line-height: $line-height18-5;
+                    font-size: $font-size15;
                     text-decoration: none;
                     &:hover{
                         color: $green;
@@ -90,11 +88,11 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
-        
+        transition: 0.5s;
         font-style: bold;
-        font-weight: 700;
+        font-weight:$weight700;
         color: $green;
-        font-size: 0.938rem;
+        font-size: $line-height19-7;
         &:hover{
             background-color: $green;
             color: white;
@@ -140,8 +138,8 @@ header{
                    
                     font-weight: 700;
                     font-style:normal;
-                    font-size: 2.5rem;
-                    line-height: 3.125rem;
+                    font-size: $font-size40;
+                    line-height: $line-height50;
                     width: inherit;
                     color: white;
                     margin-bottom: 2.25rem;
@@ -151,8 +149,8 @@ header{
                 p{
                     
                     font-weight: 400;
-                    font-size: 1rem;
-                    line-height: 1.6rem;
+                    font-size:$font-size16;
+                    line-height: $line-height25-6;
                     font-style: normal;
                     color: white;
                     width: inherit;
@@ -171,10 +169,10 @@ header{
                     border-radius: 25px;
                     text-decoration: none;
                     transition: 0.5s;
-                    font-weight: 700;
+                    font-weight:$weight700;
                     font-style: bold;
-                    font-size: 1rem;
-                    line-height: 1.188rem;
+                    font-size: $font-size16;
+                    line-height: $line-height19-7;
                     &:hover{
                         background-color: $darkgreen;
                         transition: 0.5s;
@@ -251,10 +249,10 @@ header{
             display: flex;
             align-items: center;
             &__active{
-                font-weight: 700;
+                font-weight:$weight700;
                 font-style: normal;
-                font-size: 4rem;
-                line-height: 5rem;
+                font-size:$font-size64;
+                line-height: $line-height80;
                 color: $darkgrey;
 
             }
@@ -270,28 +268,28 @@ header{
         &__groups{
             margin-left: 2.75rem;
             margin-top: -1.8rem;
-            font-weight: 300;
+            font-weight: $weight300;
             font-style: normal;
-            font-size: 3rem;
-            line-height: 3.75rem;
+            font-size: $font-size64;
+            line-height: $line-height60;
             color: $darkgrey;
         }
         p{
             color: $grey82;
             font-weight: 400;
-            font-size: 0.875rem;
+            font-size: $font-size14;
             font-style: normal;
-            line-height: 1.094rem;
+            line-height: $line-height17-5;
             margin-top: 1.625rem;
         }
         a{
             width: 10.625rem;
             height: 2.5rem;
             border-radius: 25px;
-            font-weight: 700;
+            font-weight:$weight700;
             font-style: bold;
-            font-size: 1rem;
-            line-height: 1.188rem;
+            font-size: $font-size16;
+            line-height: $line-height19-7;
             background-color: $green;
             text-decoration: none;
             color: white;
@@ -335,23 +333,23 @@ header{
             height: 100%;
             border: none;
             outline: none;
-            -moz-outline: none; 
+             
 
         h3{
             margin-top: 1.125rem;
             color: $darkgrey;
-            font-weight: 700;
-            font-size: 1.125rem;
+            font-weight:$weight700;
+            font-size: $font-size18;
             font-style: normal;
-            line-height: 1.463rem;
+            line-height: $line-height23-4;
 
         }
         p{
             color:$grey82;
             font-style: normal;
-            font-weight: 400;
-            font-size: 0.875rem;
-            line-height: 1.138rem;
+            font-weight:$weight400;
+            font-size: $font-size14;
+            line-height: $line-height18-2;
             margin-top: 0.938rem;
         }
         
@@ -383,10 +381,10 @@ header{
             width: 23.125rem;
             height: 23.938rem;
             &__up{
-                font-weight: 700;
+                font-weight:$weight700;
                 font-style: normal;
-                font-size: 4rem;
-                line-height: 5rem;
+                font-size: $font-size64;
+                line-height:$line-height80;
                 color: $darkgrey;
                 margin-top: 3.25rem;
                 margin-left: -2px;
@@ -406,8 +404,8 @@ header{
                     
                     font-weight: 300;
                     font-style: normal;
-                    font-size: 3rem;
-                    line-height: 3.75rem;
+                    font-size: $font-size48;
+                    line-height:$line-height60;
                     color: $darkgrey;
                 }
                 
@@ -417,20 +415,20 @@ header{
             p{
                 width:16.875rem;
                 color: $grey82;
-                font-weight: 400;
-                font-size: 0.875rem;
+                font-weight: $weight400;
+                font-size:$font-size14;
                 font-style: normal;
-                line-height: 1.094rem;
+                line-height: $line-height17-5;
                 margin-top: 1.625rem;
             }
             a{
                 width: 10.625rem;
                 height: 2.5rem;
                 border-radius: 25px;
-                font-weight: 700;
+                font-weight: $weight700;
                 font-style: bold;
-                font-size: 1rem;
-                line-height: 1.188rem;
+                font-size:$font-size16;
+                line-height: $line-height19-7;
                 background-color: $green;
                 text-decoration: none;
                 color: white;
@@ -465,8 +463,8 @@ header{
                 height: max-content;
                 font-weight: 700;
                 font-style: normal;
-                font-size: 1.25rem;
-                line-height: 1.625rem;
+                font-size: $font-size20;
+                line-height: $line-height26;
                 color: $darkgrey;
                 margin-top: 1.938rem;
                 margin-left: 1.313rem;
@@ -488,9 +486,9 @@ header{
                 p{
                     color:$grey82;
                     font-style: normal;
-                    font-weight: 400;
-                    font-size: 0.875rem;
-                    line-height: 1.138rem;
+                    font-weight:$weight400;
+                    font-size: $font-size14;
+                    line-height: $line-height18-2;
                     
                 }
                 
@@ -506,10 +504,10 @@ header{
                 transition: 0.5s;
                 
                 h4{
-                    font-weight: 600;
+                    font-weight:$weight600;
                     font-style: normal;
-                    font-size: 0.875rem;
-                    line-height: 1.125rem;
+                    font-size: $font-size14;
+                    line-height: $line-height18-2 ;
                     color:$grey4f;
                     transition: 0.5s;
                 }

@@ -76,12 +76,10 @@ header {
 
 .navbar {
   max-width: 73.125rem;
-  height: 73px;
+  height: 6.625rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  padding-top: 33px;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -122,9 +120,11 @@ header {
 
 .navbar .menu ul li a {
   color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   font-weight: 700;
   font-style: normal;
-  line-height: 1.125rem;
+  line-height: 1.156rem;
   font-size: 0.938rem;
   text-decoration: none;
 }
@@ -166,10 +166,12 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   font-style: bold;
   font-weight: 700;
   color: #41E063;
-  font-size: 0.938rem;
+  font-size: 1.231rem;
 }
 
 .navbar .btn1:hover {
@@ -266,7 +268,7 @@ header {
   font-weight: 700;
   font-style: bold;
   font-size: 1rem;
-  line-height: 1.188rem;
+  line-height: 1.231rem;
 }
 
 .mySwiper .swiper-wrapper .swiper-slide .header-wrapper .header__content a:hover {
@@ -385,7 +387,7 @@ header {
   margin-top: -1.8rem;
   font-weight: 300;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 3.75rem;
   color: #333333;
 }
@@ -406,7 +408,7 @@ header {
   font-weight: 700;
   font-style: bold;
   font-size: 1rem;
-  line-height: 1.188rem;
+  line-height: 1.231rem;
   background-color: #41E063;
   text-decoration: none;
   color: white;
@@ -461,7 +463,6 @@ header {
   height: 100%;
   border: none;
   outline: none;
-  -moz-outline: none;
 }
 
 .active__groups__item a h3 {
@@ -568,7 +569,7 @@ header {
   font-weight: 700;
   font-style: bold;
   font-size: 1rem;
-  line-height: 1.188rem;
+  line-height: 1.231rem;
   background-color: #41E063;
   text-decoration: none;
   color: white;
@@ -669,7 +670,7 @@ header {
   font-weight: 600;
   font-style: normal;
   font-size: 0.875rem;
-  line-height: 1.125rem;
+  line-height: 1.138rem;
   color: #4F4F4F;
   -webkit-transition: 0.5s;
   transition: 0.5s;
