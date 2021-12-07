@@ -6,8 +6,9 @@ $gray82:#828282;
 $white: #E5E5E5;
 $black-gray:#4F4F4F;
 $line-gray:#C3C3C3;
-$linear-grey:linear-gradient(#E5E5E5
-100%
 
-30%
+
+$linear-grey:linear-gradient(to left,
+#E5E5E5  0%,
+rgba(232, 232, 232, 0.3) 100%
 );
