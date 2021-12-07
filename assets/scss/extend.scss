@@ -1,3 +1,6 @@
+@import "./colors.scss";
+@import "./font.scss";
+
 
 // green button
 %btn-green{
@@ -19,14 +22,8 @@
 };
 
 
-%blog-box{
-    display: flex;
-     justify-content: space-between;
-     flex-wrap: wrap;
-     width: 73.125rem;
-     margin: 0 auto;
-    .box{
-        margin-bottom: 1.875rem;
+%box{
+    margin-bottom: 1.875rem;
         .box-img{
             width: 16.875rem;
             height: 9.75rem;
@@ -43,8 +40,8 @@
             background: #FFFFFF;
 
             .box-text-p{
-                text-align: center;
-                 margin: 1.25rem 2.75rem 2.7rem 2.75rem;
+                 text-align:center;
+                 margin: 1.25rem 2.45rem 2.7rem 2.45rem;
                  font-weight: 700;
                  font-size: $font-size18;
                  line-height: $line-height23-4;
@@ -62,4 +59,4 @@
             }
         };
     };
-}
+

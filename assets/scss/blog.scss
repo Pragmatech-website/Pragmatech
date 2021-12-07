@@ -1,8 +1,8 @@
 @import "./colors.scss";
-@import "./font.scss";
-@import "./reset.scss";
 @import "./extend.scss";
+@import "./reset.scss";
 @import "./font.scss";
+
 
 
 body{
@@ -14,112 +14,106 @@ html{
 
 
 // blog start
-
-
-.blog-all{
-    background-color: #F5F5F5;
-    height: 50rem;
+.head{
     width: 100%;
-
-    .blog-header{
-        height: 10.625rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        .line{
-            margin-bottom: 5rem;
-            width: 102px;
-            border-bottom: 2.5px solid $green;
-            
-        };
-        .blog-text{
-            color:$darkgrey;
-            text-align: center;
-            margin-top: 3rem;
-            margin:auto 1.625rem;
-            height: 5rem;
-            width: 8.5rem;
-            font-size: $font-size64;
-            font-weight: $weight700;
-            font-style:normal;
-        };
-    };
-};
-
-
-
-
-.blog-TM{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto;
-    height: 46.875rem;
-    width: 73.125rem;
-    .blog-img{
-        display: inline-block;
-        background:url("../img/Background.svg");
-        object-fit: cover;
-        width: 41.875rem;
-        height: 34.375rem;
-        margin-right: 3.75rem;
-    };
-    .blog-text2{ 
-        display:block;
-        width: 27.5rem;
-        height: 5.688rem;
-        text-align: left;
-        font-size: $font-size35;
-        font-weight: $weight700;
-        font-style:normal;
-
-        h3{
-            font-size: $font-size35;
-            margin-bottom: 1.688rem;
-            margin-top: 3.5rem;
-            color: $darkgrey;
-            line-height: $line-height45;
-        };
-        p{
-            margin-bottom: 1.688rem;
-            font-size: 16px;
-            color:$darkgrey;
-            font-weight: normal;
-            line-height: 1.5rem;
-            text-align: justify;
-        };
-        .blog-name{
+    .blog-all{
             display: flex;
-            flex-direction: row;
-            justify-content: left;
-            
-            line-height: 20.8px;
-            color: $darkgrey;
-            .blog-mtext{
-                font-weight: bold !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: $grey;
+            .blog-header{
+                height: 10.625rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+        
+                .line{
+                    margin-bottom: 5rem;
+                    width: 102px;
+                    border-bottom: 2.5px solid $green;
+                    
+                };
+                .blog-text{
+                    color:$darkgrey;
+                    text-align: center;
+                    margin-top: 3rem;
+                    margin:auto 1.625rem;
+                    height: 5rem;
+                    width: 8.5rem;
+                    font-size: $font-size64;
+                    font-weight: $weight700;
+                    font-style:normal;
+                };
             };
+            .blog-TM{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin: 0 auto;
+                    height: 46.875rem;
+                    width: 73.125rem;
+                    .blog-img{
+                        display: inline-block;
+                        background: url(../img/backgrounds.svg);
+                        object-fit: cover;
+                        width: 41.875rem;
+                        height: 34.375rem;
+                        margin-right: 3.75rem;
+                    };
+                    .blog-text2{ 
+                        display:block;
+                        width: 27.5rem;
+                        height: 5.688rem;
+                        text-align: left;
+                        font-size: $font-size35;
+                        font-weight: $weight700;
+                        font-style:normal;
+                
+                        h3{
+                            font-size: $font-size35;
+                            margin-bottom: 1.688rem;
+                            margin-top: 3.5rem;
+                            color: $darkgrey;
+                            line-height: $line-height45;
+                        };
+                        p{
+                            margin-bottom: 1.688rem;
+                            font-size: 16px;
+                            color:$darkgrey;
+                            font-weight: normal;
+                            line-height: 1.5rem;
+                            text-align: justify;
+                        };
+                        .blog-name{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: left;
+                            
+                            line-height: 20.8px;
+                            color: $darkgrey;
+                            .blog-mtext{
+                                font-weight: bold !important;
+                            };
+                        };
+                        button{
+                            @extend %btn-green;
+                        };
+                    };
+                };
         };
-        button{
-            @extend %btn-green;
-        };
-    };
-};
-
-
-
-
-// blog end
-
-
-
-// blog-box start
- .blog-box{
-     @extend %blog-box;
-     margin-top: 4.375rem;
- };
-
-
+        .blog-box{
+                 display: flex;
+                 justify-content: space-between;
+                 flex-wrap: wrap;
+                 width: 73.125rem;
+                 margin: 0 auto;
+                 margin-top: 4.375rem;
+                 .box{
+                    @extend %box;
+                 }
+             };
+}
 
 // blog-box end
 
