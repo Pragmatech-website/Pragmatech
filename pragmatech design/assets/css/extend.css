@@ -53,3 +53,36 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.btn1 {
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  width: 8.063rem;
+  height: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid #41E063;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-style: bold;
+  font-weight: 700;
+  color: #41E063;
+  font-size: 1.231rem;
+}
+
+.btn1:hover {
+  background-color: #41E063;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
