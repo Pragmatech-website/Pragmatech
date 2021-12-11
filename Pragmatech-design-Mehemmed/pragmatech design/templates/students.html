@@ -7,10 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/students.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3113ae62d0.js" crossorigin="anonymous"></script>
+
     <title>Tələbələr və Məzunlar</title>
 </head>
 
 <body>
+
+    <!-- header -->
+    <header>
+        <nav class="navbar">
+            <a href="./index.html">
+                <div class="logo"><img src="../assets/img/logoblack.svg" alt=""></div>
+            </a>
+            <div class="menu">
+                <ul>
+                    <li><a href="./about.html">Haqqımızda</a> <span></span> </li>
+                    <li><a href="./programs.html">Proqramlar</a> <span></span> </li>
+                    <li><a href="./blog.html">Bloq</a> <span></span> </li>
+                    <li><a href="./students.html">Tələbə və Məzunlar</a> <span></span> </li>
+                    <li><a href="./contact.html">Əlaqə</a> <span></span> </li>
+                </ul>
+            </div>
+
+            <div class="wrapper">
+                <div class="search-box">
+                    <input type="text" placeholder="Search" class="input">
+                    <div class="btn">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <a class="btn1" href="#">MÜRACİƏT</a>
+        </nav>
+    </header>
+    <!-- downmenu -->
+    <section class="downmenu">
+        <div class="downmenu__wrapper">
+            <a href="">
+                <div class="downmenu__wrapper__item">Ana Səhifə</div>
+            </a>
+            <img src="../assets/img/Vectorright.svg" alt="">
+            <a href="">
+                <div class="downmenu__wrapper__item">Tələbə və Məzunlar</div>
+            </a>
+            <img src="../assets/img/Vectorright.svg" alt="">
+
+
+        </div>
+    </section>
+
+
+
     <!-- Start SummaryInformation -->
     <section id="summaryİnformation">
         <div class="container">
@@ -52,17 +100,17 @@
             <div class="component">
                 <!-- Start head filter -->
                 <div class="components__head">
-                    <div class="components__head--firstfilter " onclick="filterSelection('all')">
+                    <div class="components__head--firstfilter" onclick="openCity(event, 'Student')">
                         <h1>Tələbələr</h1>
                     </div>
-                    <div class="components__head--secondfilter" onclick="filterSelection('graduate')">
+                    <div class="components__head--firstfilter" onclick="openCity(event, 'Graduent')">
                         <h1>Məzunlar</h1>
                     </div>
                 </div>
                 <!-- End head filter -->
                 <div class="list">
                     <div class="list__component">
-                        <div class="item graduate">
+                        <div class="item" id="Student">
                             <div class="item__picture"><img src="../assets/img/person1.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -77,7 +125,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Student">
                             <div class="item__picture"><img src="../assets/img/person2.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -92,7 +140,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Student">
                             <div class="item__picture"><img src="../assets/img/person3.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -107,7 +155,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Student">
                             <div class="item__picture"><img src="../assets/img/person4.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -122,7 +170,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Graduent">
                             <div class="item__picture"><img src="../assets/img/person5.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -137,7 +185,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Graduent">
                             <div class="item__picture"><img src="../assets/img/person6.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -152,7 +200,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Graduent">
                             <div class="item__picture"><img src="../assets/img/person7.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -167,7 +215,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Graduent">
                             <div class="item__picture"><img src="../assets/img/person8.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -182,7 +230,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Graduent">
                             <div class="item__picture"><img src="../assets/img/person9.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -197,7 +245,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Graduent">
                             <div class="item__picture"><img src="../assets/img/person10.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -212,7 +260,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Graduent">
                             <div class="item__picture"><img src="../assets/img/person11.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -227,7 +275,7 @@
                             </div>
 
                         </div>
-                        <div class="item ">
+                        <div class="item" id="Graduent">
                             <div class="item__picture"><img src="../assets/img/person12.png" alt=""></div>
                             <div class="data">
                                 <div class="item__name">
@@ -248,7 +296,44 @@
         </div>
     </section>
     <!-- End Components -->
-    <script src="../assets/js/app.js"></script>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer__up">
+            <div class="footer__up__menu">
+                <ul>
+                    <li><a href="">Haqqımızda</a> </li>
+                    <li><a href="">Proqramlar</a> </li>
+                    <li><a href="">Bloq</a> </li>
+                    <li><a href="">Tələbə və Məzunlar</a> </li>
+                    <li><a href="">Əlaqə</a> </li>
+                </ul>
+            </div>
+            <div class="footer__up__address">
+                <div class="footer__up__address__item">
+                    <p>Xocalı prospekti 40, AZ1000 Bakı, Azərbaycan</p>
+                    <p>Mobil + 994 (50) 256 08 07</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__down">
+            <a href="">
+                <div class="footer__down__logo"><img src="../assets/img/logofooter.svg" alt=""></div>
+            </a>
+            <div class="footer__down__text">©2021 - Pragmatech - Bütün hüquqlar qorunur.</div>
+            <div class="footer__down__link">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../assets/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/common.js"></script>
 </body>
 
 </html>

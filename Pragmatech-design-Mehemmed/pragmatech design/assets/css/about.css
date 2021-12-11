@@ -52,6 +52,514 @@ table {
   border-spacing: 0;
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header .navbar {
+  width: 73.125rem;
+  height: 6.625rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+  position: relative;
+}
+
+header .navbar .menu {
+  margin-left: 10.625rem;
+  width: 35.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar .menu ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+header .navbar .menu ul li {
+  margin-right: 3.063rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+}
+
+header .navbar .menu ul li a {
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.156rem;
+  font-size: 0.938rem;
+  text-decoration: none;
+}
+
+header .navbar .menu ul li a:hover {
+  color: #41E063 !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .navbar .menu ul li:last-child {
+  margin-right: 0;
+}
+
+header .navbar .wrapper {
+  position: absolute;
+  top: 30%;
+  right: 8.125rem;
+}
+
+header .navbar .search-box {
+  width: 6.25rem;
+  height: 2.5rem;
+  position: relative;
+}
+
+header .navbar .boxactive {
+  width: 12.5rem;
+}
+
+header .navbar .input {
+  position: absolute;
+  top: 0.063rem;
+  right: 3.125rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 0px;
+  height: 2.5rem;
+  opacity: 0;
+  outline: none;
+  font-size: 1.125rem;
+  border-radius: 50px;
+  color: #29313a;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+header .navbar .input ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #62d474;
+}
+
+header .navbar ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #62d474;
+}
+
+header .navbar :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #62d474;
+}
+
+header .navbar :-moz-placeholder {
+  /* Firefox 18- */
+  color: #62d474;
+}
+
+header .navbar .btn {
+  position: absolute;
+  width: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.5rem;
+  background: unset;
+  border-radius: 50%;
+  right: 0;
+  top: 0.063rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #fff;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+header .navbar .btn i {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 18px;
+}
+
+header .navbar .input.active {
+  width: 12.5rem;
+  height: 2.5rem;
+  right: 1.25rem;
+  border: 3px solid #41E063;
+  opacity: 1;
+  padding: 0 30px 0 20px;
+}
+
+header .navbar .menu_ul_active {
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  width: 37.75rem;
+}
+
+header .navbar .btn.animate {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  right: 1.25rem;
+  background-color: #41E063;
+}
+
+header .navbar .btn1-animate {
+  margin-left: 5.563rem;
+}
+
+.btn1 {
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  width: 8.063rem;
+  height: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid #41E063;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-style: bold;
+  font-weight: 700;
+  color: #41E063;
+  font-size: 0.938rem;
+  line-height: 1.156rem;
+}
+
+.btn1:hover {
+  background-color: #41E063;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+footer .footer__up {
+  width: 100%;
+  height: 11.063rem;
+  background-color: #F5F5F5;
+  padding-top: 3.063rem;
+}
+
+footer .footer__up__menu {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer__up__menu ul {
+  width: 35.75rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer__up__menu ul a {
+  color: #333333;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.156rem;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer .footer__up__menu ul a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #828282;
+}
+
+footer .footer__up__address {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3.113rem;
+}
+
+footer .footer__up__address__item {
+  width: 31.25rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer__up__address__item p {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.081rem;
+  color: #828282;
+}
+
+footer .footer__down {
+  width: 100%;
+  height: 3.938rem;
+  background-color: #41E063;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer__down__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 2.15rem;
+  color: white;
+  margin-left: 6.75rem;
+  margin-right: 9.063rem;
+}
+
+footer .footer__down__link {
+  width: 5.75rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer__down__link i {
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer .footer__down__link i:hover {
+  color: #828282;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+  background-color: rgba(236, 236, 236, 0.5);
+}
+
+header .navbar i {
+  color: #333333;
+}
+
+header .navbar ul li {
+  position: relative;
+}
+
+header .navbar ul li a {
+  color: #333333 !important;
+}
+
+header .navbar ul li:nth-child(2) a {
+  font-weight: 400 !important;
+}
+
+header .navbar ul li:nth-child(2) a:hover {
+  color: #333333 !important;
+}
+
+header .navbar ul li:nth-child(2) span {
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  margin-top: 0.313rem;
+  width: 2.688rem;
+  height: 0.188rem;
+  background-color: #41E063;
+}
+
+.downmenu {
+  width: 100%;
+  height: 6.25rem;
+  margin-top: 6.625rem;
+}
+
+.downmenu__wrapper {
+  width: 73.125rem;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.downmenu__wrapper img {
+  margin-right: 1.234rem;
+  margin-top: 0.1rem;
+  margin-left: 0.531rem;
+}
+
+.downmenu__wrapper a {
+  text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.138rem;
+  color: #333333;
+}
+
+.downmenu__wrapper a:hover {
+  color: #828282;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 #AllAbout {
   position: relative;
   font-family: "Roboto", sans-serif;
@@ -268,6 +776,10 @@ table {
   font-size: 1rem;
   font-weight: 400;
   margin-top: 10px;
+}
+
+footer {
+  margin-top: 6.25rem;
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1440px) {
