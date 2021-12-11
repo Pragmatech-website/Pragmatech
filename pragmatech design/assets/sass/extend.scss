@@ -3,6 +3,7 @@
 @import "./reset.scss";
 // green button
 %btn-green{
+    cursor: pointer;
     width: 8.125rem;
     height: 2.5rem;
     border: 1px solid $green;
@@ -64,13 +65,13 @@
 
 // navbar
 %navbar{
-    max-width: 73.125rem;
+    width: 73.125rem;
     height: 6.625rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
     z-index: 5;
-    padding: 0 auto;
+    
     position: relative;
 
     .menu{
@@ -86,9 +87,12 @@
             display: flex;
             align-items: center;
             transition: 0.8s;
+            
             li{
                 margin-right: 3.063rem;
                 width: max-content;
+                position: relative;
+                
                 a{
                     color: white;
                     transition: 0.5s;
@@ -98,7 +102,7 @@
                     font-size: $font-size15;
                     text-decoration: none;
                     &:hover{
-                        color: $green;
+                        color: $green !important;
                         transition: 0.5s;
                     }
                 }
@@ -136,7 +140,7 @@
     height:2.5rem;
     opacity: 0;
     outline: none;
-    font-size: 18px;
+    font-size: $font-size18;
     border-radius: 50px;
     color: #29313a;
     
@@ -225,7 +229,8 @@
         font-style: bold;
         font-weight:$weight700;
         color: $green;
-        font-size: $line-height19-7;
+        font-size: $font-size15;
+        line-height: $line-height18-5;
         &:hover{
             background-color: $green;
             color: white;
@@ -233,6 +238,183 @@
         }
     }
 
+// plannedgroups
+%double{
+    .double__groups{
+        width: 100%;
+        height:min-content;
+        background-color:$grey;
+        
+        &__box{
+            width: 73.125rem;
+            height:max-content;
+            display: flex;
+            gap: 1.875rem;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            
+            
+            &__main{
+                width: 23.125rem;
+                height: 23.938rem;
+                &__up{
+                    font-weight:$weight700;
+                    font-style: normal;
+                    font-size: $font-size64;
+                    line-height:$line-height80;
+                    color: $darkgrey;
+                    margin-top: 3.25rem;
+                    margin-left: -2px;
+                }
+                &__down{
+                    display: flex;
+                    align-items: center;
+                    margin-top: -1.8rem;
+                    &__stroke{
+                        width: 11.875rem;
+                        height: 0.188rem;
+                        background-color: $green;
+                        margin-top:0.313rem;
+                    }
+                    &__groups{
+                        margin-left: 0.688rem;
+                        
+                        font-weight: 300;
+                        font-style: normal;
+                        font-size: $font-size48;
+                        line-height:$line-height60;
+                        color: $darkgrey;
+                    }
+                    
+    
+                }
+    
+                p{
+                    width:16.875rem;
+                    color: $gray82;
+                    font-weight: $weight400;
+                    font-size:$font-size14;
+                    font-style: normal;
+                    line-height: $line-height17-5;
+                    margin-top: 1.625rem;
+                }
+                a{
+                    width: 10.625rem;
+                    height: 2.5rem;
+                    border-radius: 25px;
+                    font-weight: $weight700;
+                    font-style: bold;
+                    font-size:$font-size16;
+                    line-height: $line-height19-7;
+                    background-color: $green;
+                    text-decoration: none;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 1.688rem;
+                    transition:0.5s;
+                    &:hover{
+                        background-color: $darkgreen;
+                        transition: 0.5s;
+                       
+                    }
+                    
+                }
+            }
+    
+    
+            &__item{
+                width: 23.125rem;
+                height: 23.938rem;
+                background-color: white;
+                
+                img{
+                    width: 23.125rem;
+                    height: 11.063rem;
+    
+                }
+    
+                h3{
+                    width: 16.25rem;
+                    height: max-content;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: $font-size20;
+                    line-height: $line-height26;
+                    color: $darkgrey;
+                    margin-top: 1.938rem;
+                    margin-left: 1.313rem;
+                }
+    
+                .calendar{
+                    width: 100%;
+                    height: max-content;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1.313rem;
+                    margin-top: 1.75rem;
+                    img{
+                        width: 1rem;
+                        height: 1rem;
+                        margin-right: 0.5rem;
+    
+                    }
+                    p{
+                        color:$gray82;
+                        font-style: normal;
+                        font-weight:$weight400;
+                        font-size: $font-size14;
+                        line-height: $line-height18-2;
+                        
+                    }
+                    
+                }
+                .detail{
+                    width: 100%;
+                    height: max-content;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1.313rem;
+                    margin-top: 2.063rem;
+                    text-decoration: none;
+                    transition: 0.5s;
+                    
+                    h4{
+                        font-weight:$weight600;
+                        font-style: normal;
+                        font-size: $font-size14;
+                        line-height: $line-height18-2 ;
+                        color:$grey4f;
+                        transition: 0.5s;
+                    }
+                    i{
+                        font-size: 0.625rem;
+                        color:$grey4f;
+                        margin-left: 0.875rem;
+                        margin-top: 1px;
+                        transition: 0.5s;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        
+                        h4{
+                            color: $green;
+                            transition: 0.5s;
+                        }
+                        i{
+                            color:$green;
+                            transform: translateX(30%);
+                            transition: 0.5s;
+                            
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

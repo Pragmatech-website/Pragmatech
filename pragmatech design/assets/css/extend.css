@@ -77,7 +77,8 @@ table {
   font-style: bold;
   font-weight: 700;
   color: #41E063;
-  font-size: 1.231rem;
+  font-size: 0.938rem;
+  line-height: 1.156rem;
 }
 
 .btn1:hover {
