@@ -11,6 +11,17 @@ var myswiper = new Swiper(".mySwiper", {
     },
   });
 
+  // loader
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+    const wrapper = document.querySelector(".loader");
+    wrapper.classList.add("wrapper-finish");
+    
+  }, 1000);
+  });
+
+
 
 // navbarscroll
 var header = document.querySelector("header");
@@ -58,12 +69,7 @@ window.onscroll = function() {
 
 }
 
-
-
-
-
-
-  // search
+// search
   $(".btn").click(function () {
     $(".input").toggleClass("active").focus;
     $(this).toggleClass("animate");

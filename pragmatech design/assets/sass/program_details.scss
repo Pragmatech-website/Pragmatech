@@ -13,6 +13,14 @@ html,body{
     
    
 }
+.loader{
+    @extend %loader;
+}
+.wrapper-finish{
+    transition: 1s;
+    opacity: 0;
+    z-index: -1;
+ }
 
 header{
     width: 100%;
@@ -113,12 +121,25 @@ span{
         width: 73.125rem;
         height: max-content;
         margin: 0 auto;
-        h1{
+        display: flex;
+        &__img{
+            width:45%;
+            max-height: 100%;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;      
+            }
+        }
+        &__text {
+            h1{
             font-weight: $weight700;
             font-size: $font-size35;
             font-style: normal;
             line-height: $line-height45-5;
             color: $darkgrey;
+            margin-right: 2.813rem;
         }
         > p{
             width: 33.75rem;
@@ -135,6 +156,11 @@ span{
         .clock,.calendar{
             display: flex;
             align-items:center;
+           
+            img{
+                width: 1.875rem;
+                height:1.875rem;
+            }
             p{
                 font-weight: $weight400;
                 font-size: $font-size18;
@@ -147,26 +173,12 @@ span{
         }
         .calendar{
             margin-top: 1.875rem;
-            img{
-                width: 30px;
-                height: 30px
-            }
+            
         }
 
-    }
+    }}
 
-    &__img{
-        position: absolute;
-        top: 4.375rem;
-        right: 9.8%;
-        width: 34.1%;
-        height: 20.8vw;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;      
-        }
-    }
+    
 
 }
 // program info

@@ -14,13 +14,23 @@ html,body{
    
 }
 
+.loader{
+    @extend %loader;
+}
+.wrapper-finish{
+    transition: 1s;
+    opacity: 0;
+    z-index: -1;
+ }
+
 header{
     width: 100%;
     height: max-content; 
     position:absolute;
     top: 0;
-    z-index: 99999;
+    z-index: 9999;
     background-color: unset;
+    
     
 }
 
@@ -150,7 +160,7 @@ header{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        z-index: 999999;
+        z-index: 9;
         .css{
             width: 44px;
             height: 50px;
@@ -286,11 +296,11 @@ header{
 }
 
 // plannedgroups
-.double__groups__all{
+.double__main__all{
     @extend %double;
     
     
-    .double__groups{
+    .double__main{
         
         display: flex;
         align-items: center;

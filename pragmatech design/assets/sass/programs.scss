@@ -13,6 +13,14 @@ html,body{
     
    
 }
+.loader{
+    @extend %loader;
+}
+.wrapper-finish{
+    transition: 1s;
+    opacity: 0;
+    z-index: -1;
+ }
 
 header{
     width: 100%;
@@ -190,6 +198,7 @@ span{
                 line-height: $line-height30;
                 transition: 0.5s;
                 cursor: pointer;
+                color: $darkgrey;
             }
             &__active{
                 font-weight: $weight700;
@@ -197,6 +206,7 @@ span{
                 font-size: $font-size24;
                 line-height: $line-height30;
                 transition: 0.5s;
+                color:lighten($darkgrey,50%);
                 cursor: pointer;
                 
             }
@@ -225,24 +235,26 @@ span{
         }
     }
 }
-.double__groups__all{
+.double{
     @extend %double;
     height: fit-content;
-    margin-top: 7.5rem;
-    margin-bottom: 7.5rem;
+    margin-top: 3.063rem;
+    margin-bottom: 7rem;
     
-    .double__groups{
+    &__main{
         background-color: white !important;
         margin-top: 0;
-        .groups__active{
-            display: none;
+        
+        &__box__item{
+            border: 1px solid $formborder;
+            transition: 0.5s;
+            transform:scale(1)
         }
     }
-
-    .double__groups__box__item{
-        border: 1px solid $formborder;
-        transition: 0.5s;
+    .main__active{
+        display:none;
     }
+    
 }
 
 footer{
