@@ -835,6 +835,7 @@ header .navbar .btn1-animate {
   color: white;
   font-size: 1rem;
   line-height: 1.231rem;
+  border-radius: 3px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1463,6 +1464,7 @@ header .navbar ul li:nth-child(5) span {
   margin-top: 1.75rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  border-radius: 3px;
 }
 
 .head .sendbox-all .contact-sendbox .sendbox-submit input:hover {

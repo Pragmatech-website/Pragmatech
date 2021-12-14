@@ -351,6 +351,7 @@ header {
                     line-height: $line-height19-7;
                     margin-top: 1.75rem;
                     transition: 0.5s;
+                    border-radius: 3px;
                     &:hover {
                         background-color: $darkgreen;
                         cursor: pointer;

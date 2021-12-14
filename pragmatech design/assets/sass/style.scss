@@ -708,6 +708,7 @@ span.choose {
                     line-break: $line-height19-7;
                     transition: 0.5s;
                     margin-top: 1.5rem;
+                    border-radius: 3px;
                     &:hover{
                         background-color: $darkgreen;
                         cursor: pointer;

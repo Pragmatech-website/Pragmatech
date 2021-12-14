@@ -1141,6 +1141,7 @@ table {
   color: white;
   font-size: 1rem;
   line-height: 1.231rem;
+  border-radius: 3px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -2141,6 +2142,7 @@ header {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   margin-top: 1.5rem;
+  border-radius: 3px;
 }
 
 .help__form form .submit:hover {
