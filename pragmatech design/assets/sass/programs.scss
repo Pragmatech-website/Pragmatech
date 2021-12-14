@@ -17,9 +17,18 @@ html,body{
     @extend %loader;
 }
 .wrapper-finish{
-    transition: 1s;
-    opacity: 0;
-    z-index: -1;
+    display: none;
+ }
+ .wrapper-animation{
+     animation: wrapperanima 1.5s linear;
+ }
+ @keyframes wrapperanima{
+     0%{
+         opacity: 1;
+     }
+     100%{
+         opacity: 0;
+     }
  }
 
 header{
@@ -257,13 +266,26 @@ span{
     
 }
 
+.popup__all{
+    @extend %popup__all;
+}
+
+   
+
 footer{
     @extend %footer;
     }
 
-@media only screen and (min-width:960px) and (max-width:1320px){
-    html{
-        font-size: 12.5px;
+    @media only screen and (min-device-width:992px) and (max-device-width:1350px){
+        html{
+            font-size: 12.5px;
+        }
+        
     }
     
-}
+    
+    @media only screen and (min-device-width:1351px){
+        html{
+            font-size: 16px;
+        }
+    }

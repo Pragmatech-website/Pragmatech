@@ -1,69 +1,21 @@
 // loader
 
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-    const wrapper = document.querySelector(".loader");
+window.addEventListener('load', () => {
+    
+  const wrapper = document.querySelector(".loader");
+  wrapper.classList.add("wrapper-animation")
+  setTimeout(() => {
     wrapper.classList.add("wrapper-finish");
-    
-    
+    wrapper.classList.remove("wrapper-animation")
   }, 1500);
-  });
-
-
-
-
-// navbarscroll
-var header = document.querySelector("header");
-var prevScrollpos = window.pageYOffset;
-
-window.onscroll = function() {
   
-            
-      var currentScrollPos = window.pageYOffset;
-      
-      
-     
+  
 
-       if (prevScrollpos > currentScrollPos) {
-      header.style.top = "0";
-      
-      header.style.transition = "0.5s";
-      if(window.pageYOffset < 130){
-        
-        header.style.backgroundColor="#F5F5F5"
-        header.style.position="fixed"
-       
-      }
-        
-    
-    }
-    
-    
-    
-    else {
-    header.style.top = "-6.625rem";
-    header.style.position= "fixed";
-    header.style.backgroundColor= "#F5F5F5";
-    if(window.pageYOffset < 130){
-      
-      header.style.backgroundColor="#F5F5F5"
-      header.style.position="fixed"
-     
-    }
-   
-    
-    }
-     prevScrollpos = currentScrollPos;
-    
-
-}
+});
 
 
 
-
-
-
-  // search
+ // search
   $(".btn").click(function () {
     $(".input").toggleClass("active").focus;
     $(this).toggleClass("animate");
@@ -76,102 +28,66 @@ window.onscroll = function() {
 
 
 
-  // tab section
-  let double__main__box = document.querySelector(".double__main__box");
-  let main__active = document.querySelector(".main__active")
-  let wrapper__all =  document.querySelector(".tabs__header__wrapper__all");
-  let wrapper__active =  document.querySelector(".tabs__header__wrapper__active");
-  let indicator__item = document.querySelector(".tabs__indicator__wrapper__item");
-  let firstitem = document.querySelectorAll(".firstitem");
-  let lastitem = document.querySelectorAll(".lastitem")
-  let firstbox = document.querySelector(".firstbox")
-
-  wrapper__all.addEventListener("click",()=>{
-    if(firstbox.style.display=="none"){
-      console.log("koko")
-      firstitemfunc()
-    }
-    
-
-    function firstitemfunc(){
-      indicator__item.style.transform="translateX(0%)";
-    wrapper__active.style.color="rgba(51, 51, 51, 0.5)";
-    wrapper__all.style.color="#333333";
-    for(i=0;i<lastitem.length;i++){
-      lastitem[i].classList.add("tabanimationreduce");
-      
-    }
-
-    setTimeout(() => {
-      main__active.style.display="none";
-      double__main__box.style.display="flex";
-      
-      for(i=0;i<firstitem.length;i++){
-        firstitem[i].classList.add("tabanimation");
-        
-
-      };
-      for(i=0;i<lastitem.length;i++){
-        lastitem[i].classList.remove("tabanimationreduce");
-        
-      }
-
-    },500);
-    }
-    
-
-  })
-
-  // secondtab
   
-  wrapper__active.addEventListener("click",()=>{
-    
-    if(main__active.style.display=="" || main__active.style.display=="none" ){
-      lastitemfunc()
-    }
-    else{
-      
-      console.log(main__active.style.display)
-    }
-    function lastitemfunc(){
-     
-    indicator__item.style.transform="translateX(322%)"
-    wrapper__all.style.color="rgba(51, 51, 51, 0.5)";
-    wrapper__active.style.color="#333333";
-    
-    
-    for(i=0;i<firstitem.length;i++){
-      firstitem[i].classList.remove("tabanimation")
-      firstitem[i].classList.add("tabanimationreduce")
-    }
 
-    setTimeout(() => {
-      firstbox.style.display="none";
-      main__active.style.display="flex";
-      for(i=0;i<lastitem.length;i++){
-        lastitem[i].classList.add("tabanimation");
-        
-        
+  // dropdown
+  $('.dropdown').click(function () {
+    $(this).attr('tabindex', 1).focus();
+    $(this).toggleClass('active');
+    $(this).find('.dropdown-menu').slideToggle(300);
+});
+$('.dropdown').focusout(function () {
+    $(this).removeClass('active');
+    $(this).find('.dropdown-menu').slideUp(300);
+});
+$('.dropdown .dropdown-menu li').click(function () {
+    $(this).parents('.dropdown').find('span').text($(this).text());
+    $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+});
 
-      };
-      for(i=0;i<firstitem.length;i++){
-        
-        firstitem[i].classList.remove("tabanimationreduce");
-      }
 
-    },500);
-
-    }
-    
-
-   
-
-   
-    
-    
-  })
-
+// popup
+let popup__all = document.querySelector(".popup__all");
+let btn1 = document.querySelector(".btn1");
+let form = document.querySelector(".popup")
+btn1.addEventListener("click",()=>{
+  openpopup()
+});
+function openpopup(){
+  popup__all.style.display="flex"
+  popup__all.classList.add("popupanimation");
+ 
   
+  setTimeout(() => {
+    popup__all.classList.remove("popupanimation")
+    popup__all.style.backgroundColor= "rgba(0, 0, 0, 0.486)";
+   
+  }, 200);
+}
+
+
+function closepopup(){
+  popup__all.style.backgroundColor= "unset";
+  popup__all.classList.add("popuphidden");
+ 
+  
+  setTimeout(() => {
+    popup__all.classList.remove("popuphidden");
+    popup__all.style.display="none";
+   
+  }, 150);
+}
+
+document.body.addEventListener("click",(event)=>{
+        if(event.target.className=="popup__all"){
+          closepopup()
+        }
+})
+
+
+
+
+
 
 
   

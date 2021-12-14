@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../assets/css/about.css">
-    <title>About</title>
+    <title>Haqqımızda</title>
 </head>
 
 <body>
@@ -203,6 +203,42 @@
         </div>
     </section>
 
+ <!-- popup -->
+ <div class="popup__all">
+    <form class="popup">
+     <h1>Bizə yazın</h1>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+     
+     <div class="popup-inputs">
+         <input type="text" placeholder="Ad"> <input type="text" placeholder="Soyad">
+     </div> 
+     <div class="popup-inputs">
+         <input type="email" placeholder="Email"> <input type="number" placeholder="Telefon">
+         <div class="label"><img src="../assets/img/icons/icon.svg" alt="icon">text@example.com</div>
+     </div>
+     <div class="dropdown">
+      <div class="select">
+        <span class="label">Proqramı seçin</span>
+        <img src="../assets/img/icons/Vectordown.svg" alt="">
+      </div>
+      <input type="hidden" name="gender">
+      <ul class="dropdown-menu">
+        <li>HTML</li>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>C#</li>
+      </ul>
+    </div>
+     <div class="popup-textarea">
+         <textarea placeholder="Mesajınız" class="popup-input" name="text"  cols="30" rows="10"></textarea>  
+     </div>
+     <div class="popup-submit">
+         <input type="submit" value="Göndər">
+     </div>
+  </form>
+  </div>
+      
+
 
     <!-- footer -->
     <footer>
@@ -242,6 +278,7 @@
 
     <script src="../assets/vendor/jquery-3.6.0.min.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

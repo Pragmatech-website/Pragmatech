@@ -11,16 +11,7 @@ var myswiper = new Swiper(".mySwiper", {
     },
   });
 
-  // loader
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-    const wrapper = document.querySelector(".loader");
-    wrapper.classList.add("wrapper-finish");
-    
-  }, 1000);
-  });
-
+ 
 
 
 // navbarscroll
@@ -69,16 +60,10 @@ window.onscroll = function() {
 
 }
 
-// search
-  $(".btn").click(function () {
-    $(".input").toggleClass("active").focus;
-    $(this).toggleClass("animate");
-    $(".input").val("");
-    $(".menu ul").toggleClass("menu_ul_active")
-    $(".btn1").toggleClass("btn1-animate")
-    
-    
-  });
+
+
+ 
+
 
   
   

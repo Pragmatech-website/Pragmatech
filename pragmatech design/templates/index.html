@@ -303,18 +303,65 @@
           <input class="form__email" placeholder="Email" type="email">
           <div class="label"><img src="../assets/img/icons/icon.svg" alt="icon">text@example.com</div>
         </div>
-        <select class="program__select" name="programs" id="programs">
-          <option value="HTML">HTML</option>
-          <option value="CSS">CSS</option>
-          <option value="JS">JS</option>
-          <option value="C#">C#</option>
-        </select>
+
+        <!-- dropdown -->
+        <div class="dropdown">
+          <div class="select">
+            <span class="label">Proqramı seçin</span>
+            <img src="../assets/img/icons/Vectordown.svg" alt="">
+          </div>
+          <input type="hidden" name="program">
+          <ul class="dropdown-menu">
+            <li id="male">HTML</li>
+            <li id="female">Css</li>
+            <li id="male">Javascript</li>
+            <li id="female">C#</li>
+          </ul>
+        </div>
+
+        
         
         <input class="submit" value="Müraciət et" type="submit">
       </form>
     </div>
 
   </section>
+
+   <!-- popup -->
+<div class="popup__all">
+  <form class="popup">
+   <h1>Bizə yazın</h1>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+   
+   <div class="popup-inputs">
+       <input type="text" placeholder="Ad"><input type="text" placeholder="Soyad">
+   </div> 
+   <div class="popup-inputs">
+       <input type="email" placeholder="Email"><input type="number" placeholder="Telefon">
+       <div class="label"><img src="../assets/img/icons/icon.svg" alt="icon">text@example.com</div>
+   </div>
+   <div class="dropdown">
+    <div class="select">
+      <span class="label">Proqramı seçin</span>
+      <img src="../assets/img/icons/Vectordown.svg" alt="">
+    </div>
+    <input type="hidden" name="gender">
+    <ul class="dropdown-menu">
+      <li>HTML</li>
+      <li>Css</li>
+      <li>Javascript</li>
+      <li>C#</li>
+    </ul>
+  </div>
+   <div class="popup-textarea">
+       <textarea placeholder="Mesajınız" class="popup-input" name="text"  cols="30" rows="10"></textarea>  
+   </div>
+   <div class="popup-submit">
+       <input type="submit" value="Göndər">
+   </div>
+</form>
+</div>
+    
 
   <!-- footer -->
   <footer>
@@ -349,6 +396,7 @@
     <script src="../assets/vendor/jquery-3.6.0.min.js"></script>
     <script src="../assets/vendor/swiper-bundle.min.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/common.js"></script>
 </body>
 </html>
     

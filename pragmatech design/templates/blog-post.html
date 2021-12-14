@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog-Post</title>
     <link rel="stylesheet" href="../assets/css/blog-post.css">
     <script src="https://kit.fontawesome.com/3113ae62d0.js" crossorigin="anonymous"></script>
+    <title>Bloq</title>
 </head>
 <body>
 
@@ -199,6 +199,44 @@
 <!-- blog-box end -->
     </div>
 
+
+ <!-- popup -->
+ <div class="popup__all">
+    <form class="popup">
+     <h1>Bizə yazın</h1>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+     
+     <div class="popup-inputs">
+         <input type="text" placeholder="Ad"> <input type="text" placeholder="Soyad">
+     </div> 
+     <div class="popup-inputs">
+         <input type="email" placeholder="Email"> <input type="number" placeholder="Telefon">
+         <div class="label"><img src="../assets/img/icons/icon.svg" alt="icon">text@example.com</div>
+     </div>
+     <div class="dropdown">
+      <div class="select">
+        <span class="label">Proqramı seçin</span>
+        <img src="../assets/img/icons/Vectordown.svg" alt="">
+      </div>
+      <input type="hidden" name="gender">
+      <ul class="dropdown-menu">
+        <li>HTML</li>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>C#</li>
+      </ul>
+    </div>
+     <div class="popup-textarea">
+         <textarea placeholder="Mesajınız" class="popup-input" name="text"  cols="30" rows="10"></textarea>  
+     </div>
+     <div class="popup-submit">
+         <input type="submit" value="Göndər">
+     </div>
+  </form>
+  </div>
+      
+
+
      <!-- footer -->
  <footer>
     <div class="footer__up">
@@ -231,5 +269,6 @@
   <!-- footer end -->
   <script src="../assets/vendor/jquery-3.6.0.min.js"></script>
   <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
