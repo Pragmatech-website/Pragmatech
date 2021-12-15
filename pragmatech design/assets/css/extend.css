@@ -126,6 +126,7 @@ table {
   0% {
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
+    opacity: 0;
   }
   100% {
     -webkit-transform: scale(1);
@@ -137,6 +138,7 @@ table {
   0% {
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
+    opacity: 0;
   }
   100% {
     -webkit-transform: scale(1);
@@ -152,6 +154,7 @@ table {
   100% {
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
+    opacity: 0;
   }
 }
 
@@ -163,6 +166,7 @@ table {
   100% {
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
+    opacity: 0;
   }
 }
 
@@ -304,5 +308,11 @@ table {
   100% {
     -webkit-transform: translateX(40%) scale(0.4);
             transform: translateX(40%) scale(0.4);
+  }
+}
+
+@media only screen and (max-device-height: 500px) {
+  html {
+    font-size: 10px !important;
   }
 }

@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     wrapper.classList.add("wrapper-finish");
     wrapper.classList.remove("wrapper-animation")
-  }, 1500);
+  }, 1000);
   
   
 

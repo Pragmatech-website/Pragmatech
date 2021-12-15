@@ -11,7 +11,10 @@ body {
     font-family: $font;
     
 }
-
+::selection {
+    background-color: $green;
+    color: #fff;
+}
 .loader {
     @extend %loader;
 }
@@ -19,7 +22,7 @@ body {
     display: none;
  }
  .wrapper-animation{
-     animation: wrapperanima 1.5s linear;
+     animation: wrapperanima 1s linear;
  }
  @keyframes wrapperanima{
      0%{

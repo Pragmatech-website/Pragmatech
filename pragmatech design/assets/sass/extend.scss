@@ -5,9 +5,10 @@
 
 // loading
 %loader{
-    
-    background-image: url("../img/style_css_img/green-5443435_960_720.webp");
-    background-size: cover;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -18,14 +19,11 @@
     right: 0;
     z-index:99999999;
   .loader__wrapper {
+    position: relative;
     width: 250px;
     height: 50px;
     line-height: 50px;
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     font-family: helvetica, arial, sans-serif;
     text-transform: uppercase;
     font-weight: 900;
@@ -135,6 +133,7 @@
     display: flex;
     align-items: center;
     z-index: 5;
+    
     
     position: relative;
 
@@ -392,6 +391,12 @@
                 width: 23.125rem;
                 height: 23.938rem;
                 background-color: white;
+                transition: 0.3s;
+                &:hover{
+                    transition: 0.3s;
+                    box-shadow: rgba(65, 224, 99, 0.3) -5px 5px, rgba(65, 224, 99, 0.2) -10px 10px, rgba(65, 224, 99, 0) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
+                    border: none;
+                }
                 
                 
                 
@@ -485,7 +490,7 @@
         animation:anima 0.55s linear;
     }
     @keyframes anima{
-        0%{transform:scale(0.4)}
+        0%{transform:scale(0.4);opacity: 0;}
         100%{transform:scale(1)}
         
     }
@@ -495,7 +500,7 @@
     }
     @keyframes animareduce{
         0%{transform:scale(1)}
-        100%{transform:scale(0.4)}
+        100%{transform:scale(0.4);opacity: 0;}
 
     }
 }
@@ -630,7 +635,7 @@
     
     .popup {
         width: 40rem;
-        height: 42.625rem;
+        height: 40.625rem;
         background-color: white;
        display: flex;
        flex-direction: column;
@@ -757,7 +762,7 @@
         .popup-submit {
             display: flex;
             justify-content: center;
-            margin-top: 3rem;
+            margin-top: 2rem;
             input {
                 background-color: $green;
                 width: 16.25rem;
@@ -879,5 +884,12 @@
             }
 
         }
+    }
+}
+
+
+@media only screen  and (max-device-height:500px){
+    html{
+        font-size: 10px !important;
     }
 }

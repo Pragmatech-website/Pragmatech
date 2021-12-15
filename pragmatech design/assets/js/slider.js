@@ -50,10 +50,7 @@ wrapper__active.addEventListener("click",()=>{
   if(main__active.style.display=="" || main__active.style.display=="none" ){
     lastitemfunc()
   }
-  else{
-    
-    console.log(main__active.style.display)
-  }
+  
   function lastitemfunc(){
    
   indicator__item.style.transform="translateX(322%)"
@@ -83,11 +80,4 @@ wrapper__active.addEventListener("click",()=>{
   },500);
 
   }
-  
-
- 
-
- 
-  
-  
 })

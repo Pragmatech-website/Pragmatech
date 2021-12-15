@@ -5,10 +5,14 @@
 @import "./extend.scss";
 body {
     font-family: $font;
+
     
 }
 
-
+::selection {
+    background-color: $green;
+    color: #fff;
+}
 
 
 .loader{
@@ -18,7 +22,7 @@ body {
     display: none;
  }
  .wrapper-animation{
-     animation: wrapperanima 1.5s linear;
+     animation: wrapperanima 1s linear;
  }
  @keyframes wrapperanima{
      0%{
@@ -36,6 +40,7 @@ header {
     top: 0;
     z-index: 9999;
     background-color: $navgrey;
+    border-bottom:1px solid #ccccccc7;
     .navbar {
         @extend %navbar;
         i {

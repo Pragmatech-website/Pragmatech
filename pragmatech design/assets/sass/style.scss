@@ -10,8 +10,13 @@ html,body{
     width: 100%;
     height: fit-content;
     font-family: $font;
+   
     
    
+}
+::selection {
+    background-color: $green;
+    color: #fff;
 }
 
 .loader{
@@ -21,7 +26,7 @@ html,body{
     display: none;
  }
  .wrapper-animation{
-     animation: wrapperanima 1.5s linear;
+     animation: wrapperanima 1s linear;
  }
  @keyframes wrapperanima{
      0%{
@@ -39,6 +44,7 @@ header{
     top: 0;
     z-index: 9999;
     background-color: unset;
+    border-bottom: 0.1% solid #cccccc;
     
     
 }
@@ -170,6 +176,7 @@ header{
         justify-content: space-around;
         align-items: center;
         z-index: 9;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         .css{
             width: 44px;
             height: 50px;
@@ -178,6 +185,8 @@ header{
 }
 
 // groups section
+
+
 .active__groups{
     width: 73.125rem;
     height: max-content;
@@ -224,7 +233,7 @@ header{
         }
         p{
             color: $gray82;
-            font-weight: 400;
+            font-weight:$weight400;
             font-size: $font-size14;
             font-style: normal;
             line-height: $line-height17-5;
@@ -259,11 +268,14 @@ header{
         width: 16.875rem;
         height: 16rem;
         border: 1px solid $greystroke;
-        transition:all 0.5s;
+        transition:all 0.5s linear;
+        
+        
         &:hover{
-            box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-            transform:scale(1.02);
+            box-shadow: rgba(65, 224, 99, 0.4) -5px 5px, rgba(65, 224, 99, 0.3) -10px 10px, rgba(65, 224, 99, 0.1) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
+            border: none;
             transition: all 0.3s linear;
+            
             
             
         }
@@ -289,7 +301,7 @@ header{
             font-size: $font-size18;
             font-style: normal;
             line-height: $line-height23-4;
-
+            
         }
         p{
             color:$gray82;
@@ -404,6 +416,7 @@ header{
         grid-column-start: 2;
         grid-column-end: 4;
         margin-bottom: 0;
+        
         .box-text{
             width: 18.688rem;
             height: 16.875rem;
