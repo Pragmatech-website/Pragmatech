@@ -1708,7 +1708,7 @@ header {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
-  gap: 30px;
+  gap: 1.875rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1915,6 +1915,120 @@ header {
   margin-top: -0.938rem;
 }
 
+.bg__border {
+  position: absolute;
+  background-color: red;
+  z-index: 10;
+}
+
+.bg__border:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 99%;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.bg__border:nth-child(3) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.bg__border:nth-child(4) {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 99%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.bg__border:nth-child(5) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.bg__border__animation_1 {
+  -webkit-transform-origin: bottom !important;
+          transform-origin: bottom !important;
+  -webkit-transform: scaleY(1) !important;
+          transform: scaleY(1) !important;
+  -webkit-transition: -webkit-transform 0.5s !important;
+  transition: -webkit-transform 0.5s !important;
+  transition: transform 0.5s !important;
+  transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+.bg__border__animation_2 {
+  -webkit-transform-origin: left !important;
+          transform-origin: left !important;
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-transition: -webkit-transform 0.5s !important;
+  transition: -webkit-transform 0.5s !important;
+  transition: transform 0.5s !important;
+  transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+.bg__border__animation_3 {
+  -webkit-transform-origin: top !important;
+          transform-origin: top !important;
+  -webkit-transform: scaleY(1) !important;
+          transform: scaleY(1) !important;
+  -webkit-transition: -webkit-transform 0.5s !important;
+  transition: -webkit-transform 0.5s !important;
+  transition: transform 0.5s !important;
+  transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+.bg__border__animation_4 {
+  -webkit-transform-origin: right !important;
+          transform-origin: right !important;
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-transition: -webkit-transform 0.5s !important;
+  transition: -webkit-transform 0.5s !important;
+  transition: transform 0.5s !important;
+  transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+.form__item {
+  position: relative;
+}
+
 .help {
   width: 100%;
   height: 27.813rem;
@@ -1934,6 +2048,7 @@ header {
   height: 22.688rem;
   position: relative;
   margin-top: 2.563rem;
+  color: #b84949;
 }
 
 .help__question img {
@@ -1986,7 +2101,9 @@ header {
 
 .help__question p {
   width: 21.5rem;
-  height: 4.375rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   margin-left: 8.063rem;
   margin-top: 3.688rem;
   text-align: justify;
@@ -2035,6 +2152,7 @@ header {
   padding-left: 1.375rem;
   padding-bottom: 0.938rem;
   line-height: 1.231rem;
+  position: relative;
 }
 
 .help__form form .form__up input.form__name::-webkit-input-placeholder {

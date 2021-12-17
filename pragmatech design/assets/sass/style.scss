@@ -342,7 +342,7 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 1.875rem;
     flex-wrap: wrap;
 
     .blog__posts__main{
@@ -416,7 +416,7 @@ header{
         grid-column-start: 2;
         grid-column-end: 4;
         margin-bottom: 0;
-        
+
         .box-text{
             width: 18.688rem;
             height: 16.875rem;
@@ -520,6 +520,84 @@ header{
 }
 
 // help
+
+
+.bg__border{
+    position: absolute;
+    
+    background-color: red;
+    z-index: 10;
+}
+ .bg__border:nth-child(2){
+    top: 0;
+    left: 0;
+    width:2px;
+    height: 99%;
+    transform-origin:top;
+    transition: transform 0.5s;
+    transform:scaleY(0)
+
+    
+}
+.bg__border:nth-child(3){
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 2px;
+    transform-origin:right;
+    transition: transform 0.5s;
+    transform:scaleX(0)
+
+    
+    
+}
+.bg__border:nth-child(4){
+    top: 0;
+    right: 0;
+    width:2px;
+    height: 99%;
+    transform-origin:bottom;
+    transition: transform 0.5s;
+    transform:scaleY(0)
+
+    
+}
+.bg__border:nth-child(5){
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height: 2px;
+    transform-origin:left;
+    transition: transform 0.5s;
+    transform:scaleX(0)
+    
+    
+}
+.bg__border__animation_1{
+    transform-origin:bottom !important;
+    transform: scaleY(1) !important;
+    transition: transform 0.5s !important;
+}
+.bg__border__animation_2{
+    transform-origin:left !important;
+    transform: scaleX(1) !important;
+    transition: transform 0.5s !important;
+}
+.bg__border__animation_3{
+    transform-origin:top !important;
+    transform: scaleY(1) !important;
+    transition: transform 0.5s !important;
+}
+.bg__border__animation_4{
+    transform-origin:right !important;
+    transform: scaleX(1) !important;
+    transition: transform 0.5s !important;
+}
+
+.form__item{
+    position: relative;
+}
+
 .help{
     width: 100%;
     height: 27.813rem;
@@ -535,7 +613,7 @@ header{
         height: 22.688rem;
         position: relative;
         margin-top: 2.563rem;
-        
+        color: rgb(184, 73, 73);
         img{
             position: absolute;
             top: 0;
@@ -580,7 +658,7 @@ header{
         }
         p{
             width: 21.5rem;
-            height: 4.375rem;
+            height: max-content;
             margin-left: 8.063rem;
             margin-top: 3.688rem;
             text-align: justify;
@@ -619,10 +697,11 @@ header{
                         padding-left: 1.375rem;
                         padding-bottom:0.938rem ;
                         line-height: $line-height19-7;
+                        position: relative;
                         &::placeholder{
                             color: $placeholdercolor;
                         }
-                        
+                       
                         
                         
                     }

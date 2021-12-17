@@ -155,6 +155,7 @@
 
           </a></div>
           
+          
     </section>
     <!-- plannedgroups -->
     <div class="double__main__all">
@@ -299,25 +300,32 @@
     <div class="help__form">
       <form action="">
         <div class="form__up">
-          <input class="form__name" placeholder="Ad" type="text">  <input class="form__surname" placeholder="Soyad" type="text">
+          <div class="form__item" ><input  class="form__name"required placeholder="Ad" type="text"><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span></div> 
+          <div class="form__item"><input class="form__surname" required placeholder="Soyad" type="text"><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span></div>
         </div>
         <div class="form__down">
-          <input class="form__email" placeholder="Email" type="email">
+          <div class="form__item">
+          <input class="form__email"required placeholder="Email" type="email">
+          <span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span>
+        </div>
           <div class="label"><img src="../assets/img/icons/icon.svg" alt="icon">text@example.com</div>
+          
         </div>
 
         <!-- dropdown -->
         <div class="dropdown">
-          <div class="select">
+          
+          <div class="select  form__item">
+            
             <span class="label">Proqramı seçin</span>
             <img src="../assets/img/icons/Vectordown.svg" alt="">
           </div>
           <input type="hidden" name="program">
           <ul class="dropdown-menu">
-            <li>HTML</li>
-            <li>Css</li>
-            <li>Javascript</li>
-            <li>C#</li>
+            <li value="HTML">HTML</li>
+            <li value="Css">Css</li>
+            <li value="Javascript">Javascript</li>
+            <li value="C#">C#</li>
           </ul>
         </div>
 
