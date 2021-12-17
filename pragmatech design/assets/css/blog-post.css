@@ -1148,6 +1148,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 99999;
+  border-bottom: 1px solid #ccccccc7;
 }
 
 header .navbar i {
@@ -1381,6 +1382,128 @@ header .navbar ul li:nth-child(3) span {
       flex-wrap: wrap;
   width: 73.125rem;
   margin: 0 auto;
+}
+
+.popup__all .bg__border {
+  position: absolute;
+  background-color: red;
+  z-index: 4;
+}
+
+.popup__all .bg__border:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 99%;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.popup__all .bg__border:nth-child(3) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.popup__all .bg__border:nth-child(4) {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 99%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.popup__all .bg__border:nth-child(5) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.popup__all .bg__border__animation_1 {
+  -webkit-transform-origin: bottom !important;
+          transform-origin: bottom !important;
+  -webkit-transform: scaleY(1) !important;
+          transform: scaleY(1) !important;
+  -webkit-transition: -webkit-transform 0.5s !important;
+  transition: -webkit-transform 0.5s !important;
+  transition: transform 0.5s !important;
+  transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+.popup__all .bg__border__animation_2 {
+  -webkit-transform-origin: left !important;
+          transform-origin: left !important;
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-transition: -webkit-transform 0.5s !important;
+  transition: -webkit-transform 0.5s !important;
+  transition: transform 0.5s !important;
+  transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+.popup__all .bg__border__animation_3 {
+  -webkit-transform-origin: top !important;
+          transform-origin: top !important;
+  -webkit-transform: scaleY(1) !important;
+          transform: scaleY(1) !important;
+  -webkit-transition: -webkit-transform 0.5s !important;
+  transition: -webkit-transform 0.5s !important;
+  transition: transform 0.5s !important;
+  transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+.popup__all .bg__border__animation_4 {
+  -webkit-transform-origin: right !important;
+          transform-origin: right !important;
+  -webkit-transform: scaleX(1) !important;
+          transform: scaleX(1) !important;
+  -webkit-transition: -webkit-transform 0.5s !important;
+  transition: -webkit-transform 0.5s !important;
+  transition: transform 0.5s !important;
+  transition: transform 0.5s, -webkit-transform 0.5s !important;
+}
+
+.popup__all .dropdown {
+  z-index: 5;
+}
+
+.popup__all .form__item {
+  position: relative;
+}
+
+.popup__all .name__field, .popup__all .surname__field, .popup__all .email__field, .popup__all .number__field, .popup__all .textarea {
+  position: relative;
 }
 
 footer {

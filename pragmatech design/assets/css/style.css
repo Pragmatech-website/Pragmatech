@@ -1377,7 +1377,6 @@ header {
   top: 0;
   z-index: 9999;
   background-color: unset;
-  border-bottom: 0.1% solid #cccccc;
 }
 
 .mySwiper {
@@ -1918,7 +1917,7 @@ header {
 .bg__border {
   position: absolute;
   background-color: red;
-  z-index: 10;
+  z-index: 4;
 }
 
 .bg__border:nth-child(2) {
@@ -2025,7 +2024,15 @@ header {
   transition: transform 0.5s, -webkit-transform 0.5s !important;
 }
 
+.dropdown {
+  z-index: 5;
+}
+
 .form__item {
+  position: relative;
+}
+
+.name__field, .surname__field, .email__field, .number__field, .textarea {
   position: relative;
 }
 

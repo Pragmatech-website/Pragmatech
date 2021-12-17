@@ -38,6 +38,7 @@ header {
     top: 0;
     z-index: 99999;
     background-color: $navgrey;
+    border-bottom: 1px solid #ccccccc7;
     .navbar {
         @extend %navbar;
         i {
@@ -287,6 +288,15 @@ header {
     
 }
 .popup__all{
+    @include formanimation;
+.form__item{
+    position: relative;
+}
+
+.name__field,.surname__field,.email__field,.number__field,.textarea{
+    position: relative;
+
+}
     @extend %popup__all;
 }
 

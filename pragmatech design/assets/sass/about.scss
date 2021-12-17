@@ -329,6 +329,15 @@ header {
 }
 
 .popup__all{
+    @include formanimation;
+.form__item{
+    position: relative;
+}
+
+.name__field,.surname__field,.email__field,.number__field,.textarea{
+    position: relative;
+
+}
     @extend %popup__all;
 }
 

@@ -39,6 +39,7 @@ header{
     top: 0;
     width: 100%;
     z-index: 99999;
+    border-bottom: 1px solid #ccccccc7;
 
     .navbar{
         @extend %navbar;
@@ -233,6 +234,15 @@ header{
 // blog-box end
 
 .popup__all{
+    @include formanimation;
+.form__item{
+    position: relative;
+}
+
+.name__field,.surname__field,.email__field,.number__field,.textarea{
+    position: relative;
+
+}
     @extend %popup__all;
 }
 
