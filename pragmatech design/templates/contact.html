@@ -98,14 +98,14 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             <div class="sendbox-line"></div>
             <div class="sendbox-inputs">
-                <input type="text" placeholder="Ad"> <input type="text" placeholder="Soyad">
+                <div class="sendbox__name"><input required type="text" placeholder="Ad"><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span></div> <div class="sendbox__surname"><input required type="text" placeholder="Soyad"><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span></div> 
             </div> 
             <div class="sendbox-inputs">
-                <input type="email" placeholder="Email"> <input type="number" placeholder="Telefon">
+             <div class="sendbox__email"><input  required type="email" placeholder="Email"><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span></div>   <div class="sendbox__number"><input required type="tel" placeholder="Telefon"><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span></div>
                 <div class="label"><img src="../assets/img/icons/icon.svg" alt="icon">text@example.com</div>
             </div>
             <div class="sendbox-textarea">
-                <input type="text" placeholder="mesajiniz" class="textbox-input">
+              <textarea required placeholder="Mesajınız" class="textbox-input" name="" id="" cols="30" rows="10"></textarea><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span>
             </div>
             <div class="sendbox-submit">
                 <input type="submit" value="Göndər">
@@ -187,6 +187,7 @@
   <script src="../assets/vendor/jquery-3.6.0.min.js"></script>
   <script  src="../assets/js/common.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/contact_form.js"></script>
 
 </body>
 </html>

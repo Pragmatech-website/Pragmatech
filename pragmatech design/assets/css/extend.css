@@ -122,6 +122,12 @@ table {
   transition: 0.5s;
 }
 
+@media only screen and (max-device-width: 990px) {
+  .btn1 {
+    display: none;
+  }
+}
+
 @-webkit-keyframes anima {
   0% {
     -webkit-transform: scale(0.4);
@@ -308,11 +314,5 @@ table {
   100% {
     -webkit-transform: translateX(40%) scale(0.4);
             transform: translateX(40%) scale(0.4);
-  }
-}
-
-@media only screen and (max-device-height: 500px) {
-  html {
-    font-size: 10px !important;
   }
 }

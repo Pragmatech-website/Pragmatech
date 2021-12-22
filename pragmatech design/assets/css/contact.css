@@ -213,6 +213,14 @@ header .navbar {
   position: relative;
 }
 
+header .navbar .logoblack {
+  display: none;
+}
+
+header .navbar .burger {
+  display: none;
+}
+
 header .navbar .menu {
   margin-left: 10.625rem;
   width: 35.75rem;
@@ -255,6 +263,8 @@ header .navbar .menu ul li a {
   line-height: 1.156rem;
   font-size: 0.938rem;
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
 header .navbar .menu ul li a:hover {
@@ -383,6 +393,44 @@ header .navbar .btn1-animate {
   margin-left: 5.563rem;
 }
 
+@media only screen and (max-device-width: 990px) {
+  header .navbar {
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    padding: 0 28.8px 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 1px solid #ccccccc7;
+  }
+  header .navbar .logoblack {
+    display: block;
+  }
+  header .navbar a:nth-child(1) {
+    display: none;
+  }
+  header .navbar .burger {
+    display: block;
+    cursor: pointer;
+  }
+  header .navbar .menu {
+    display: none;
+  }
+  header .navbar .wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  header .navbar {
+    height: 4.375rem !important;
+  }
+}
+
 .btn1 {
   text-decoration: none;
   position: absolute;
@@ -415,6 +463,12 @@ header .navbar .btn1-animate {
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media only screen and (max-device-width: 990px) {
+  .btn1 {
+    display: none;
+  }
 }
 
 @-webkit-keyframes anima {
@@ -1442,6 +1496,8 @@ header .navbar ul li:nth-child(5) span {
   padding-left: 1rem;
   padding-bottom: 5.938rem;
   line-height: 1.231rem;
+  resize: none;
+  overflow: hidden;
 }
 
 .head .sendbox-all .contact-sendbox .sendbox-textarea .textbox-input::-webkit-input-placeholder {
@@ -1499,13 +1555,13 @@ header .navbar ul li:nth-child(5) span {
   transition: 0.5s;
 }
 
-.popup__all .bg__border {
+.bg__border {
   position: absolute;
   background-color: red;
   z-index: 4;
 }
 
-.popup__all .bg__border:nth-child(2) {
+.bg__border:nth-child(2) {
   top: 0;
   left: 0;
   width: 2px;
@@ -1520,7 +1576,7 @@ header .navbar ul li:nth-child(5) span {
           transform: scaleY(0);
 }
 
-.popup__all .bg__border:nth-child(3) {
+.bg__border:nth-child(3) {
   top: 0;
   left: 0;
   width: 100%;
@@ -1535,7 +1591,7 @@ header .navbar ul li:nth-child(5) span {
           transform: scaleX(0);
 }
 
-.popup__all .bg__border:nth-child(4) {
+.bg__border:nth-child(4) {
   top: 0;
   right: 0;
   width: 2px;
@@ -1550,7 +1606,7 @@ header .navbar ul li:nth-child(5) span {
           transform: scaleY(0);
 }
 
-.popup__all .bg__border:nth-child(5) {
+.bg__border:nth-child(5) {
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1565,7 +1621,7 @@ header .navbar ul li:nth-child(5) span {
           transform: scaleX(0);
 }
 
-.popup__all .bg__border__animation_1 {
+.bg__border__animation_1 {
   -webkit-transform-origin: bottom !important;
           transform-origin: bottom !important;
   -webkit-transform: scaleY(1) !important;
@@ -1576,7 +1632,7 @@ header .navbar ul li:nth-child(5) span {
   transition: transform 0.5s, -webkit-transform 0.5s !important;
 }
 
-.popup__all .bg__border__animation_2 {
+.bg__border__animation_2 {
   -webkit-transform-origin: left !important;
           transform-origin: left !important;
   -webkit-transform: scaleX(1) !important;
@@ -1587,7 +1643,7 @@ header .navbar ul li:nth-child(5) span {
   transition: transform 0.5s, -webkit-transform 0.5s !important;
 }
 
-.popup__all .bg__border__animation_3 {
+.bg__border__animation_3 {
   -webkit-transform-origin: top !important;
           transform-origin: top !important;
   -webkit-transform: scaleY(1) !important;
@@ -1598,7 +1654,7 @@ header .navbar ul li:nth-child(5) span {
   transition: transform 0.5s, -webkit-transform 0.5s !important;
 }
 
-.popup__all .bg__border__animation_4 {
+.bg__border__animation_4 {
   -webkit-transform-origin: right !important;
           transform-origin: right !important;
   -webkit-transform: scaleX(1) !important;
@@ -1609,26 +1665,14 @@ header .navbar ul li:nth-child(5) span {
   transition: transform 0.5s, -webkit-transform 0.5s !important;
 }
 
-.popup__all .dropdown {
+.dropdown {
   z-index: 5;
 }
 
-.popup__all .form__item {
+.sendbox__name, .sendbox__surname, .sendbox__email, .sendbox__number, .sendbox-textarea {
   position: relative;
 }
 
 .popup__all .name__field, .popup__all .surname__field, .popup__all .email__field, .popup__all .number__field, .popup__all .textarea {
   position: relative;
-}
-
-@media only screen and (min-device-width: 992px) and (max-device-width: 1350px) {
-  html {
-    font-size: 12.5px;
-  }
-}
-
-@media only screen and (min-device-width: 1351px) {
-  html {
-    font-size: 16px;
-  }
 }

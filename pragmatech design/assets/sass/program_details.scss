@@ -1,7 +1,8 @@
 @import "./colors.scss";
-@import "./reset.scss";
 @import "./font.scss";
+@import "./reset.scss";
 @import "./extend.scss";
+@import "./breakpoint.scss";
 
 *{
     box-sizing: border-box;
@@ -285,15 +286,4 @@ footer{
     @extend %footer;
     }
 
-    @media only screen and  (max-device-width:1350px){
-        html{
-            font-size: 12.5px;
-        }
-        
-    }
-    
-    @media only screen and (min-device-width:1351px){
-        html{
-            font-size: 16px;
-        }
-    }
+  

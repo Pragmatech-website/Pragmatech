@@ -213,6 +213,14 @@ table {
   position: relative;
 }
 
+.navbar .logoblack {
+  display: none;
+}
+
+.navbar .burger {
+  display: none;
+}
+
 .navbar .menu {
   margin-left: 10.625rem;
   width: 35.75rem;
@@ -255,6 +263,8 @@ table {
   line-height: 1.156rem;
   font-size: 0.938rem;
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
 .navbar .menu ul li a:hover {
@@ -383,6 +393,44 @@ table {
   margin-left: 5.563rem;
 }
 
+@media only screen and (max-device-width: 990px) {
+  .navbar {
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    padding: 0 28.8px 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 1px solid #ccccccc7;
+  }
+  .navbar .logoblack {
+    display: block;
+  }
+  .navbar a:nth-child(1) {
+    display: none;
+  }
+  .navbar .burger {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar .menu {
+    display: none;
+  }
+  .navbar .wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .navbar {
+    height: 4.375rem !important;
+  }
+}
+
 .btn1 {
   text-decoration: none;
   position: absolute;
@@ -415,6 +463,12 @@ table {
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media only screen and (max-device-width: 990px) {
+  .btn1 {
+    display: none;
+  }
 }
 
 @-webkit-keyframes anima {
@@ -1444,16 +1498,4 @@ header {
 
 .popup__all .name__field, .popup__all .surname__field, .popup__all .email__field, .popup__all .number__field, .popup__all .textarea {
   position: relative;
-}
-
-@media only screen and (max-device-width: 1350px) {
-  html {
-    font-size: 12.5px;
-  }
-}
-
-@media only screen and (min-device-width: 1351px) {
-  html {
-    font-size: 16px;
-  }
 }

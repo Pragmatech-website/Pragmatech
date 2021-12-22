@@ -54,6 +54,62 @@ table {
   border-spacing: 0;
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 .loader {
   background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
   display: -webkit-box;
@@ -238,6 +294,14 @@ header .navbar {
   position: relative;
 }
 
+header .navbar .logoblack {
+  display: none;
+}
+
+header .navbar .burger {
+  display: none;
+}
+
 header .navbar .menu {
   margin-left: 10.625rem;
   width: 35.75rem;
@@ -280,6 +344,8 @@ header .navbar .menu ul li a {
   line-height: 1.156rem;
   font-size: 0.938rem;
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
 header .navbar .menu ul li a:hover {
@@ -408,6 +474,44 @@ header .navbar .btn1-animate {
   margin-left: 5.563rem;
 }
 
+@media only screen and (max-device-width: 990px) {
+  header .navbar {
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    padding: 0 28.8px 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 1px solid #ccccccc7;
+  }
+  header .navbar .logoblack {
+    display: block;
+  }
+  header .navbar a:nth-child(1) {
+    display: none;
+  }
+  header .navbar .burger {
+    display: block;
+    cursor: pointer;
+  }
+  header .navbar .menu {
+    display: none;
+  }
+  header .navbar .wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  header .navbar {
+    height: 4.375rem !important;
+  }
+}
+
 .btn1 {
   text-decoration: none;
   position: absolute;
@@ -440,6 +544,12 @@ header .navbar .btn1-animate {
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media only screen and (max-device-width: 990px) {
+  .btn1 {
+    display: none;
+  }
 }
 
 @-webkit-keyframes anima {
@@ -1027,62 +1137,6 @@ footer .footer__down__link i:hover {
   }
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -1508,16 +1562,4 @@ header .navbar ul li:nth-child(3) span {
 
 footer {
   margin-top: 6.25rem;
-}
-
-@media only screen and (min-device-width: 992px) and (max-device-width: 1350px) {
-  html {
-    font-size: 12.5px;
-  }
-}
-
-@media only screen and (min-device-width: 1351px) {
-  html {
-    font-size: 16px;
-  }
 }

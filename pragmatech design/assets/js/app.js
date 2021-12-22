@@ -272,9 +272,143 @@ document.querySelector(".dropdown").addEventListener("focus",()=>{
 
 // form__help__finished
 
+// /////////////////////////responsive design/////////////////////////////////////////
 
+
+// ACTIVE
+let activescrollContainer = document.querySelector(".active__groups__container");
+
+let prev__button = document.querySelectorAll(".arrows__left")
+let next__button = document.querySelectorAll(".arrows__right")
+
+let active__item = document.querySelectorAll(".active__groups__item")
+
+
+
+prev__button[0].addEventListener("click",()=>{
+          activescrollContainer.scrollLeft -=100
+})
+
+var reducescroll
+prev__button[0].addEventListener("pointerdown",(e)=>{
+    reducescroll = setInterval(() => {
+    activescrollContainer.scrollLeft -=100
+  }, 100);
  
+
+})
+
+prev__button[0].addEventListener("pointerup",()=>{
+  clearInterval(reducescroll)
  
+
+})
+
+next__button[0].addEventListener("click",()=>{
+  activescrollContainer.scrollLeft +=100
+})
+
+var reducescroll
+next__button[0].addEventListener("pointerdown",()=>{
+reducescroll = setInterval(() => {
+activescrollContainer.scrollLeft +=100
+}, 100);
+
+
+})
+
+next__button[0].addEventListener("pointerup",()=>{
+clearInterval(reducescroll)
+
+
+})
+
+// planned
+let doublemain = document.querySelector(".double__main");
+
+
+
+prev__button[1].addEventListener("click",()=>{
+        doublemain.scrollLeft -=100
+})
+
+var reducescroll
+prev__button[1].addEventListener("pointerdown",(e)=>{
+  reducescroll = setInterval(() => {
+  doublemain.scrollLeft -=100
+}, 100);
+
+
+})
+
+prev__button[1].addEventListener("pointerup",()=>{
+clearInterval(reducescroll)
+
+
+})
+
+next__button[1].addEventListener("click",()=>{
+doublemain.scrollLeft +=100
+})
+
+var reducescroll
+next__button[1].addEventListener("pointerdown",()=>{
+reducescroll = setInterval(() => {
+doublemain.scrollLeft +=100
+}, 100);
+
+
+})
+
+next__button[1].addEventListener("pointerup",()=>{
+clearInterval(reducescroll)
+
+
+})
+
+// blogposts
+
+let  blog__posts__wrapper = document.querySelector(".blog__posts__wrapper__all")
+
+
+
+prev__button[2].addEventListener("click",()=>{
+        blog__posts__wrapper.scrollLeft -=100
+})
+
+var reducescroll
+prev__button[2].addEventListener("pointerdown",(e)=>{
+  reducescroll = setInterval(() => {
+  blog__posts__wrapper.scrollLeft -=100
+}, 100);
+
+
+})
+
+prev__button[2].addEventListener("pointerup",()=>{
+clearInterval(reducescroll)
+
+
+})
+
+next__button[2].addEventListener("click",()=>{
+blog__posts__wrapper.scrollLeft +=100
+})
+
+var reducescroll
+next__button[2].addEventListener("pointerdown",()=>{
+reducescroll = setInterval(() => {
+blog__posts__wrapper.scrollLeft +=100
+}, 100);
+
+
+})
+
+next__button[2 ].addEventListener("pointerup",()=>{
+clearInterval(reducescroll)
+
+
+})
 
     
       

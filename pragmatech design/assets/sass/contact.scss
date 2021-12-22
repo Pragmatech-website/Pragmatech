@@ -1,8 +1,8 @@
 @import "./colors.scss";
+@import "./font.scss";
 @import "./reset.scss";
 @import "./extend.scss";
-@import "./font.scss";
-
+@import "./breakpoint.scss";
 * {
     box-sizing: border-box;
 }
@@ -226,6 +226,8 @@ header {
             }
         }
     }
+
+  
     .sendbox-all {
         width: 100%;
         height: 39.125rem;
@@ -333,6 +335,8 @@ header {
                     padding-left: 1rem;
                     padding-bottom: 5.938rem;
                     line-height: $line-height19-7;
+                    resize: none;
+                    overflow:hidden;
                     
                     &::placeholder {
                         color: $placeholdercolor;
@@ -367,12 +371,17 @@ header {
     }
 }
 // text and map end
+@include formanimation;
+
+
+.sendbox__name,.sendbox__surname,.sendbox__email,.sendbox__number,.sendbox-textarea{
+    position: relative;
+
+}
+
+
 
 .popup__all{
-    @include formanimation;
-.form__item{
-    position: relative;
-}
 
 .name__field,.surname__field,.email__field,.number__field,.textarea{
     position: relative;
@@ -391,16 +400,3 @@ footer {
     @extend %footer;
 }
 
-@media only screen and (min-device-width:992px) and (max-device-width:1350px){
-    html{
-        font-size: 12.5px;
-    }
-    
-}
-
-
-@media only screen and (min-device-width:1351px){
-    html{
-        font-size: 16px;
-    }
-}
