@@ -1783,7 +1783,7 @@ header .navbar ul li:nth-child(1) span {
 @media only screen and (max-device-width: 480px) {
   #AllAbout .container .summary .back__area .text__data {
     width: 80vw !important;
-    margin-top: 20.2vh !important;
+    margin-top: 90.86vw !important;
     margin-left: 20px !important;
   }
 }
