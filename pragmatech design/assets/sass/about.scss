@@ -7,11 +7,11 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
- 
     font-family: $font;
     
        
 }
+
 html{
 
     @include respond(lgscreen) {
@@ -297,10 +297,12 @@ header {
         width: 73.125rem;
         margin: 0 auto;
         @include respond(laptop){
-            width: 85% !important;
+            width: 100% !important;
+            margin:0 !important;
         }
         @include respond(mobile){
-            width: 90% !important;
+            width: 100% !important;
+           
         }
 
         
@@ -320,29 +322,35 @@ header {
                 width: 31.25rem;
                 height: 13.375rem;
                 object-fit: cover;
-                overflow-x: hidden;
+                
                 @include respond (laptop){
                     width: 100vw !important;
                     height: 300px !important;
-                    margin-left: -8.8% !important;
-                }
-                @include respond (mobile){
                     
-                    margin-left: -5.5% !important;
                 }
+               
             }
             .left__about {
                 width: 31.25rem;
                 margin-top: 5.125rem;
                 margin-right: 10.625rem;
+                *{
+                    overflow-x: unset !important;
+                }
+                
                 @include respond(laptop){
                         width: 100% !important;
                         margin-right: 0px !important;
                 }
                 .left__about--row {
-                    
+                    @include respond(laptop){
+                        width:100% !important;
+                    }
                     .left__text {
-                       
+                        @include respond(laptop){
+                           
+                            width: 100% !important;
+                        }
                         .left__text--title {
                             position: relative;
                             display: flex;
@@ -351,6 +359,9 @@ header {
                             width: 31.258rem;
                             @include respond(laptop){
                             justify-content: flex-start !important;
+                            margin: 0 auto !important;
+                            margin-bottom: 10px !important;
+                            width: 90% !important;
                             }
                             h1{
                                 font-size: $font-size24;
@@ -391,6 +402,12 @@ header {
                             text-align: justify;
                             color: $darkgrey;
                             font-style: normal;
+                            @include respond(laptop){
+                               width: 90% !important;
+                                margin: 0 auto !important;
+                                margin-bottom: 20px !important;
+                                }
+
                         }
                         .left__text--image {
                             margin-bottom: 1.875rem;
@@ -415,17 +432,24 @@ header {
             .right__about {
                 width: 31.25rem;
                 margin-top: 7.5rem;
+                
                 @include respond(laptop){
                     width: 100% !important;
                     margin-right: 0px !important;
                     margin-top: 0px !important;
             }
                 .right__about--row {
-                
+                    
+                    @include respond(laptop){
+                        width:100% !important;
+                    }
                     .right__text {
+                        
                         @include respond(laptop){
                             flex-direction: column;
                             display: flex;
+                            
+                            width: 100% !important;
                            .right__text--image:nth-child(1){
                                order: 1;
                            }
@@ -450,6 +474,9 @@ header {
                             position: relative;
                             @include respond(laptop){
                                 justify-content: flex-start !important;
+                                width:90% !important;
+                                margin: 0 auto !important;
+                                margin-bottom: 10px !important;
                                 }
                             h1{
                                 font-size: $font-size24;
@@ -491,7 +518,11 @@ header {
                             color: $darkgrey;
                             text-align: justify;
                             margin-bottom: 2.389rem;
-                            
+                            @include respond(laptop){
+                                width: 90% !important;
+                                margin: 0 auto !important;
+                                margin-bottom: 20px !important;
+                            }
                         }
                     }
                 }
@@ -516,7 +547,7 @@ header {
    
 
 footer {
-    margin-top: 6.25rem;
+    
     @extend %footer;
 }
 
