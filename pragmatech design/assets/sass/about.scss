@@ -3,11 +3,35 @@
 @import "./reset.scss";
 @import "./extend.scss";
 @import "./breakpoint.scss";
-body {
-    font-family: $font;
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+ 
+    font-family: $font;
+    
+       
+}
+html{
+
+    @include respond(lgscreen) {
+        font-size: 16px;
+        
+  }
+
+    @include respond(desktop) {
+      font-size: 12.7px;
+      
+}
+@include respond(laptop) {
+    font-size: 16px;
     
 }
+   
+
+}
+ 
+
 
 ::selection {
     background-color: $green;
@@ -41,8 +65,13 @@ header {
     z-index: 9999;
     background-color: $navgrey;
     border-bottom:1px solid #ccccccc7;
+    
     .navbar {
         @extend %navbar;
+        a:nth-child(1){
+            display: block !important;
+        }
+      
         i {
             color: $darkgrey;
         }
@@ -76,17 +105,48 @@ header {
     }
 }
 
+ 
+ 
+.mobile__navbar{
+    @extend %mobile__navbar;
+    display: none;
+    transition:0.5s;
+}
+
+.mobile__navbar__active{
+    display:block;
+    animation: navbar__menu__animation 0.5s linear;
+    transition: 0.5s;
+}
+
+@keyframes navbar__menu__animation{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+        
+    }
+    100%{
+        transform:translateX(0%);
+        opacity:1;
+        
+}
+}
 // downmenu
+
 .downmenu {
     width: 100%;
     height: 6.25rem;
     margin-top: 6.625rem;
+    @include respond(laptop){
+        display: none !important;
+    }
     &__wrapper {
         width: 73.125rem;
         height: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
+        
         img {
             margin-right: 1.234rem;
             margin-top: 0.1rem;
@@ -124,11 +184,44 @@ header {
             background-color: $grey;
             justify-content: space-between;
             position: relative;
+            @include respond(laptop){
+                background-color:unset !important;
+                .front__image{
+                    width: 100% !important;
+                    height: 70vw !important;
+                    position: absolute;
+                    top:70px !important;
+                    left: 0;
+                    z-index: -1;
+                }
+                .back__area{
+                   
+                    & .text__data{
+                        margin: 0 auto;
+                        margin-top:530px;
+                        width: 90%!important;
+                        padding: 20px !important;
+                        background-color: $grey;
+                    }
+                }
+            }
+            @include respond(mobile){
+                .back__area{
+                   
+                    & .text__data{
+                        width: 80vw !important;
+                        margin-top:20.2vh !important;
+                        margin-left: 20px !important;
+                        
+                        
+                    }
+                }
+            }
             .back__area {
                 width: 73.125rem;
                 margin: 0 auto;
                 .text {
-                    // background-color: $grey;
+                   
                     .text__data {
                         padding: 7rem 0px;
                         
@@ -140,12 +233,23 @@ header {
                             font-style: normal;
                             display: flex;
                             align-items: center;
+                            color: $darkgrey;
+                            @include respond(laptop){
+                                font-size: $font-size40 !important;
+                            }
+                            @include respond(mobile){
+                                font-size: 37.5px !important;
+                            }
                             .line {
                                 width: 6.375rem;
                                 height: 3px;
                                 background-color: $green;
                                 margin-left: 1.875rem;
                                 margin-top: 0.4rem;
+                                @include respond(mobile){
+                                    width: 41px !important;
+                                    margin-left: 10px !important;
+                                }
                             }
                         }
                         .text__data--about {
@@ -155,6 +259,10 @@ header {
                             font-style: normal;
                             text-align: justify;
                             margin-top:1.875rem ;
+                            color: $darkgrey;
+                            @include respond(mobile){
+                                margin-top: 0  !important;
+                            }
                         }
                     }
                 }
@@ -165,6 +273,13 @@ header {
                 position: absolute;
                 top: 0;
                 right: 0;
+                @include respond(tablet){
+                    height: 90vw  !important;
+                    width: 100% !important;
+                }
+                @include respond(mobile){
+                    height: 88vw  !important;
+                }
                 & img {
                     width: 100%;
                     height: 100%;
@@ -177,33 +292,66 @@ header {
 
 #MainTimeline {
     font-family: $font;
+    
     .container {
-        width: 82%;
-        margin: 0px auto;
+        width: 73.125rem;
+        margin: 0 auto;
+        @include respond(laptop){
+            width: 85% !important;
+        }
+        @include respond(mobile){
+            width: 90% !important;
+        }
+
+        
         .timeline {
             display: flex;
             margin-top: 4.375rem;
             justify-content: center;
+            width: 100%;
             position: relative;
+            @include respond (laptop){
+                    flex-direction: column;
+                    margin-top: 0  !important;
+                    
+            }
+            
             img{
                 width: 31.25rem;
                 height: 13.375rem;
                 object-fit: cover;
+                overflow-x: hidden;
+                @include respond (laptop){
+                    width: 100vw !important;
+                    height: 300px !important;
+                    margin-left: -8.8% !important;
+                }
+                @include respond (mobile){
+                    
+                    margin-left: -5.5% !important;
+                }
             }
             .left__about {
                 width: 31.25rem;
                 margin-top: 5.125rem;
                 margin-right: 10.625rem;
+                @include respond(laptop){
+                        width: 100% !important;
+                        margin-right: 0px !important;
+                }
                 .left__about--row {
                     
                     .left__text {
-                        
+                       
                         .left__text--title {
                             position: relative;
                             display: flex;
                             justify-content: end;
                             margin-bottom: 1.236rem;
                             width: 31.258rem;
+                            @include respond(laptop){
+                            justify-content: flex-start !important;
+                            }
                             h1{
                                 font-size: $font-size24;
                                 font-weight: $weight700;
@@ -215,9 +363,11 @@ header {
                                 width:5rem;
                                 top: 0.5rem;
                                 right: -7.05rem;
-
                                 display: flex;
                                 align-items: center;
+                                @include respond (laptop){
+                                    display: none !important;
+                                }
                                 .rare {
                                     width: 2.813rem;
                                     height: 2px;
@@ -258,13 +408,28 @@ header {
                 right: 0;
                 margin: 0 auto;
                 position: absolute;
+                @include respond(laptop){
+                    display: none !important;
+                }
             }
             .right__about {
                 width: 31.25rem;
                 margin-top: 7.5rem;
+                @include respond(laptop){
+                    width: 100% !important;
+                    margin-right: 0px !important;
+                    margin-top: 0px !important;
+            }
                 .right__about--row {
                 
                     .right__text {
+                        @include respond(laptop){
+                            flex-direction: column;
+                            display: flex;
+                           .right__text--image:nth-child(1){
+                               order: 1;
+                           }
+                        }
                         .right__text--image {
                             margin-bottom: 1.875rem;
                             
@@ -283,6 +448,9 @@ header {
                             align-items: center;
                             margin-bottom: 1.236rem;
                             position: relative;
+                            @include respond(laptop){
+                                justify-content: flex-start !important;
+                                }
                             h1{
                                 font-size: $font-size24;
                                 font-weight: $weight700;
@@ -296,6 +464,10 @@ header {
                                 left: -5.75rem;
                                 display: flex;
                                 align-items: center;
+                                @include respond (laptop){
+                                    display: none !important;
+                                }
+                            
                                 .rare {
                                     width: 2.813rem;
                                     height: 2px;
