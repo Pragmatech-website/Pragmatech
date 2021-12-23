@@ -2231,16 +2231,13 @@ header {
     transition: 0.5s;
     color: white !important;
     cursor: pointer;
+    margin-bottom: 8px !important;
   }
 }
 
 @media only screen and (max-device-width: 480px) {
-  .tabs .tab__dropdown .select {
-    margin: 0 auto !important;
-  }
   .tabs .tab__dropdown-menu li {
     width: 212.733px;
-    margin: 0 auto !important;
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
             justify-content: flex-start !important;
