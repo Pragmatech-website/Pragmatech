@@ -189,6 +189,7 @@ header {
                 .front__image{
                     width: 100% !important;
                     height: 70vw !important;
+                    min-height: 494px;
                     position: absolute;
                     top:70px !important;
                     left: 0;
@@ -199,7 +200,7 @@ header {
                     & .text__data{
                         margin: 0 auto;
                         margin-top:530px;
-                        width: 90%!important;
+                        width: 90% !important;
                         padding: 20px !important;
                         background-color: $grey;
                     }
@@ -209,12 +210,18 @@ header {
                 .back__area{
                    
                     & .text__data{
-                        width: 80vw !important;
+                        
+                        margin: 0 auto !important;
                         margin-top:90.86vw !important;
-                        margin-left: 20px !important;
+                        
                         
                         
                     }
+                }
+            }
+            @media only screen and (max-device-width:380px){
+                .text__data{
+                    width: 95% !important;
                 }
             }
             .back__area {
@@ -327,6 +334,12 @@ header {
                     width: 100vw !important;
                     height: 300px !important;
                     
+                }
+                @include respond (mobile){
+                    height: 240px !important;
+                }
+                @media only screen and (max-device-width:350px){
+                    height:65vw !important ;
                 }
                
             }

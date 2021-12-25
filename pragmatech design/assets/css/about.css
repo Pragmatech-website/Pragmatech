@@ -1766,6 +1766,7 @@ header .navbar ul li:nth-child(1) span {
   #AllAbout .container .summary .front__image {
     width: 100% !important;
     height: 70vw !important;
+    min-height: 494px;
     position: absolute;
     top: 70px !important;
     left: 0;
@@ -1782,9 +1783,14 @@ header .navbar ul li:nth-child(1) span {
 
 @media only screen and (max-device-width: 480px) {
   #AllAbout .container .summary .back__area .text__data {
-    width: 80vw !important;
+    margin: 0 auto !important;
     margin-top: 90.86vw !important;
-    margin-left: 20px !important;
+  }
+}
+
+@media only screen and (max-device-width: 380px) {
+  #AllAbout .container .summary .text__data {
+    width: 95% !important;
   }
 }
 
@@ -1938,6 +1944,18 @@ header .navbar ul li:nth-child(1) span {
   #MainTimeline .container .timeline img {
     width: 100vw !important;
     height: 300px !important;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  #MainTimeline .container .timeline img {
+    height: 240px !important;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  #MainTimeline .container .timeline img {
+    height: 65vw !important;
   }
 }
 

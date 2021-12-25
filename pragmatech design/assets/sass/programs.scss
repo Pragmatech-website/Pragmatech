@@ -212,8 +212,8 @@ span{
             }
         }
         @include respond (mobile){
-            width: 80% !important;
-            margin-left: 20px !important;
+            width: 90% !important;
+            margin-left:0 auto !important;
             margin-top: 247px !important;
             &__wrapper__up{
                 margin-bottom: 0 !important;

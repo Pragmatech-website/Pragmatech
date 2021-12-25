@@ -2034,8 +2034,8 @@ header {
 
 @media only screen and (max-device-width: 480px) {
   .programs__left {
-    width: 80% !important;
-    margin-left: 20px !important;
+    width: 90% !important;
+    margin-left: 0 auto !important;
     margin-top: 247px !important;
   }
   .programs__left__wrapper__up {

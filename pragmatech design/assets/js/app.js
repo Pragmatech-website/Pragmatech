@@ -277,144 +277,202 @@ document.querySelector(".dropdown").addEventListener("focus",()=>{
 
 // ACTIVE
 let activescrollContainer = document.querySelector(".active__groups__container");
+let item__disabled  =document.querySelectorAll(".item__disabled")
 
-let prev__button = document.querySelectorAll(".arrows__left")
-let next__button = document.querySelectorAll(".arrows__right")
-
+let item__wrapper = document.querySelector(".active__groups__item__wrapper")
 let active__item = document.querySelectorAll(".active__groups__item")
 
 
-
-prev__button[0].addEventListener("click",()=>{
-          activescrollContainer.scrollLeft -=100
-})
-
-var reducescroll
-prev__button[0].addEventListener("pointerdown",(e)=>{
-    reducescroll = setInterval(() => {
-    activescrollContainer.scrollLeft -=100
-  }, 100);
- 
-
-})
-
-prev__button[0].addEventListener("pointerup",()=>{
-  clearInterval(reducescroll)
- 
-
-})
-
-next__button[0].addEventListener("click",()=>{
-  activescrollContainer.scrollLeft +=100
-})
-
-var reducescroll
-next__button[0].addEventListener("pointerdown",()=>{
-reducescroll = setInterval(() => {
-activescrollContainer.scrollLeft +=100
-}, 100);
-
-
-})
-
-next__button[0].addEventListener("pointerup",()=>{
-clearInterval(reducescroll)
-
-
-})
-
+// activegroups
+  if(window.innerWidth<=990){
+    for(let i = 0;i<item__disabled.length;i++){
+      item__disabled[i].parentNode.removeChild(item__disabled[i])
+      
+    }
+  }
+$('.responsive').slick({
+    speed: 300,
+    touchThreshold:100,
+    infinite:false,
+    centerMode: false,
+    arrows:true,
+     responsive: [
+    {
+      breakpoint: 9999,
+      settings: "unslick"
+    },
+    {
+      breakpoint: 991,
+      settings: {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+       
+        
+      }
+    },
+    {
+      breakpoint: 860,
+      settings: {
+        slidesToShow: 2.5,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 580,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 350,
+      settings: {
+        slidesToShow: 1.1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+			
 // planned
-let doublemain = document.querySelector(".double__main");
 
-
-
-prev__button[1].addEventListener("click",()=>{
-        doublemain.scrollLeft -=100
-})
-
-var reducescroll
-prev__button[1].addEventListener("pointerdown",(e)=>{
-  reducescroll = setInterval(() => {
-  doublemain.scrollLeft -=100
-}, 100);
-
-
-})
-
-prev__button[1].addEventListener("pointerup",()=>{
-clearInterval(reducescroll)
-
-
-})
-
-next__button[1].addEventListener("click",()=>{
-doublemain.scrollLeft +=100
-})
-
-var reducescroll
-next__button[1].addEventListener("pointerdown",()=>{
-reducescroll = setInterval(() => {
-doublemain.scrollLeft +=100
-}, 100);
-
-
-})
-
-next__button[1].addEventListener("pointerup",()=>{
-clearInterval(reducescroll)
-
-
-})
-
+$('.double__responsive').slick({
+  speed: 300,
+  touchThreshold:100,
+  infinite:false,
+  centerMode: false,
+  arrows:true,
+  
+   responsive: [
+  {
+    breakpoint: 9999,
+    settings: "unslick"
+  },
+  {
+    breakpoint: 991,
+    settings: {
+    slidesToShow: 2.2,
+    slidesToScroll: 1,
+     
+      
+    }
+  },
+  {
+    breakpoint: 860,
+    settings: {
+      slidesToShow: 2.2,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 700,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 640,
+    settings: {
+      slidesToShow: 1.4,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 350,
+    settings: {
+      slidesToShow: 1.1,
+      slidesToScroll: 1
+    }
+  }
+  // You can unslick at a given breakpoint now by adding:
+  // settings: "unslick"
+  // instead of a settings object
+]
+});
+  
 // blogposts
 
-let  blog__posts__wrapper = document.querySelector(".blog__posts__wrapper__all")
-
-
-
-prev__button[2].addEventListener("click",()=>{
-        blog__posts__wrapper.scrollLeft -=100
-})
-
-var reducescroll
-prev__button[2].addEventListener("pointerdown",(e)=>{
-  reducescroll = setInterval(() => {
-  blog__posts__wrapper.scrollLeft -=100
-}, 100);
-
-
-})
-
-prev__button[2].addEventListener("pointerup",()=>{
-clearInterval(reducescroll)
-
-
-})
-
-next__button[2].addEventListener("click",()=>{
-blog__posts__wrapper.scrollLeft +=100
-})
-
-var reducescroll
-next__button[2].addEventListener("pointerdown",()=>{
-reducescroll = setInterval(() => {
-blog__posts__wrapper.scrollLeft +=100
-}, 100);
-
-
-})
-
-next__button[2 ].addEventListener("pointerup",()=>{
-clearInterval(reducescroll)
-
-
-})
-
-    
+$('.blog__responsive').slick({
+  speed: 300,
+  touchThreshold:100,
+  infinite:false,
+  centerMode: false,
+  arrows:true,
+  
+   responsive: [
+  {
+    breakpoint: 9999,
+    settings: "unslick"
+  },
+  {
+    breakpoint: 991,
+    settings: {
+    slidesToShow: 2.8,
+    slidesToScroll: 1,
+     
       
- 
-      
-    
+    }
+  },
+  {
+    breakpoint: 860,
+    settings: {
+      slidesToShow: 2.5,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 750,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 640,
+    settings: {
+      slidesToShow: 1.5,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1.3,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 390,
+    settings: {
+      slidesToShow: 1.1,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 350,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }
+  // You can unslick at a given breakpoint now by adding:
+  // settings: "unslick"
+  // instead of a settings object
+]
+});
+
+
   
   
 
