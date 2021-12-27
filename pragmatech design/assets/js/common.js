@@ -467,13 +467,9 @@ popup__label.style.color="#C4C4C4";
 
 
 for(let inputindex = 0;inputindex < inputs.length;inputindex++){
-  inputs[inputindex].addEventListener("click",(e)=>{
-    e.preventDefault()
-    $('.popup').bind('touchmove');
-  })
+  $(inputs[inputindex]).unbind('touchmove')
+
 }
-
-
 
   
   
