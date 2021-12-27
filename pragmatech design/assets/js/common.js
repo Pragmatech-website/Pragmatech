@@ -53,6 +53,14 @@ let x__icon = document.querySelector(".x__icon")
 let navbar__menu = document.querySelector(".mobile__navbar")
 let popupicon = document.querySelector(".header .x__icon")
 let mobile__navbar__btn = document.querySelector(".mobile__navbar .btn1")
+let inputs = document.querySelectorAll("input")
+
+for(let inputindex = 0;inputindex <= inputs.length;inputindex++){
+  $(inputs[inputindex]).focus((e) => {
+    e.preventDefault();
+    e.target.focus({preventScroll: false});
+  })
+}
 $('.popup').bind('touchmove');
 burger.addEventListener("click",()=>{
   navbar__menu.classList.add("mobile__navbar__active")
@@ -84,8 +92,13 @@ let btn1 = document.querySelectorAll(".btn1");
 let form = document.querySelector(".popup")
 for(let fixedindex = 0; fixedindex< btn1.length;fixedindex++){
 btn1[fixedindex].addEventListener("click",()=>{
+  if(fixedindex==2){
+    document.body.style.overflow="hidden"
+  }
   openpopup()
 });}
+
+
 function openpopup(){
   popup__all.style.display="flex"
   popup__all.classList.add("popupanimation");
