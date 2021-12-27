@@ -477,6 +477,9 @@ span{
     height: fit-content;
     margin-top: 3.063rem;
     margin-bottom: 7rem;
+    .firstbox{
+        display: none;
+    }
     @include respond(laptop){
         &__main__box{
             width:85% !important;
