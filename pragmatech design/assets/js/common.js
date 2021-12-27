@@ -160,7 +160,7 @@ name__field.addEventListener('focusout', function(){
   }}
 
   name__field.addEventListener("focus",()=>{
-
+    
     $('.popup').bind('touchmove');
     if(name__field.checkValidity()==true){
       
@@ -200,7 +200,12 @@ name__field.addEventListener("input",()=>{
         }}
 
 })
-
+name__field.addEventListener("click",()=>{
+  name__field.style.backgroundColor="pink"
+})
+name__field.addEventListener("blur",()=>{
+  name__field.style.backgroundColor="blue"
+})
 // surnameform validation
 
 surname__field.addEventListener('focusout', function(){
@@ -456,8 +461,8 @@ document.querySelector(".popup-submit").addEventListener("click",(e)=>{
 });
 document.querySelector(".popup .dropdown").addEventListener("focus",()=>{
 
-document.querySelector(".popup .dropdown").style.backgroundColor="white";
-popup__label.style.color="#C4C4C4";
+          document.querySelector(".popup .dropdown").style.backgroundColor="white";
+          popup__label.style.color="#C4C4C4";
 
 })
 
@@ -466,10 +471,7 @@ popup__label.style.color="#C4C4C4";
 
 
 
-for(let inputindex = 0;inputindex < inputs.length;inputindex++){
-  $(inputs[inputindex]).unbind('touchmove')
 
-}
 
   
   
