@@ -153,7 +153,7 @@ name__field.addEventListener('focusout', function(){
 
   name__field.addEventListener("focus",()=>{
 
-  
+    $('.popup').bind('touchmove');
     if(name__field.checkValidity()==true){
       
       for(let borderindex=0; borderindex<4;borderindex++){
@@ -176,6 +176,7 @@ name__field.addEventListener('focusout', function(){
 }); 
 
 name__field.addEventListener("input",()=>{
+  $('.popup').bind('touchmove');
         if(name__field.checkValidity()==true){
           for(let borderindex=0; borderindex<4;borderindex++){
             name__field__bg__border[borderindex].style.backgroundColor="#41E063"
@@ -209,7 +210,7 @@ surname__field.addEventListener('focusout', function(){
   }}
 
   surname__field.addEventListener("focus",()=>{
-
+    $('.popup').bind('touchmove');
   
     if(surname__field.checkValidity()==true){
       
@@ -233,6 +234,7 @@ surname__field.addEventListener('focusout', function(){
 }); 
 
 surname__field.addEventListener("input",()=>{
+  $('.popup').bind('touchmove');
         if(surname__field.checkValidity()==true){
           for(let borderindex=0; borderindex<4;borderindex++){
             surname__field__bg__border[borderindex].style.backgroundColor="#41E063"
@@ -266,7 +268,7 @@ email__field.addEventListener('focusout', function(){
 
   email__field.addEventListener("focus",()=>{
 
-  
+    $('.popup').bind('touchmove');
     if(email__field.checkValidity()==true){
       
       for(let borderindex=0; borderindex<4;borderindex++){
@@ -289,6 +291,7 @@ email__field.addEventListener('focusout', function(){
 }); 
 
 email__field.addEventListener("input",()=>{
+  $('.popup').bind('touchmove');
         if(email__field.checkValidity()==true){
           for(let borderindex=0; borderindex<4;borderindex++){
             email__field__bg__border[borderindex].style.backgroundColor="#41E063"
@@ -323,7 +326,7 @@ number__field.addEventListener('focusout', function(){
 
   number__field.addEventListener("focus",()=>{
 
-  
+    $('.popup').bind('touchmove');
     if(number__field.checkValidity()==true){
       
       for(let borderindex=0; borderindex<4;borderindex++){
@@ -346,6 +349,7 @@ number__field.addEventListener('focusout', function(){
 }); 
 
 number__field.addEventListener("input",()=>{
+  $('.popup').bind('touchmove');
         if(number__field.checkValidity()==true){
           for(let borderindex=0; borderindex<4;borderindex++){
             number__field__bg__border[borderindex].style.backgroundColor="#41E063"
@@ -378,7 +382,7 @@ textarea.addEventListener('focusout', function(){
   }}
 
   textarea.addEventListener("focus",()=>{
-
+    $('.popup').bind('touchmove');
   
     if(textarea.checkValidity()==true){
       
@@ -402,6 +406,7 @@ textarea.addEventListener('focusout', function(){
 }); 
 
 textarea.addEventListener("input",()=>{
+  $('.popup').bind('touchmove');
         if(textarea.checkValidity()==true){
           for(let borderindex=0; borderindex<4;borderindex++){
             textarea__bg__border[borderindex].style.backgroundColor="#41E063"
