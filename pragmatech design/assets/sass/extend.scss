@@ -684,14 +684,13 @@
         z-index: 999999;
         background-color:rgba(0, 0, 0, 0.342);
         transform: translateX(0) scale(1);
-        -webkit-overflow-scrolling: touch;
-        overflow-y: scroll !important;
+        
         .x__icon{
             display: none;
             cursor: pointer;
         }
 
-        @media only screen and (min-device-width:991px) and (max-device-height:429px){
+        @media only screen and (min-device-width:768px) and (max-device-height:550px){
         
             .popup-submit{
                 margin-bottom: 10px !important;
@@ -715,7 +714,7 @@
                height: 90vh !important;
                overflow-x: hidden;
                overflow-y: scroll !important;
-               -webkit-overflow-scrolling: touch;
+              padding-top: 15px;
                h1{
                     margin-top: 30px !important;
                }
@@ -811,8 +810,8 @@
                width: 100% !important;
                height: 100vh !important;
                overflow-x: hidden;
-               overflow-y: scroll;
-               -webkit-overflow-scrolling: touch;
+               overflow-y: visible !important;
+              
 
                h1{
                     margin-top: 30px !important;
@@ -1280,6 +1279,50 @@
 
 }
 
+%fixed__footer{
+    width: 100%;
+    height: 70px;
+    background-color: $green;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    
+    @include respond(mobile){
+        display: flex !important;
+    }
+    i{
+        font-size: 20px;
+    }
+    .fixed__footer__iconleft{
+        width: 50px;
+        height: max-content;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .fab{
+            color: white;
+            text-decoration: none;
+        }
+    }
+    
+    .fixed__footer__iconright{
+        width: 50px;
+        height: max-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .fab{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
 
     %footer{
     width: 100%;
@@ -1334,19 +1377,7 @@
     }
 
     @include respond (mobile){
-        .footer__up{
-            height: 90px !important;
-            &__address__item{
-                height: 100% !important;
-                justify-content: space-around !important;
-            }
-        }
-        .footer__down{
-            &__text{
-                text-align: center;
-                width: 100%;
-            }
-        }
+        display: none !important;
     }
     .footer__up{
         width: 100%;

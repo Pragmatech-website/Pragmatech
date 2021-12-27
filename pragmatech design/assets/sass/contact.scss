@@ -7,10 +7,32 @@
     box-sizing: border-box;
 }
 
-body {
+html,body{
+    width: 100%;
+    height: fit-content;
     font-family: $font;
     
+   
 }
+html{
+
+    @include respond(lgscreen) {
+        font-size: 16px;
+        
+  }
+
+    @include respond(desktop) {
+      font-size: 12.7px;
+      
+}
+@include respond(laptop) {
+    font-size: 16px;
+    
+}
+   
+
+}
+
 ::selection {
     background-color: $green;
     color: #fff;
@@ -45,6 +67,9 @@ header {
 
     .navbar {
         @extend %navbar;
+        a:nth-child(1){
+            display: block !important;
+        }
         i {
             color: $darkgrey;
         }
@@ -78,12 +103,41 @@ header {
     }
 }
 
+.mobile__navbar{
+    @extend %mobile__navbar;
+    display: none;
+    transition:0.5s;
+}
+
+.mobile__navbar__active{
+    display:block;
+    animation: navbar__menu__animation 0.5s linear;
+    transition: 0.5s;
+}
+
+@keyframes navbar__menu__animation{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+        
+    }
+    100%{
+        transform:translateX(0%);
+        opacity:1;
+        
+}
+}
+
+
 // downmenu
 
 .downmenu {
     width: 100%;
     height: 6.25rem;
     margin-top: 6.625rem;
+    @include respond(laptop){
+        display: none !important;
+    }
     &__wrapper {
         width: 73.125rem;
         height: 100%;
@@ -138,6 +192,37 @@ header {
             width: 73.125rem;
             height: 27.625rem;
             align-items: center;
+            @include respond(laptop){
+                width: 90% !important;
+                height:340px ;
+                .contact-text{
+                    margin: 0 !important;
+                    font-size: $font-size40 !important;
+                    margin: 0 15px !important;
+                    width: max-content !important;
+                }
+                .line{
+                    margin: 0 !important;
+                }
+            }
+            @include respond(mobile){
+                height: 400px !important;
+                justify-content: flex-start !important;
+                align-items: flex-start;
+                .contact-text{
+                    font-size: 37.5px !important;
+                    line-height: 46px !important;
+                    height: max-content !important;
+                    margin-top: 100px !important;
+                   
+                }
+                .line{
+                    margin-top: 125px !important;
+                    width: 41px !important;
+                   &:nth-child(1){
+                    display: none !important;
+                }
+            }}
             .contact-text {
                 text-align: center;
                 color: $darkgrey;
@@ -161,6 +246,46 @@ header {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        @include respond(laptop){
+            .contact-map{
+                top: 15rem !important;
+                width: 90% !important;
+                iframe{
+                    width: 100% !important;
+                }
+            }
+            .contact-info{
+                        margin-top: 120px !important;
+            }
+        }
+        @include respond(tablet){
+            .contact-info{
+                width: 90% !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: flex-end !important;
+                margin-top: 300px !important;
+                height: 280px !important;
+                > div{
+                    width: 210.617px;
+                    justify-content: flex-start !important;
+                    margin-bottom: 15px !important;
+
+                }
+            }
+        }
+        @include respond(mobile){
+            .contact-map{
+                top: 12rem !important;
+                height: 276px !important;
+                iframe{
+                    height: 100% !important;
+                }
+            }
+            .contact-info{
+                margin-top: 0px !important;
+            }
+        }
         .contact-map {
             border: 10px solid white;
             background: white;
@@ -181,10 +306,14 @@ header {
             width: 43.438rem;
             height: 24rem;
             background: white;
-            padding-bottom: 1.125rem;
             margin: auto 0;
             padding-bottom: 3rem;
             position: static;
+            > div{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
             .contact-info-location {
                 width:1.375rem;    
                 height: 1.75rem;
@@ -192,6 +321,9 @@ header {
                 background: url("../img/icons/location.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
+                @include respond(tablet){
+                    margin-right: 8px ;
+                }
                 
             }
             .contact-info-number {
@@ -223,6 +355,8 @@ header {
                     margin-right: 0;
                 }
                 
+
+                
             }
         }
     }
@@ -239,8 +373,23 @@ header {
         text-align: center;
         position: static;
         box-sizing: border-box;
+        @include respond(tablet){
+            height: max-content !important;
+            padding-bottom: 30px !important;
+            input{
+                width: 100% !important;
+                
+            }
+        }
+        @include respond(mobile){
+            margin-bottom: 70px;
+        }
         .contact-sendbox {
             text-align: center;
+            @include respond (tablet){
+                width: 90% !important;
+            }
+
 
             h1 {
                 margin-top: 2.704rem;
@@ -264,6 +413,20 @@ header {
                 margin-bottom: 2.313rem;
             }
             .sendbox-inputs {
+                @include respond(tablet){
+                    width: 100% !important;
+                    max-width: 500px !important;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    margin-bottom: 30px !important;
+                    .sendbox__name{
+                        margin-bottom: 30px !important;
+                    }
+                    .sendbox__email{
+                        margin-bottom: 30px !important;
+                    }
+                    
+                }
                 width: 35.625rem;
                 height: max-content;
                 display: flex;
@@ -271,7 +434,7 @@ header {
                 position: relative;
                 margin-bottom: 2.813rem;
                 .label{
-                width: 100%;
+                        width: 100%;
                         height: max-content;
                         font-style: normal;
                         font-weight: $weight400;
@@ -322,6 +485,16 @@ header {
                 width: 35.625rem;
                 height: 8.063rem;
                 margin-top: 1.25rem;
+                @include respond(tablet){
+                    
+                        width: 100% !important;
+                        max-width: 500px !important;
+                        margin: 0 auto;
+                        .textbox-input{
+                            width: 100% !important;
+                        }
+                    
+                }
                 .textbox-input {
                     width: 35.625rem;
                     height: 8.063rem;
@@ -346,6 +519,11 @@ header {
             .sendbox-submit {
                 display: flex;
                 justify-content: center;
+                @include respond(tablet){
+                    input{
+                        width:60% !important;
+                    }
+                }
                 input {
                     background-color: $green;
                     width: 16.25rem;
@@ -392,7 +570,22 @@ header {
 
    
    
-
+.fixed__footer{
+    @extend %fixed__footer;
+    .btn1{
+        background-color: white;
+        color: $green;
+        width: 110px;
+        height: 40px;
+        display: block;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        
+    }
+}
 
 // footer
 

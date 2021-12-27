@@ -11,7 +11,7 @@ html,body{
     width: 100%;
     height: fit-content;
     font-family: $font;
-    
+    overflow-x: hidden;
    
     
    
@@ -851,7 +851,8 @@ header{
     
 }
     @extend %double;
-
+    
+    
     .double__main__box__wrapper{
         width: 73.125rem;
         margin: 0 auto;
@@ -991,6 +992,7 @@ header{
     @include respond(mobile){
         .btn__bottom{
             height: 50px !important;
+           
         }
         .blog__posts__main{
            
@@ -1110,6 +1112,7 @@ header{
         width: 73.125rem;
         margin: 0 auto;
         height: max-content;
+        max-height: 55rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -1132,6 +1135,7 @@ header{
         .box-text{
             width: 18.688rem;
             height: 16.875rem;
+            border: none !important;
         }
         .box-img{
             height:16.875rem;
@@ -1157,11 +1161,15 @@ header{
         margin-bottom: 0;
         border: 1px solid #3636364D;
         .box-text{
-            border: none;
+            border-left: none;
+            border-right: none;
             height: 15.775rem;
             .buttons{
                 cursor: pointer;
                 transition: 0.5s;
+                @media only screen and (max-width:300px){
+                    display: none !important;
+                }
             }
         }
 
@@ -1308,8 +1316,8 @@ header{
     @include respond(mobile){
         background-color: $grey !important;
         height:670px !important;
-        padding-bottom: 0 !important;
-        margin-bottom: 0 !important;
+        padding-bottom:0 !important;
+        margin-bottom:120px!important;
         justify-content: unset !important;
         .submit{
             margin-top: 30px !important;
@@ -1577,6 +1585,23 @@ span.choose {
     transition: 0.5s;
 }
 
+.fixed__footer{
+    @extend %fixed__footer;
+    .btn1{
+        background-color: white;
+        color: $green;
+        width: 110px;
+        height: 40px;
+        display: block;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        
+    }
+}
+
 @keyframes navbar__menu__animation{
     0%{
         transform: translateX(-100%);
@@ -1589,6 +1614,8 @@ span.choose {
         
 }
 }
+
+
 footer{
     @extend %footer;
     }

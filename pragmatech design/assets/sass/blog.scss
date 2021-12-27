@@ -4,13 +4,36 @@
 @import "./extend.scss";
 @import "./breakpoint.scss";
 
+html,body{
+    width: 100%;
+    height: fit-content;
+    font-family: $font;
+    
+   
+}
 
-body{
-   font-family:$font;
-};
 ::selection {
     background-color: $green;
     color: #fff;
+}
+
+html{
+
+    @include respond(lgscreen) {
+        font-size: 16px;
+        
+  }
+
+    @include respond(desktop) {
+      font-size: 12.7px;
+      
+}
+@include respond(laptop) {
+    font-size: 16px;
+    
+}
+   
+
 }
 
 .loader{
@@ -38,11 +61,14 @@ header{
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 99999;
+    z-index: 9999;
     border-bottom: 1px solid #ccccccc7;
 
     .navbar{
         @extend %navbar;
+        a:nth-child(1){
+            display: block !important;
+        }
         i{
             color: $darkgrey;
         }
@@ -53,7 +79,7 @@ header{
                 a{
                     color: $darkgrey !important;}
                 }
-             li:nth-child(3){
+             li:nth-child(4){
                  a{font-weight: $weight400 !important;
                      &:hover{
                          color: $darkgrey !important;
@@ -78,12 +104,40 @@ header{
      };
     };
 
+
+    .mobile__navbar{
+        @extend %mobile__navbar;
+        display: none;
+        transition:0.5s;
+    }
+    
+    .mobile__navbar__active{
+        display:block;
+        animation: navbar__menu__animation 0.5s linear;
+        transition: 0.5s;
+    }
+    
+    @keyframes navbar__menu__animation{
+        0%{
+            transform: translateX(-100%);
+            opacity: 0;
+            
+        }
+        100%{
+            transform:translateX(0%);
+            opacity:1;
+            
+    }
+    }
 // downmenu
 
 .downmenu{
     width: 100%;
     height: 6.25rem;
     margin-top: 6.625rem;
+    @include respond(laptop){
+        display: none !important;
+    }
     &__wrapper{
         width: 73.125rem;
         height: 100%;
@@ -131,14 +185,51 @@ header{
             justify-content: center;
             align-items: center;
             background: $grey;
+            @include respond(laptop){
+                padding-bottom: 30px;
+            }
+            @include respond(tablet){
+                width: 100% !important;
+            }
+            @include respond(mobile){
+                padding-bottom:0 !important;
+            }
             .blog-header{
                 height: 10.625rem;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                @include respond(laptop){
+                        margin-top: 80px ;
+                }
+                @include respond(tablet){
+                    align-items: center;
+                    .blog-text{
+                        font-size: $font-size40 !important;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 !important;
+                    }
+                    .line{
+                        margin-bottom: 0 !important;
+                    }
+                }
+                @include respond(mobile){
+                    height: max-content !important;
+                    margin-top: 100px !important;
+                    .blog-text{
+                        font-size: 37.5px  !important;
+                        width: max-content !important;
+                        margin: 0 10px !important;
+                    }
+                    .line{
+                        width:  41px !important;
+                    }
+                }
         
                 .line{
-                    margin-bottom: 5rem;
+                    margin-bottom: 5.4rem;
                     width: 102px;
                     border-bottom: 2.5px solid $green;
                     
@@ -160,12 +251,58 @@ header{
                     flex-direction: row;
                     justify-content: center;
                     margin: 0 auto;
-                    height: 46.875rem;
+                    height: 38.875rem;
                     width: 73.125rem;
+                    @include respond(laptop){
+                        flex-direction: column !important;
+                        height: max-content !important;
+                        width: max-content !important;
+                        .blog-img{
+                            margin-right: 0 !important;
+                        }
+                        .blog-text2{
+                            height: max-content !important;
+                            width: 41.875rem !important;
+                            .blog-name{
+                                justify-content: space-between !important;
+                            }
+                        }
+
+                    }
+                    @include respond(tablet){
+                        width: 100% !important;
+                        .blog-img{
+                        width: 90vw !important;
+                        height: 80vw  !important;
+                        margin: 0 auto !important;
+                       
+                    }
+                    .blog-text2{
+                        width:90% !important;
+                        margin: 0 auto !important;
+                    }
+                    }
+                    @include respond(mobile){
+                        .blog-text2{
+                            padding-bottom: 15px;
+                            h3{
+                                font-size: 20px !important;
+                                line-height: 26px !important;
+                                margin-top: 20px !important;
+                                margin-bottom: 20px !important;
+                            }
+                            .blog-name{
+                                    .blog-mtext{
+                                        margin-right: 0 !important;
+                                    }
+                            }
+                            
+                        }
+                    }
                     .blog-img{
                         display: inline-block;
                         background: url("../img/bloq_css_img/background.svg");
-                        object-fit: cover;
+                        background-size: cover;
                         width: 41.875rem;
                         height: 34.375rem;
                         margin-right: 3.75rem;
@@ -214,19 +351,65 @@ header{
                         };
                         a{
                             @extend %btn-green;
-                        };
+                                                  };
                     };
                 };
         };
         .blog-box{
                  display: flex;
-                 justify-content: space-between;
+                 gap: 1.875rem;
                  flex-wrap: wrap;
-                 width: 73.125rem;
+                 width: 73.2rem;
                  margin: 0 auto;
                  margin-top: 4.375rem;
+                 @include respond(laptop){
+                     width: 95% !important;
+                     gap: 2vw !important;
+                 }
+                 @media only screen and (max-device-width:890px) {
+                     gap: 1.875rem !important;
+                     padding: 0 2% !important;
+                 }
+                 @include respond(tablet){
+                     padding: 0 !important;
+                     width: 90% !important;
+                     justify-content: center !important;
+                     margin-bottom: 90px;
+                 }
                  .box{
                     @extend %box;
+                    margin-bottom: 0 !important;
+                    @include respond(laptop){
+                        width:31.8% !important;
+                        &-text{
+                            width: 100% !important;
+                        }
+                    }
+                    @media only screen and (max-device-width:890px) {
+                       width: 47.5% !important;
+                       .box-img{
+                           height: 185px !important
+                       }
+                    }
+                    @include respond(tablet){
+                        width: 400px !important;
+                    }
+                    @include respond(mobile){
+                        width: 100% !important;
+                        max-width: 340px !important;
+                        .box-img{
+                            height: 156px !important;
+                        }
+                        &-text{
+                            height:  max-content !important;
+                            padding: 15px 0;
+                            
+                            .box-text-p{
+                                margin: 0 10px 15px 10px !important;
+                            }
+                        }
+                    }
+                   
                  }
              };
 }
@@ -247,7 +430,22 @@ header{
 }
 
    
-
+.fixed__footer{
+    @extend %fixed__footer;
+    .btn1{
+        background-color: white;
+        color: $green;
+        width: 110px;
+        height: 40px;
+        display: block;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        
+    }
+}
 
 // footer
 
