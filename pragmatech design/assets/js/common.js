@@ -56,7 +56,7 @@ let mobile__navbar__btn = document.querySelector(".mobile__navbar .btn1")
 burger.addEventListener("click",()=>{
   navbar__menu.classList.add("mobile__navbar__active")
   document.body.style.height = "80vh"
- 
+  document.body.style.overflow="hidden"
   
 })
 
@@ -64,7 +64,7 @@ x__icon.addEventListener("click",()=>{
  
   navbar__menu.classList.remove("mobile__navbar__active");
   document.body.style.height = "max-content";
-  
+  document.body.style.overflow="unset";
 })
 
 mobile__navbar__btn.addEventListener("click",()=>{
