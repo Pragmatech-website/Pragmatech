@@ -55,7 +55,7 @@ let popupicon = document.querySelector(".header .x__icon")
 let mobile__navbar__btn = document.querySelector(".mobile__navbar .btn1")
 let inputs = document.querySelectorAll("input")
 
-for(let inputindex = 0;inputindex <= inputs.length;inputindex++){
+for(let inputindex = 0;inputindex < inputs.length;inputindex++){
   inputs[inputindex].addEventListener("click",()=>{
     $('.popup').bind('touchmove');
   })
