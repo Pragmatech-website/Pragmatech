@@ -53,6 +53,7 @@ let x__icon = document.querySelector(".x__icon")
 let navbar__menu = document.querySelector(".mobile__navbar")
 let popupicon = document.querySelector(".header .x__icon")
 let mobile__navbar__btn = document.querySelector(".mobile__navbar .btn1")
+$('.popup').bind('touchmove');
 burger.addEventListener("click",()=>{
   navbar__menu.classList.add("mobile__navbar__active")
   
