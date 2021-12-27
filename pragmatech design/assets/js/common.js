@@ -55,11 +55,7 @@ let popupicon = document.querySelector(".header .x__icon")
 let mobile__navbar__btn = document.querySelector(".mobile__navbar .btn1")
 let inputs = document.querySelectorAll("input")
 
-for(let inputindex = 0;inputindex < inputs.length;inputindex++){
-  inputs[inputindex].addEventListener("click",()=>{
-    $('.popup').bind('touchmove');
-  })
-}
+
 $('.popup').bind('touchmove');
 burger.addEventListener("click",()=>{
   navbar__menu.classList.add("mobile__navbar__active")
@@ -470,7 +466,12 @@ popup__label.style.color="#C4C4C4";
 
 
 
-
+for(let inputindex = 0;inputindex < inputs.length;inputindex++){
+  inputs[inputindex].addEventListener("click",(e)=>{
+    e.preventDefault()
+    $('.popup').bind('touchmove');
+  })
+}
 
 
 
