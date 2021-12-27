@@ -56,9 +56,8 @@ let mobile__navbar__btn = document.querySelector(".mobile__navbar .btn1")
 let inputs = document.querySelectorAll("input")
 
 for(let inputindex = 0;inputindex <= inputs.length;inputindex++){
-  $(inputs[inputindex]).focus((e) => {
-    e.preventDefault();
-    e.target.focus({preventScroll: false});
+  inputs[inputindex].addEventListener("click",()=>{
+    $('.popup').bind('touchmove');
   })
 }
 $('.popup').bind('touchmove');

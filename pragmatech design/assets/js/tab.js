@@ -23,7 +23,7 @@ if(window.innerWidth>990){
     
   
     function firstitemfunc(){
-      indicator__item.style.transform="translateX(0%)";
+      indicator__item.style.transform="translateX(-10%)";
       indicator__item.style.left="unset";
       indicator__item.style.right="unset"
       wrapper__all.style.color="rgba(51, 51, 51, 0.5)";
@@ -65,7 +65,7 @@ if(window.innerWidth>990){
     
     function lastitemfunc(){
      
-    indicator__item.style.transform="translateX(322%)"
+    indicator__item.style.transform="translateX(335%)"
     indicator__item.style.left="unset";
     indicator__item.style.right="unset"
     wrapper__active.style.color="rgba(51, 51, 51, 0.5)";
@@ -108,7 +108,7 @@ else{
     
   
     function firstitemfunc(){
-     indicator__item.style.left="5%";
+     indicator__item.style.left="3%";
       indicator__item.style.transform="translateX(unset)"
       indicator__item.style.right="unset";
       wrapper__all.style.color="rgba(51, 51, 51, 0.5)";
@@ -150,7 +150,7 @@ else{
     
     function lastitemfunc(){
      
-    indicator__item.style.right="5%"
+    indicator__item.style.right="3%"
     indicator__item.style.left="unset";
     indicator__item.style.transform="translateX(unset)"
     wrapper__active.style.color="rgba(51, 51, 51, 0.5)";
@@ -215,7 +215,7 @@ dropdown__wrapper__active.addEventListener("click",()=>{
   
 
   function firstitemfunc(){
-   indicator__item.style.left="5%";
+   indicator__item.style.left="unset";
     indicator__item.style.transform="translateX(unset)"
     indicator__item.style.right="unset";
     wrapper__all.style.color="rgba(51, 51, 51, 0.5)";
@@ -257,7 +257,7 @@ dropdown__wrapper__all.addEventListener("click",()=>{
   
   function lastitemfunc(){
    
-  indicator__item.style.right="5%"
+  indicator__item.style.right="unset"
   indicator__item.style.left="unset";
   indicator__item.style.transform="translateX(unset)"
   wrapper__active.style.color="rgba(51, 51, 51, 0.5)";

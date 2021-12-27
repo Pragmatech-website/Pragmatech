@@ -355,7 +355,7 @@ span{
                     display: none;
                     padding-top: 20px;
                     li{
-                        width:204.6px !important;
+                        width:162.817px !important;
                         margin:0 auto !important;
                         display: flex;
                         justify-content: flex-start;
@@ -377,7 +377,7 @@ span{
                 
                 
                 li{
-                    width: 212.733px;
+                    
                    
                    justify-content: flex-start !important;
                 }
@@ -457,12 +457,14 @@ span{
                 background-color: $green;
                 transition: 1s;
                 position: absolute;
+                transform: translateX(-10%);
                 @include respond(laptop){
-                    left: 5%
+                    left: 3%;
+                    transform:unset!important;
                 }
                 @include respond(tablet){
                     width: 100% !important;
-                   left:0 !important
+                    left:0 !important
                 }
             }
         }
