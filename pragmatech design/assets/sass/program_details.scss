@@ -33,7 +33,6 @@ html{
    
 
 }
-
 button, input, select, textarea {
     font-family: $font;
 }
@@ -49,7 +48,6 @@ button, input, select, textarea {
 :-ms-input-placeholder {
     font-family: $font;
 }
-
 ::selection {
     background-color: $green;
     color: #fff;
@@ -97,7 +95,7 @@ header{
            a{
            color: $darkgrey !important;}
        }
-    li:nth-child(3){
+    li:nth-child(2){
         a{font-weight: $weight400 !important;
             &:hover{
                 color: $darkgrey !important;
@@ -192,7 +190,7 @@ span{
 
 // program_title
 
-.group__title{
+.program__title{
     width: 100%;
     height:max-content;
     background-color: $grey;
@@ -225,7 +223,7 @@ span{
         }
     }
   
-    .group__title__content{
+    .program__title__content{
         width: 73.125rem;
         height: max-content;
         margin: 0 auto;
@@ -271,43 +269,7 @@ span{
                 margin-bottom: 31px !important;
             }
         }
-        .clock,.calendar{
-            display: flex;
-            align-items:center;
-            @include respond(mobile){
-                img{
-                    width: 16px !important;
-                    height: 16px !important;
-                }
-                p{
-                    font-size: 14px !important;
-                    margin-left: 8px !important;
-                    margin-top: 0  !important;
-                }
-            }
-            img{
-                width: 1.875rem;
-                height:1.875rem;
-            }
-            p{
-                font-weight: $weight400;
-                font-size: $font-size18;
-                font-style: normal;
-                line-height: $line-height23-4;
-                color: $gray82;
-                margin-left: 1rem;
-                margin-top: 0.2rem;
-            }
-        }
-        .calendar{
-            margin-top: 1.875rem;
-            @include respond(mobile){
-              
-                    margin-top: 22px !important;
-                
-            }
-            
-        }
+        
 
     }}
 
@@ -315,7 +277,7 @@ span{
 
 }
 // program info
-.group__info{
+.program__info{
     width: 73.125rem;
     height: max-content;
     margin: 0 auto;

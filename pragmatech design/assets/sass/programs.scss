@@ -33,7 +33,7 @@ html{
    
 
 }
-
+ 
 button, input, select, textarea {
     font-family: $font;
 }
@@ -49,7 +49,6 @@ button, input, select, textarea {
 :-ms-input-placeholder {
     font-family: $font;
 }
-
 ::selection {
     background-color: $green;
     color: #fff;
@@ -97,7 +96,7 @@ header{
            a{
            color: $darkgrey !important;}
        }
-    li:nth-child(3){
+    li:nth-child(2){
         a{font-weight: $weight400 !important;
             &:hover{
                 color: $darkgrey !important;
@@ -190,7 +189,7 @@ span{
 
 
 
-.groups{
+.programs{
     width: 100%;
     height: max-content;
     display: flex;
@@ -328,175 +327,16 @@ span{
             color: $darkgrey;
         }
     }
-    .tab__dropdown{
-        display: none;
-        @include respond(tablet){
-            display: block !important;
-            width: 100%;
-            height: 40px;
-            
-            cursor: pointer;
-            .select{
-                width: max-content;
-                align-items: center;
-                height: 100%;
-                margin:0 auto !important;
-                display: flex;
-                border: unset !important;
-                .tab__icon{
-                    transition: 0.5s;
-                    width: max-content;
-                    height: max-content;
-                    
-                }
-            
-            span{
-                font-weight: $weight700;
-                font-style: normal;
-                font-size: $font-size24;
-                line-height: $line-height30;
-                transition: 0.5s;
-                cursor: pointer;
-                color: $darkgrey;
-                margin-right:10px ;}}
-
-                &-menu{
-                    width: 100%;
-                    background-color: $green;
-                    position: relative;
-                    z-index: 5;
-                    height: 110px;
-                   
-                    display: none;
-                    padding-top: 20px;
-                    li{
-                        width:162.817px !important;
-                        margin:0 auto !important;
-                        display: flex;
-                        justify-content: flex-start;
-                        font-weight: $weight700;
-                        font-style: normal;
-                        font-size: $font-size24;
-                        line-height: $line-height30;
-                        transition: 0.5s;
-                        color:white !important;
-                        cursor: pointer;
-                        margin-bottom: 8px !important;
-                      
-                    }
-                }
-        }
-        @include respond(mobile){
-            
-            &-menu{
-                
-                
-                li{
-                    
-                   
-                   justify-content: flex-start !important;
-                }
-            }
-        }
-    }
-
-    &__header{
-        width: 100%;
-        height: 3.125rem;
-       @include respond(tablet){
-           display: none !important;
-       }
-        &__wrapper{
-            width: 49.688rem;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
-            @include respond(laptop){
-                width: 90% !important;
-                
-            }
-            @include respond(tablet){
-                width: 100% !important;
-                margin: unset !important;
-                position: absolute;
-                top: 100px;
-                display: flex;
-                flex-direction:column !important;
-                text-align: center;
-                
-                
-            }
-            &__all{
-                font-weight: $weight700;
-                font-style: normal;
-                font-size: $font-size24;
-                line-height: $line-height30;
-                transition: 0.5s;
-                cursor: pointer;
-                color:lighten($darkgrey,50%);
-                
-            }
-            &__active{
-                font-weight: $weight700;
-                font-style: normal;
-                font-size: $font-size24;
-                line-height: $line-height30;
-                transition: 0.5s;
-                color: $darkgrey;
-                cursor: pointer;
-                
-                
-            }
-        }
-    }
-
-
-    &__indicator{
-        width: 100%;
-        height: 0.25rem;
-        background-color: $line-gray;
-        &__wrapper{
-            width:  49.688rem;
-            height: 100%;
-            margin: 0 auto;
-            display: flex;
-            position: relative;
-            @include respond(laptop){
-                width: 100% !important;
-                margin: unset !important;
-            }
-            &__item{
-                width: 11.875rem;
-                height: 100%;
-                background-color: $green;
-                transition: 1s;
-                position: absolute;
-                transform: translateX(-10%);
-                @include respond(laptop){
-                    left: 3%;
-                    transform:unset!important;
-                }
-                @include respond(tablet){
-                    width: 100% !important;
-                    left:0 !important
-                }
-            }
-        }
-    }
+       
 }
-.tabs__wrapper__active{
-    opacity: 1;
-    transition: 0.5s;
-}
+ 
+
 .double{
     @extend %double;
     height: fit-content;
     margin-top: 3.063rem;
     margin-bottom: 7rem;
-    .firstbox{
-        display: none;
-    }
+    
     @include respond(laptop){
         &__main__box{
             width:85% !important;

@@ -1618,6 +1618,26 @@ html, body {
   }
 }
 
+button, input, select, textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+:-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
 ::-moz-selection {
   background-color: #41E063;
   color: #fff;
