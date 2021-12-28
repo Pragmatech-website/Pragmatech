@@ -200,12 +200,11 @@ name__field.addEventListener("input",()=>{
         }}
 
 })
-name__field.addEventListener("click",()=>{
-  name__field.style.backgroundColor="pink"
-})
-name__field.addEventListener("blur",()=>{
-  name__field.style.backgroundColor="blue"
-})
+name__field.addEventListener('keydown', function(e) {
+  if (e.keyCode == '40') {
+    $('.popup').bind('touchmove');
+}
+});
 // surnameform validation
 
 surname__field.addEventListener('focusout', function(){
