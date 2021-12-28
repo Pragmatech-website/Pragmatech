@@ -201,9 +201,9 @@ name__field.addEventListener("input",()=>{
 
 })
 window.addEventListener("resize",()=>{
-  if(window.style.height="100vh"){
+  if(window.innerHeight < "100vh"){
   name__field.style.backgroundColor="red"}
-  else{
+  else if(window.innerHeight=="100vh"){
     name__field.style.backgroundColor="blue"
   }
   
