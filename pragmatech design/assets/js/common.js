@@ -202,7 +202,7 @@ name__field.addEventListener("input",()=>{
 })
 name__field.addEventListener('keydown', function(e) {
   if (e.keyCode == '40') {
-    $('.popup').bind('touchmove');
+    name__field.blur()
 }
 });
 // surnameform validation
