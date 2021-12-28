@@ -145,6 +145,7 @@ let email__field__bg__border =document.querySelectorAll(".email__field span")
 let number__field__bg__border =document.querySelectorAll(".number__field span")
 let textarea__bg__border =document.querySelectorAll(".textarea span")
 let popup__submit = document.querySelector(".popup-submit") 
+
 name__field.addEventListener('focusout', function(){
   
   if (name__field.checkValidity()==true){
@@ -200,13 +201,13 @@ name__field.addEventListener("input",()=>{
         }}
 
 })
-function hashHandler() {
-  name__field.blur()
+
+for(let focusindex = 0;focusindex<inputs.length;focusindex++){
+  inputs[focusindex].addEventListener("focus",()=>{
+    $('.popup').bind('touchmove');
+  })
 }
 
-name__field.addEventListener("focus",()=>{
-  window.addEventListener('hashchange', hashHandler, false);
-})
 
 // surnameform validation
 

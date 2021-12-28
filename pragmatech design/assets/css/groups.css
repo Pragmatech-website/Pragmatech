@@ -1067,7 +1067,7 @@ table {
   }
   .popup__all .popup {
     width: 100% !important;
-    height: 100% !important;
+    height: 100vh !important;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 10000;
