@@ -61,13 +61,14 @@ burger.addEventListener("click",()=>{
   navbar__menu.classList.add("mobile__navbar__active")
   
   document.body.style.overflow="hidden"
+  document.querySelector("html").style.overflow="hidden"
   
 })
 
 x__icon.addEventListener("click",()=>{
  
   navbar__menu.classList.remove("mobile__navbar__active");
-  
+  document.querySelector("html").style.overflow="unset"
   document.body.style.overflow="unset";
 })
 
@@ -77,6 +78,15 @@ mobile__navbar__btn.addEventListener("click",()=>{
 
 popupicon.addEventListener("click",()=>{
   closepopup()
+  if(popupicon.classList.contains("s__icon")){
+
+    document.querySelector("html").style.overflow="unset"
+    document.body.style.overflow="unset";
+    popupicon.classList.remove("s__icon")
+    console.log("cyc")
+  
+  }
+  
 })
 
 
@@ -85,14 +95,17 @@ popupicon.addEventListener("click",()=>{
 let popup__all = document.querySelector(".popup__all");
 let btn1 = document.querySelectorAll(".btn1");
 let form = document.querySelector(".popup")
+
+
 for(let fixedindex = 0; fixedindex< btn1.length;fixedindex++){
 btn1[fixedindex].addEventListener("click",()=>{
   if(fixedindex==2){
     document.body.style.overflow="hidden"
+    document.querySelector("html").style.overflow="hidden"
+    popupicon.classList.add("s__icon")
   }
   openpopup()
 });}
-
 
 function openpopup(){
   popup__all.style.display="flex"
