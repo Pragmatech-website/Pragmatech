@@ -200,11 +200,14 @@ name__field.addEventListener("input",()=>{
         }}
 
 })
-name__field.addEventListener("keydown",(e)=>{
-  if(e.keyCode==27){
-    name__field.style.backgroundColor="red"
-  }
+function hashHandler() {
+  name__field.blur()
+}
+
+name__field.addEventListener("focus",()=>{
+  window.addEventListener('hashchange', hashHandler, false);
 })
+
 // surnameform validation
 
 surname__field.addEventListener('focusout', function(){
