@@ -1687,7 +1687,7 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 99999;
+  z-index: 9999;
   border-bottom: 1px solid #ccccccc7;
 }
 
@@ -1918,6 +1918,12 @@ header .navbar ul li:nth-child(5) span {
   font-weight: 700;
   line-height: 5rem;
   margin-top: 8rem;
+}
+
+@media only screen and (max-device-width: 340px) {
+  .head .contact-all .contact-header .contact-text {
+    font-size: 10vw !important;
+  }
 }
 
 .head .contact-all .contact-header .line {
