@@ -204,7 +204,10 @@ name__field.addEventListener("input",()=>{
 
 for(let focusindex = 0;focusindex<inputs.length;focusindex++){
   inputs[focusindex].addEventListener("focus",()=>{
-    $('.popup').bind('touchmove');
+    document.querySelector(".popup").addEventListener("touchmove",()=>{
+              inputs[focusindex].blur()
+    })
+    
   })
 }
 
