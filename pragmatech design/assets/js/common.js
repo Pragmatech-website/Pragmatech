@@ -201,8 +201,11 @@ name__field.addEventListener("input",()=>{
 
 })
 window.addEventListener("resize",()=>{
-  
-  name__field.style.backgroundColor="red"
+  if(window.style.height="100vh"){
+  name__field.style.backgroundColor="red"}
+  else{
+    name__field.style.backgroundColor="blue"
+  }
   
 })
 // surnameform validation
