@@ -202,7 +202,8 @@ name__field.addEventListener("input",()=>{
 })
 
 name__field.addEventListener('keyup', function(e) {
-  console.log(e)
+  document.body.innerHTML = e.keyCode
+ 
 });
 // surnameform validation
 
