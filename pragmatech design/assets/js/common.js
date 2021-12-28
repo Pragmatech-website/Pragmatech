@@ -201,9 +201,13 @@ name__field.addEventListener("input",()=>{
 
 })
 
-name__field.addEventListener('keyup', function(e) {
-  document.body.innerHTML = e.keyCode
- 
+$(name__field).on('focus blur', 'select, textarea, input', function(e){
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+    name__field.style.backgroundColor="blue"
+  }
+  else{
+    name__field.style.backgroundColor="red"
+  }
 });
 // surnameform validation
 
