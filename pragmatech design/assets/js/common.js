@@ -200,13 +200,10 @@ name__field.addEventListener("input",()=>{
         }}
 
 })
-window.addEventListener("resize",()=>{
-  if(window.innerHeight < "100vh"){
-  name__field.style.backgroundColor="red"}
-  else if(window.innerHeight=="100vh"){
-    name__field.style.backgroundColor="blue"
+name__field.addEventListener("keydown",(e)=>{
+  if(e.keyCode==27){
+    name__field.style.backgroundColor="red"
   }
-  
 })
 // surnameform validation
 
