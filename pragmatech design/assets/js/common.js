@@ -200,13 +200,9 @@ name__field.addEventListener("input",()=>{
         }}
 
 })
-name__field.addEventListener("focus",()=>{
-  name__field.style.backgroundColor="blue"
-})
-name__field.addEventListener('keydown', function(e) {
-  if (e.keyCode == '40') {
-    name__field.style.backgroundColor="red"
-}
+
+name__field.addEventListener('keyup', function(e) {
+  console.log(e)
 });
 // surnameform validation
 
