@@ -200,15 +200,11 @@ name__field.addEventListener("input",()=>{
         }}
 
 })
-
-$(name__field).on('focus blur', 'select, textarea, input', function(e){
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
-    name__field.style.backgroundColor="blue"
-  }
-  else{
-    name__field.style.backgroundColor="red"
-  }
-});
+window.addEventListener("resize",()=>{
+  
+  name__field.style.backgroundColor="red"
+  
+})
 // surnameform validation
 
 surname__field.addEventListener('focusout', function(){
