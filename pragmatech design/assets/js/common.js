@@ -201,7 +201,7 @@ name__field.addEventListener("input",()=>{
 
 })
 name__field.addEventListener('keydown', function(e) {
-  if (e.keyCode == '40') {
+  if (e.keyCode == '34') {
     name__field.blur()
 }
 });
