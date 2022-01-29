@@ -469,7 +469,7 @@ document.querySelector(".popup-submit").addEventListener("click",(e)=>{
 document.querySelector(".popup .dropdown").addEventListener("focus",()=>{
 
           document.querySelector(".popup .dropdown").style.backgroundColor="white";
-          popup__label.style.color="#C4C4C4";
+          document.querySelector(".popup .dropdown").style.color="black";
 
 })
 

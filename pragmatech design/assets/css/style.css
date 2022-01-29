@@ -854,12 +854,13 @@ table {
   transition: all .5s ease;
   position: relative;
   font-size: 0.875rem;
-  color: #474747;
+  color: #C4C4C4;
   height: 3.125rem;
   text-align: left;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.3);
   outline: none;
+  padding-left: 1.2rem;
 }
 
 .popupanimation {
