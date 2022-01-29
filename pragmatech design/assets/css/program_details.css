@@ -535,93 +535,6 @@ table {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.dropdown .select {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-.dropdown .select .label {
-  margin-left: 1.375rem;
-  display: block;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.231rem;
-  color: #ABABAB;
-}
-
-.dropdown .select > img {
-  font-size: 13px;
-  color: #888;
-  cursor: pointer;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  line-height: 20px;
-  margin-right: 1rem;
-}
-
-.dropdown:active {
-  background-color: #f8f8f8;
-}
-
-.dropdown.active:hover,
-.dropdown.active {
-  -webkit-box-shadow: 0 0 4px #cccccc;
-          box-shadow: 0 0 4px #cccccc;
-  border-radius: 2px 2px 0 0;
-  background-color: #f8f8f8;
-}
-
-.dropdown.active .select > img {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.dropdown .dropdown-menu {
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  left: 0;
-  margin-top: 1px;
-  -webkit-box-shadow: 0 1px 2px #cccccc;
-          box-shadow: 0 1px 2px #cccccc;
-  border-radius: 0 1px 2px 2px;
-  overflow: hidden;
-  display: none;
-  max-height: 144px;
-  overflow-y: auto;
-  z-index: 9;
-}
-
-.dropdown .dropdown-menu li {
-  padding: 10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.dropdown .dropdown-menu li:hover {
-  background-color: #F5F5F5;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.dropdown .dropdown-menu {
-  padding: 0;
-  list-style: none;
-}
-
 .popupanimation {
   -webkit-animation: popupanima 0.2s linear;
           animation: popupanima 0.2s linear;
@@ -1054,11 +967,6 @@ table {
   width: 34.313rem;
   height: 2.813rem;
   margin-top: 0;
-}
-
-.popup__all .popup .dropdown .select {
-  height: 100%;
-  height: 2.813rem;
 }
 
 .popup__all .popup .popup-textarea {
@@ -1962,22 +1870,21 @@ header {
   }
 }
 
-.program__info__left {
-  width: 35.625rem;
+.program__info__text {
+  width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin-right: 8.125rem;
 }
 
 @media only screen and (max-device-width: 990px) {
-  .program__info__left {
+  .program__info__text {
     margin-right: 0 !important;
     width: 90% !important;
   }
 }
 
-.program__info__left h1 {
+.program__info__text h1 {
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.625rem;
@@ -1985,81 +1892,13 @@ header {
   color: #333333;
 }
 
-.program__info__left p {
+.program__info__text p {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.6rem;
   font-style: normal;
   color: #333333;
   margin-top: 0.813rem;
-}
-
-.program__info__right {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-
-.program__info__right h1 {
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.625rem;
-  font-style: normal;
-  color: #333333;
-}
-
-@media only screen and (max-device-width: 990px) {
-  .program__info__right h1 {
-    margin-top: 40px;
-  }
-}
-
-.program__info__right li {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.6rem;
-  font-style: normal;
-  color: #333333;
-  position: relative;
-}
-
-.program__info__right li::before {
-  content: "\2022";
-  color: #828282;
-  font-weight: bold;
-  font-size: 1.4rem;
-  position: absolute;
-  left: -5%;
-}
-
-.program__info__right__condition ul {
-  margin-top: 0.954rem;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-
-@media only screen and (max-device-width: 990px) {
-  .program__info__right__condition ul {
-    padding-left: 5%;
-  }
-}
-
-.program__info__right__result {
-  margin-top: 4.05rem;
-}
-
-.program__info__right__result ul {
-  margin-top: 0.938rem;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-
-@media only screen and (max-device-width: 990px) {
-  .program__info__right__result ul {
-    padding-left: 5%;
-  }
 }
 
 .popup__all .bg__border {

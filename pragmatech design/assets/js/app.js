@@ -71,8 +71,7 @@ let bg__border= document.querySelectorAll(".bg__border")
 let name__bg__border = document.querySelectorAll(".form__up .form__item:nth-child(1) > .bg__border")
 let surname__bg__border = document.querySelectorAll(".form__up .form__item:nth-child(2) > .bg__border")
 let email__bg__border = document.querySelectorAll(".form__down .form__item > .bg__border")
-let dropdown__menu__li = document.querySelectorAll(".dropdown-menu li")
-let help__label = document.querySelector(".dropdown .label")
+
 let help__submit = document.querySelector(".help .submit")
 
   form__item[0].addEventListener('focusout', function(){
@@ -241,13 +240,12 @@ let help__submit = document.querySelector(".help .submit")
 
 help__submit.addEventListener("click",(e)=>{
   
-        
-      
-      if(help__label.innerHTML == "Proqramı seçin"){
+     
+      if($(dropdown).prop("selectedIndex") == 0){
         
         help__submit.setAttribute("disabled", true);
-        document.querySelector(".dropdown").style.backgroundColor="#f2dede";
-        help__label.style.color="#af504e";
+        dropdown.style.backgroundColor="#f2dede";
+        dropdown.style.color="#af504e";
         removeblock()
       }
       
@@ -265,8 +263,8 @@ help__submit.addEventListener("click",(e)=>{
 });
 document.querySelector(".dropdown").addEventListener("focus",()=>{
   
-    document.querySelector(".dropdown").style.backgroundColor="white";
-    help__label.style.color="#C4C4C4";
+  document.querySelector(".dropdown").style.backgroundColor="white";
+  dropdown.style.color="black";
   
 })
 

@@ -188,7 +188,6 @@ header {
 
 #AllAbout {
     position: relative;
-    font-family: $font;
     width: 100%;
     height: max-content;
     .container {
@@ -312,32 +311,43 @@ header {
     }
 }
 
-#MainTimeline {
-    font-family: $font;
-    
-    .container {
-        width: 73.125rem;
-        margin: 0 auto;
-        @include respond(laptop){
-            width: 100% !important;
-            margin:0 !important;
-        }
-        @include respond(mobile){
-            width: 100% !important;
-           
-        }
 
+    
+    
+    
+       
         
-        .timeline {
+        
+.timeline {
+            width: 73.125rem;
+            margin: 0 auto;
             display: flex;
-            margin-top: 4.375rem;
-            justify-content: center;
-            width: 100%;
+            margin-top: 9.5rem;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            column-gap: 10.5rem;
             position: relative;
+            margin-bottom: 6.25rem;
+          
+           &::before{
+            content: "";
+            position: absolute;
+            width: 2px;
+            height:105%;
+            background-color: $green;
+            top: -4rem;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            @include respond (laptop){
+                display: none;
+            }
+        }
             @include respond (laptop){
                     flex-direction: column;
-                    margin-top: 0  !important;
-                    
+                    margin-top: 3rem  !important;
+                    width: 100% !important;
             }
             
             img{
@@ -358,31 +368,119 @@ header {
                 }
                
             }
-            .left__about {
-                width: 31.25rem;
-                margin-top: 5.125rem;
-                margin-right: 10.625rem;
-                *{
-                    overflow-x: unset !important;
-                }
-                
-                @include respond(laptop){
-                        width: 100% !important;
-                        margin-right: 0px !important;
-                }
-                .left__about--row {
+            
+                .timeline__about--row {
+                    height: max-content;
+
+                   
+                    &:nth-child(even){
+                        
+                        .timeline__text{
+                            display: flex;
+                            flex-direction: column;
+                           
+                            &--title{
+                                display: flex;
+                                justify-content:flex-start;
+                                position:relative;
+                                &::before{
+                                    content: "";
+                                    width: 2.813rem;
+                                    height: 2px;
+                                    position: absolute;
+                                    top: 0.85rem;
+                                    left: -5rem;
+                                    background-color: $green;
+                                    @include respond (laptop){
+                                        display: none;
+                                    }
+                                }
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0.5rem;
+                                    left: -5.68rem;
+                                    background-color:$green;
+                                    border-radius: 50%;
+                                    width: 0.875rem;
+                                    height: 0.875rem;
+                                    @include respond (laptop){
+                                        display: none;
+                                    }
+                                }
+                            }
+                            &--image{
+                                order:-1;
+                                @include respond (laptop){
+                                    order: unset !important;
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(odd){
+                        
+                        .timeline__text{
+                            display: flex;
+                            flex-direction: column;
+                           
+                            &--title{
+                                display: flex;
+                                justify-content:flex-end;
+                                position: relative;
+                                &::before{
+                                    content: "";
+                                    width: 2.813rem;
+                                    height: 2px;
+                                    position: absolute;
+                                    top: 0.85rem;
+                                    right: -5rem;
+                                    background-color: $green;
+                                    @include respond (laptop){
+                                        display: none;
+                                    }
+                                }
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0.5rem;
+                                    right: -5.69rem;
+                                    background-color:$green;
+                                    border-radius: 50%;
+                                    width: 0.875rem;
+                                    height: 0.875rem;
+                                    @include respond (laptop){
+                                        display: none;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        margin-top:3rem;
+                        @include respond (laptop){
+                            margin-top: 0 !important;
+                        }
+                    }
+                    &:nth-child(3){
+                        margin-top:-3rem;
+                        @include respond (laptop){
+                            margin-top: 0 !important;
+                        }
+                    }
                     @include respond(laptop){
                         width:100% !important;
                     }
-                    .left__text {
+                    .timeline__text {
+                        height: max-content;
                         @include respond(laptop){
-                           
-                            width: 100% !important;
+                          width: 100% !important;
                         }
-                        .left__text--title {
+                        .timeline__text--title {
                             position: relative;
                             display: flex;
-                            justify-content: end;
+                            
                             margin-bottom: 1.236rem;
                             width: 31.258rem;
                             @include respond(laptop){
@@ -397,30 +495,10 @@ header {
                                 line-height: $line-height30;
                                 color: $darkgrey;
                             }
-                            .elements {
-                                position: absolute;
-                                width:5rem;
-                                top: 0.5rem;
-                                right: -7.05rem;
-                                display: flex;
-                                align-items: center;
-                                @include respond (laptop){
-                                    display: none !important;
-                                }
-                                .rare {
-                                    width: 2.813rem;
-                                    height: 2px;
-                                    background-color: $green;
-                                }
-                                .circle {
-                                    height: 0.875rem;
-                                    width: 0.875rem;
-                                    background-color: $green;
-                                    border-radius: 50%;
-                                }
-                            }
+                            
                         }
-                        .left__text--about {
+                        .timeline__text--about {
+                            width: 31.258rem;
                             display: flex;
                             justify-content: end;
                             line-height: $line-height24;
@@ -430,6 +508,9 @@ header {
                             text-align: justify;
                             color: $darkgrey;
                             font-style: normal;
+                            p{
+                                width: 100%;
+                            }
                             @include respond(laptop){
                                width: 90% !important;
                                 margin: 0 auto !important;
@@ -437,130 +518,16 @@ header {
                                 }
 
                         }
-                        .left__text--image {
+                        .timeline__text--image {
                             margin-bottom: 1.875rem;
                             
                         }
                     }
                 }
-            }
-            .center__line {
-                width: 2px;
-                height: 100%;
-                background-color: $green;
-                top: 0;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                position: absolute;
-                @include respond(laptop){
-                    display: none !important;
-                }
-            }
-            .right__about {
-                width: 31.25rem;
-                margin-top: 7.5rem;
-                
-                @include respond(laptop){
-                    width: 100% !important;
-                    margin-right: 0px !important;
-                    margin-top: 0px !important;
-            }
-                .right__about--row {
-                    
-                    @include respond(laptop){
-                        width:100% !important;
-                    }
-                    .right__text {
-                        
-                        @include respond(laptop){
-                            flex-direction: column;
-                            display: flex;
-                            
-                            width: 100% !important;
-                           .right__text--image:nth-child(1){
-                               order: 1;
-                           }
-                        }
-                        @include respond(mobile){
-                            margin-bottom: 80px !important;
-                        }
-                        .right__text--image {
-                            margin-bottom: 1.875rem;
-                            
-                            & img {
-                                width: 31.25rem;
-                                height:13.375rem ;
-                                
-                            }
-                        }
-                        .right__text--title {
-                            display: flex;
-                            justify-content: start;
-                            font-size: $font-size24;
-                            font-weight: $weight700;
-                            line-height: $line-height30;
-                            align-items: center;
-                            margin-bottom: 1.236rem;
-                            position: relative;
-                            @include respond(laptop){
-                                justify-content: flex-start !important;
-                                width:90% !important;
-                                margin: 0 auto !important;
-                                margin-bottom: 10px !important;
-                                }
-                            h1{
-                                font-size: $font-size24;
-                                font-weight: $weight700;
-                                line-height: $line-height30;
-                                color: $darkgrey;
-                            }
-                            .elements {
-                                position: absolute;
-                                width:5rem;
-                                top: 0.5rem;
-                                left: -5.75rem;
-                                display: flex;
-                                align-items: center;
-                                @include respond (laptop){
-                                    display: none !important;
-                                }
-                            
-                                .rare {
-                                    width: 2.813rem;
-                                    height: 2px;
-                                    background-color: $green;
-                                }
-                                .circle {
-                                    height: 0.875rem;
-                                    width:0.875rem;
-                                    background-color: $green;
-                                    border-radius: 50%;
-                                }
-                            }
-                        }
-                        .right__text--about {
-                            display: flex;
-                            justify-content: start;
-                            line-height: $line-height24;
-                            font-size: $font-size16;
-                            font-weight: $weight400;
-                            font-style: normal;
-                            color: $darkgrey;
-                            text-align: justify;
-                            margin-bottom: 2.389rem;
-                            @include respond(laptop){
-                                width: 90% !important;
-                                margin: 0 auto !important;
-                                margin-bottom: 20px !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+            
+           
     }
-}
+
 
 .popup__all{
     @include formanimation;

@@ -293,10 +293,10 @@ span{
         margin-top: 200px !important;
         margin-bottom: 7.5rem !important;
     }
-    &__left{
-        width: 35.625rem;
+    &__text{
+        width: 100%;
         height: max-content;
-        margin-right: 8.125rem;
+        
         @include respond(laptop){
             margin-right: 0 !important;
             width: 90% !important;
@@ -317,55 +317,7 @@ span{
             margin-top: 0.813rem;
         }
 }
-    &__right{
-        height: max-content;
-        h1{
-            font-weight:$weight700;
-            font-size: $font-size20;
-            line-height: $line-height26;
-            font-style: normal;
-            color: $darkgrey;
-            @include respond (laptop){
-                margin-top:40px;
-            }
-        }
-        li{
-            font-weight:$weight400;
-            font-size: $font-size16;
-            line-height: $line-height25-6;
-            font-style: normal;
-            color: $darkgrey;
-            position: relative;
-            &::before {
-                content: "\2022"; 
-                color: $gray82;
-                font-weight: bold;
-                font-size: 1.4rem;
-                position: absolute;
-                left: -5%;
-        }
-    }
-        &__condition{
-            ul{
-                margin-top: 0.954rem;
-                height: max-content;
-                @include respond(laptop){
-                    padding-left: 5%;
-                }
-                 
-        }}
-        &__result{
-            margin-top: 4.05rem;
-            ul{
-                margin-top: 0.938rem;
-                height: max-content;
-                @include respond(laptop){
-                    padding-left: 5%;
-                }
-            }
-        }
-    
-}
+   
 }
 .popup__all{
     @include formanimation;

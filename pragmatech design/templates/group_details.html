@@ -102,18 +102,23 @@
 
         </div>
     </section>
-
+    
     <!-- program details title -->
     <div class="group__title">
         <div class="group__title__content">
             <div class="group__title__content__text">
             <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-            <p>Vivamus pretium, massa ac tempor rhoncus, eros eros hendrerit orci, in viverra risus mi a dolor. Etiam consequat, metus nec sodales porttitor, magna risus bibendum dui, semper posuere lectus urna sit amet dui. Phasellus et bibendum eros. </p>
             <div class="clock"><img src="../assets/img/icons/clock3.svg" alt="">
                 <p>6 ay / 200 saat</p>
             </div>
             <div class="calendar"><img src="../assets/img/icons/calendar.svg" alt="#">
                 <p>Bazar ertəsi - çümə | 19:00 - 22:00</p>
+            </div>
+            <div class="time"><i class="fas fa-hourglass-end"></i>
+                <p>Son qeydiyyat tarixi:</p>
+            </div>
+            <div class="time timestart"><i class="fas fa-book-open"></i>
+                <p>Dərsin başlama tarixi:</p>
             </div>
         </div>
             <div class="group__title__content__img"><img src="../assets/img/style_css_img/comp18.svg" alt="#"></div>
@@ -125,7 +130,7 @@
     <!-- program details info -->
 
     <div class="group__info">
-        <div class="group__info__left">
+        <div class="group__info__text">
             <h1>Qrup haqqında info</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum consectetur. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum consectetur. Lorem ipsum dolor sit amet, consectetur.<br><br>
 
@@ -134,31 +139,11 @@
                 
                 Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum consectetur.</p>
         </div>
-        <div class="group__info__right">
-            <div class="group__info__right__condition">
-                <h1>Qrupda iştirak etmə şərtləri</h1>
-                <ul>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                    
-                    
-                </ul>
-            </div>
-            <div class="group__info__right__result">
-                <h1>Qrupu bitirən tələbənin əldə edəcəyi nəticələr</h1>
-                <ul>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                    
-                </ul>
-            </div>
-        </div>
+        
     </div>
 
    <!-- popup -->
-<div class="popup__all">
+   <div class="popup__all">
   
     <form class="popup">
       <div class="header">
@@ -175,19 +160,13 @@
         <div class="email__field"><input required type="email" placeholder="Email"><span class="bg__border" ></span><span class="bg__border" ></span><span class="bg__border" ></span><span class="bg__border" ></span></div><div class="number__field"><input  required type="tel" placeholder="Telefon"><span class="bg__border" ></span><span class="bg__border" ></span><span class="bg__border" ></span><span class="bg__border" ></span></div>
          <div class="label"><img src="../assets/img/icons/icon.svg" alt="icon">text@example.com</div>
      </div>
-     <div class="dropdown">
-      <div class="select">
-        <span class="label">Proqramı seçin</span>
-        <img src="../assets/img/icons/Vectordown.svg" alt="">
-      </div>
-      <input type="hidden">
-      <ul class="dropdown-menu">
-        <li>HTML</li>
-        <li>Css</li>
-        <li>Javascript</li>
-        <li>C#</li>
-      </ul>
-    </div>
+     <select class="dropdown">
+      <option value="" disabled selected hidden>Proqramı seçin</option>
+      <option value="">HTML</option>
+      <option value="">CSS</option>
+      <option value="">Python</option>
+      <option value="">Csharp</option>
+     </select>
      <div class="popup-textarea">
          <div class="textarea"><textarea required placeholder="Mesajınız" class="popup-input" name="text" cols="30" rows="10"></textarea><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span><span class="bg__border"></span></div></div>
      <div class="popup-submit">

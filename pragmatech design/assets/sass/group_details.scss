@@ -248,37 +248,29 @@ span{
             line-height: $line-height45-5;
             color: $darkgrey;
             margin-right: 2.813rem;
+            margin-bottom: 1.5rem;
             @include respond(mobile){
                 font-size: 20px !important;
                 line-height: 26px !important;
                 
             }
         }
-        > p{
-            width: 33.75rem;
-            height: max-content;
-            font-weight: $weight400;
-            font-style: normal;
-            font-size: $font-size16;
-            text-align: justify;
-            line-height: $line-height25-6;
-            margin-top: 1.875rem;
-            margin-bottom: 2.125rem;
-            color: $darkgrey;
-            @include respond(laptop){
-                width: 90% !important;
-                margin-top: 20px !important;
-                margin-bottom: 31px !important;
-            }
-        }
-        .clock,.calendar{
+        
+        .clock,.calendar,.time{
             display: flex;
             align-items:center;
             @include respond(mobile){
                 img{
                     width: 16px !important;
                     height: 16px !important;
+                   
                 }
+                i{
+                    color: $gray82;
+                    font-size: 18px !important;
+                    margin-right: 0.2rem !important;
+                }
+                
                 p{
                     font-size: 14px !important;
                     margin-left: 8px !important;
@@ -288,6 +280,12 @@ span{
             img{
                 width: 1.875rem;
                 height:1.875rem;
+            }
+            i{
+                color: $gray82;
+                font-size: 25px;
+                margin-right: 0.45rem;
+                margin-left: 0.1rem;
             }
             p{
                 font-weight: $weight400;
@@ -308,6 +306,21 @@ span{
             }
             
         }
+        .time{
+            margin-top: 1.875rem;
+            @include respond(mobile){
+              
+                    margin-top: 22px !important;
+                
+            }
+            
+        }
+        .timestart{
+            p{
+                margin-left: 0.35rem;
+            }
+        }
+        
 
     }}
 
@@ -331,12 +344,12 @@ span{
         margin-top: 200px !important;
         margin-bottom: 7.5rem !important;
     }
-    &__left{
-        width: 35.625rem;
+    &__text{
+        width: 100%;
         height: max-content;
-        margin-right: 8.125rem;
+        
         @include respond(laptop){
-            margin-right: 0 !important;
+            
             width: 90% !important;
         }
         h1{
@@ -355,55 +368,7 @@ span{
             margin-top: 0.813rem;
         }
 }
-    &__right{
-        height: max-content;
-        h1{
-            font-weight:$weight700;
-            font-size: $font-size20;
-            line-height: $line-height26;
-            font-style: normal;
-            color: $darkgrey;
-            @include respond (laptop){
-                margin-top:40px;
-            }
-        }
-        li{
-            font-weight:$weight400;
-            font-size: $font-size16;
-            line-height: $line-height25-6;
-            font-style: normal;
-            color: $darkgrey;
-            position: relative;
-            &::before {
-                content: "\2022"; 
-                color: $gray82;
-                font-weight: bold;
-                font-size: 1.4rem;
-                position: absolute;
-                left: -5%;
-        }
-    }
-        &__condition{
-            ul{
-                margin-top: 0.954rem;
-                height: max-content;
-                @include respond(laptop){
-                    padding-left: 5%;
-                }
-                 
-        }}
-        &__result{
-            margin-top: 4.05rem;
-            ul{
-                margin-top: 0.938rem;
-                height: max-content;
-                @include respond(laptop){
-                    padding-left: 5%;
-                }
-            }
-        }
     
-}
 }
 .popup__all{
     @include formanimation;

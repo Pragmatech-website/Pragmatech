@@ -574,76 +574,9 @@
     background-color: white;
     border:1px solid $formborder;
     
-    }
-    .dropdown .select {
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        
-        .label{
-            margin-left: 1.375rem;
-            display: block;
-            
-            font-weight: 400;
-            font-style: normal;
-            font-size: $font-size16;
-            line-height: $line-height19-7;
-            color: #ABABAB;
-        }
-    }
-    .dropdown .select > img {
-        font-size: 13px;
-        color: #888;
-        cursor: pointer;
-        transition: all .3s ease-in-out;
-        
-        line-height: 20px;
-        margin-right: 1rem;
-    }
     
-    .dropdown:active {
-        background-color: #f8f8f8
     }
-    .dropdown.active:hover,
-    .dropdown.active {
-        box-shadow: 0 0 4px rgb(204, 204, 204);
-        border-radius: 2px 2px 0 0;
-        background-color: #f8f8f8
-    }
-    .dropdown.active .select > img {
-        transform: rotate(180deg);
-        transition: all .3s ease-in-out;
-    }
-    .dropdown .dropdown-menu {
-        position: absolute;
-        background-color: #fff;
-        width: 100%;
-        left: 0;
-        margin-top: 1px;
-        box-shadow: 0 1px 2px rgb(204, 204, 204);
-        border-radius: 0 1px 2px 2px;
-        overflow: hidden;
-        display: none;
-        max-height: 144px;
-        overflow-y: auto;
-        z-index: 9
-    }
-    .dropdown .dropdown-menu li {
-        padding: 10px;
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-        
-        &:hover{
-            background-color: $grey;
-            transition: all 0.2s ease-in-out;
-        }
-    } 
-    .dropdown .dropdown-menu {
-        padding: 0;
-        list-style: none
-    }
+   
     .popupanimation{
         animation:popupanima 0.2s linear;
     }
@@ -675,7 +608,7 @@
     %popup__all{
         width: 100%;
         height: 100vh;
-        position: fixed;
+        position:fixed;
         top: 0;
         left: 0;
         display: none;
@@ -1004,10 +937,7 @@
                 width: 34.313rem;
                 height:2.813rem;
                 margin-top: 0;
-                .select{
-                    height: 100%;
-                    height:2.813rem;
-                }
+                
 
                 };
         

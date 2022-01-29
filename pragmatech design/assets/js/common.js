@@ -30,21 +30,7 @@ window.addEventListener('load', () => {
 
   
 
-  // dropdown
-  $('.dropdown').click(function () {
-    $(this).attr('tabindex', 1).focus();
-    $(this).toggleClass('active');
-    $(this).find('.dropdown-menu').slideToggle(300);
-});
-$('.dropdown').focusout(function () {
-    $(this).removeClass('active');
-    $(this).find('.dropdown-menu').slideUp(300);
-});
-$('.dropdown .dropdown-menu li').click(function (e) {
-    $(this).parents('.dropdown').find('span').text($(this).text());
-    $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
-    document.querySelector(".popup__hiddeninput").setAttribute("value",`${e.target.dataset.id}`)
-});
+ 
 
 
 
@@ -460,7 +446,7 @@ textarea.addEventListener("input",()=>{
 // submit
 document.querySelector(".popup-submit").addEventListener("click",(e)=>{
       
-  if(popup__label.innerHTML == "Proqramı seçin"){
+  if($(popup__dropdown).prop("selectedIndex") == 0){
    
     document.querySelector(".popup-submit input").setAttribute("disabled", true);
     document.querySelector(".popup .dropdown").style.backgroundColor="#f2dede";
