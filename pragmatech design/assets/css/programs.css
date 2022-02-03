@@ -525,8 +525,7 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -1.8rem;
-  height: 3rem;
+  margin-top: -1.4rem;
 }
 
 .double .double__main__box__main__down__stroke {
@@ -534,6 +533,15 @@ table {
   height: 0.188rem;
   background-color: #41E063;
   margin-top: 0.313rem;
+}
+
+.double .double__main__box__main__down__programs {
+  margin-left: 0.688rem;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  color: #333333;
 }
 
 .double .double__main__box__main p {
@@ -590,7 +598,6 @@ table {
   transition: 0.3s;
   -webkit-box-shadow: rgba(65, 224, 99, 0.3) -5px 5px, rgba(65, 224, 99, 0.2) -10px 10px, rgba(65, 224, 99, 0) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
           box-shadow: rgba(65, 224, 99, 0.3) -5px 5px, rgba(65, 224, 99, 0.2) -10px 10px, rgba(65, 224, 99, 0) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
-  border: none;
 }
 
 .double .double__main__box__item img {
@@ -2151,6 +2158,14 @@ header {
   height: fit-content;
   margin-top: 3.063rem;
   margin-bottom: 7rem;
+}
+
+.double .double__main__box__item h3 {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 3.8rem;
+  margin-top: 2.8rem !important;
 }
 
 @media only screen and (max-device-width: 990px) {

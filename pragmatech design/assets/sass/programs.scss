@@ -336,7 +336,13 @@ span{
     height: fit-content;
     margin-top: 3.063rem;
     margin-bottom: 7rem;
-    
+    .double__main__box__item{
+        h3{
+            height:max-content;
+            min-height: 3.8rem;
+            margin-top: 2.8rem !important;
+        }
+    }
     @include respond(laptop){
         &__main__box{
             width:85% !important;

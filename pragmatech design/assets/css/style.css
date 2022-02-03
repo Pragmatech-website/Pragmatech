@@ -606,8 +606,7 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -1rem;
-  height: 3rem;
+  margin-top: -1.4rem;
 }
 
 .double__main__all .double__main__box__main__down__stroke {
@@ -617,6 +616,15 @@ table {
   margin-top: 0.313rem;
 }
 
+.double__main__all .double__main__box__main__down__programs {
+  margin-left: 0.688rem;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  color: #333333;
+}
+
 .double__main__all .double__main__box__main p {
   width: 16.875rem;
   color: #828282;
@@ -624,7 +632,7 @@ table {
   font-size: 0.875rem;
   font-style: normal;
   line-height: 1.094rem;
-  margin-top: 1rem;
+  margin-top: 1.625rem;
 }
 
 .double__main__all .double__main__box__main a {
@@ -671,7 +679,6 @@ table {
   transition: 0.3s;
   -webkit-box-shadow: rgba(65, 224, 99, 0.3) -5px 5px, rgba(65, 224, 99, 0.2) -10px 10px, rgba(65, 224, 99, 0) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
           box-shadow: rgba(65, 224, 99, 0.3) -5px 5px, rgba(65, 224, 99, 0.2) -10px 10px, rgba(65, 224, 99, 0) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
-  border: none;
 }
 
 .double__main__all .double__main__box__item img {
@@ -1827,7 +1834,8 @@ footer .footer__down__link i:hover {
           box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1854,7 +1862,10 @@ html, body {
   }
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: "Roboto", sans-serif;
 }
 
@@ -2391,9 +2402,9 @@ header {
   }
   .active__groups__main {
     width: 60% !important;
-    height: -webkit-max-content  !important;
-    height: -moz-max-content  !important;
-    height: max-content  !important;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
     position: static !important;
     margin-left: 20px;
   }
@@ -2415,7 +2426,7 @@ header {
     height: max-content !important;
   }
   .active__groups .active__groups__main__wrapper {
-    margin-top: 10px  !important;
+    margin-top: 10px !important;
     width: 100% !important;
   }
   .active__groups .active__groups__main {
@@ -2583,7 +2594,6 @@ header {
 .active__groups__item:hover {
   -webkit-box-shadow: rgba(65, 224, 99, 0.4) -5px 5px, rgba(65, 224, 99, 0.3) -10px 10px, rgba(65, 224, 99, 0.1) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
           box-shadow: rgba(65, 224, 99, 0.4) -5px 5px, rgba(65, 224, 99, 0.3) -10px 10px, rgba(65, 224, 99, 0.1) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
-  border: none;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
@@ -2619,8 +2629,8 @@ header {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.138rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding-left: 0.8rem;
 }
 
@@ -2636,7 +2646,7 @@ header {
   }
   .double__main__all .double__main {
     width: 100%;
-    padding: 0 0 0 0  !important;
+    padding: 0 0 0 0 !important;
   }
   .double__main__all .double__main__box {
     width: 100% !important;
@@ -2654,7 +2664,7 @@ header {
   .double__main__all .double__main__box__main__up {
     font-size: 2.5rem !important;
   }
-  .double__main__all .double__main__box__main__down__groups {
+  .double__main__all .double__main__box__main__down__programs {
     font-size: 2.5rem !important;
   }
   .double__main__all .double__main__box__main__down__stroke {
@@ -2678,9 +2688,9 @@ header {
   }
   .double__main__all .double__main__box__main {
     width: 90% !important;
-    height: -webkit-max-content  !important;
-    height: -moz-max-content  !important;
-    height: max-content  !important;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
     position: static !important;
     margin-left: 20px;
   }
@@ -2724,7 +2734,7 @@ header {
   .double__main__all .double__main__box__main__down {
     margin-top: -40px !important;
   }
-  .double__main__all .double__main__box__main__down__groups {
+  .double__main__all .double__main__box__main__down__programs {
     font-size: 28.34px !important;
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -2753,6 +2763,14 @@ header {
   .double__main__all .double__main__box__item .detail {
     margin-top: 20px !important;
   }
+}
+
+.double__main__all .double__main__box__item h3 {
+  min-height: 3.8rem !important;
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
+  margin-top: 2.5rem !important;
 }
 
 .double__main__all .double__main__box__wrapper {
@@ -3056,7 +3074,7 @@ header {
   width: 18.688rem;
   height: 16.875rem;
   border-top: none;
-  border-bottom: 1px solid #3636364D;
+  border-bottom: 1px solid #3636364d;
 }
 
 .blog__posts .box:nth-child(2) .box-img {
@@ -3072,7 +3090,7 @@ header {
   -ms-grid-row-span: 2;
   grid-row: 2 / 4;
   margin-bottom: 0;
-  border: 1px solid #3636364D;
+  border: 1px solid #3636364d;
 }
 
 .blog__posts .box .box-text {
@@ -3291,7 +3309,11 @@ header {
   position: relative;
 }
 
-.name__field, .surname__field, .email__field, .number__field, .textarea {
+.name__field,
+.surname__field,
+.email__field,
+.number__field,
+.textarea {
   position: relative;
 }
 
@@ -3322,7 +3344,7 @@ header {
     margin-top: 100px !important;
     margin-bottom: 50px !important;
     background-color: #F5F5F5 !important;
-    background-image: none  !important;
+    background-image: none !important;
   }
   .help__question {
     width: 90% !important;
@@ -3655,6 +3677,34 @@ header {
   width: 500px;
   margin: 50px auto 0;
   text-align: center;
+}
+
+.help__form form .dropdown {
+  padding-left: unset !important;
+}
+
+.help__form form .dropdown input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 0 1.2rem;
+}
+
+.help__form form .dropdown input::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+.help__form form .dropdown input:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.help__form form .dropdown input::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.help__form form .dropdown input::placeholder {
+  color: #c4c4c4;
 }
 
 .help__form form .submit {
