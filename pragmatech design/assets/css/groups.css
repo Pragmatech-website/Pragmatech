@@ -526,6 +526,7 @@ table {
       -ms-flex-align: center;
           align-items: center;
   margin-top: -1.8rem;
+  height: 3rem;
 }
 
 .double .double__main__box__main__down__stroke {
@@ -533,15 +534,6 @@ table {
   height: 0.188rem;
   background-color: #41E063;
   margin-top: 0.313rem;
-}
-
-.double .double__main__box__main__down__groups {
-  margin-left: 0.688rem;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 3rem;
-  line-height: 3.75rem;
-  color: #333333;
 }
 
 .double .double__main__box__main p {

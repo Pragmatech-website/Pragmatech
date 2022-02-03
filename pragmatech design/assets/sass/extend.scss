@@ -386,22 +386,15 @@
                 &__down{
                     display: flex;
                     align-items: center;
-                    margin-top: -1.8rem;
+                    margin-top: -1rem;
+                    height: 3rem;
                     &__stroke{
                         width: 11.875rem;
                         height: 0.188rem;
                         background-color: $green;
                         margin-top:0.313rem;
                     }
-                    &__groups{
-                        margin-left: 0.688rem;
-                        
-                        font-weight: 300;
-                        font-style: normal;
-                        font-size: $font-size48;
-                        line-height:$line-height60;
-                        color: $darkgrey;
-                    }
+                   
                     
     
                 }
@@ -413,7 +406,7 @@
                     font-size:$font-size14;
                     font-style: normal;
                     line-height: $line-height17-5;
-                    margin-top: 1.625rem;
+                    margin-top: 1rem;
                 }
                 a{
                     width: 10.625rem;

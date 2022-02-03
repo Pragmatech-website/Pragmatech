@@ -606,7 +606,8 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -1.8rem;
+  margin-top: -1rem;
+  height: 3rem;
 }
 
 .double__main__all .double__main__box__main__down__stroke {
@@ -616,15 +617,6 @@ table {
   margin-top: 0.313rem;
 }
 
-.double__main__all .double__main__box__main__down__groups {
-  margin-left: 0.688rem;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 3rem;
-  line-height: 3.75rem;
-  color: #333333;
-}
-
 .double__main__all .double__main__box__main p {
   width: 16.875rem;
   color: #828282;
@@ -632,7 +624,7 @@ table {
   font-size: 0.875rem;
   font-style: normal;
   line-height: 1.094rem;
-  margin-top: 1.625rem;
+  margin-top: 1rem;
 }
 
 .double__main__all .double__main__box__main a {
