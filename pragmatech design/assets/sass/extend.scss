@@ -582,7 +582,7 @@
     width: max-content;
     height: max-content;
     &::after{
-        content: "⯆"; 
+        content: "\1F783"; 
         z-index: 99;
         position:absolute;
         top: 30%;
