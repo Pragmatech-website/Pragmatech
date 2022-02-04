@@ -1,17 +1,17 @@
 // loader
 
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
     
-  const wrapper = document.querySelector(".loader");
-  wrapper.classList.add("wrapper-animation")
-  setTimeout(() => {
-    wrapper.classList.add("wrapper-finish");
-    wrapper.classList.remove("wrapper-animation")
-  }, 1000);
+//   const wrapper = document.querySelector(".loader");
+//   wrapper.classList.add("wrapper-animation")
+//   setTimeout(() => {
+//     wrapper.classList.add("wrapper-finish");
+//     wrapper.classList.remove("wrapper-animation")
+//   }, 1000);
   
   
 
-});
+// });
 
 
 
