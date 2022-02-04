@@ -354,6 +354,23 @@
     }
 
 // plannedgroups
+
+.double__main__box__item__title{
+    position: absolute;
+    top: 1rem;
+    right: -1px;
+    width: max-content;
+    min-width: 7rem;
+    height: 1.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+    background-image: linear-gradient(#41e063e0);
+   
+}
 %double{
     .double__main{
         width: 100%;
@@ -456,20 +473,7 @@
                     
                 }
                 
-                &__title{
-                    position: absolute;
-                    top: 1rem;
-                    right: 0;
-                    width: max-content;
-                    min-width: 7rem;
-                    height: 1.5rem;
-                   display: flex;
-                   align-items: center;
-                   justify-content: center;
-                   color: white;
-                   border-radius: 3px;
-                    background-image: linear-gradient(to right,#41e0633b,#41e063e0,#41e0633b);
-                }
+              
                 
                 img{
                     width: 23.125rem;
@@ -581,11 +585,11 @@
     position: relative;
     width: max-content;
     height: max-content;
-    &::after{
-        content: "\1F783"; 
+    i{
+       
         z-index: 99;
         position:absolute;
-        top: 30%;
+        top: 25%;
         right: 2%;
         color:  $placeholdercolor;
 
