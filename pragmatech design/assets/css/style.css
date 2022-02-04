@@ -672,6 +672,7 @@ table {
   background-color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: relative;
 }
 
 .double__main__all .double__main__box__item:hover {
@@ -679,6 +680,30 @@ table {
   transition: 0.3s;
   -webkit-box-shadow: rgba(65, 224, 99, 0.3) -5px 5px, rgba(65, 224, 99, 0.2) -10px 10px, rgba(65, 224, 99, 0) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
           box-shadow: rgba(65, 224, 99, 0.3) -5px 5px, rgba(65, 224, 99, 0.2) -10px 10px, rgba(65, 224, 99, 0) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
+}
+
+.double__main__all .double__main__box__item__title {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 7rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  border-radius: 3px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#41e0633b), color-stop(#41e063e0), to(#41e0633b));
+  background-image: linear-gradient(to right, #41e0633b, #41e063e0, #41e0633b);
 }
 
 .double__main__all .double__main__box__item img {

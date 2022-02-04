@@ -446,13 +446,27 @@
                 height: 23.938rem;
                 background-color: white;
                 transition: 0.3s;
+                position: relative;
                 &:hover{
                     transition: 0.3s;
                     box-shadow: rgba(65, 224, 99, 0.3) -5px 5px, rgba(65, 224, 99, 0.2) -10px 10px, rgba(65, 224, 99, 0) -20px 20px, rgba(65, 224, 99, 0.05) -15px 15px;
                     
                 }
                 
-                
+                &__title{
+                    position: absolute;
+                    top: 1rem;
+                    right: 0;
+                    width: max-content;
+                    min-width: 7rem;
+                    height: 1.5rem;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   color: white;
+                   border-radius: 3px;
+                    background-image: linear-gradient(to right,#41e0633b,#41e063e0,#41e0633b);
+                }
                 
                 img{
                     width: 23.125rem;
