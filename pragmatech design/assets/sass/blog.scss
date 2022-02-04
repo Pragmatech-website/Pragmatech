@@ -201,6 +201,7 @@ header{
             justify-content: center;
             align-items: center;
             background: $grey;
+            height: max-content;
             @include respond(laptop){
                 padding-bottom: 30px;
             }
@@ -266,8 +267,10 @@ header{
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
+                    padding-bottom: 2rem;
                     margin: 0 auto;
-                    height: 38.875rem;
+                    min-height: 38.875rem;
+                    height: max-content;
                     width: 73.125rem;
                     @include respond(laptop){
                         flex-direction: column !important;
@@ -326,7 +329,8 @@ header{
                     .blog-text2{ 
                         display:block;
                         width: 27.5rem;
-                        height: 1.375rem;
+                        min-height: 1.375rem;
+                        height: max-content;
                         text-align: left;
                         font-size: $font-size35;
                         font-weight: $weight700;

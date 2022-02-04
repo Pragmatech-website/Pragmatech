@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -174,6 +175,25 @@ table {
             transform: scale(0.4);
     opacity: 0;
   }
+}
+
+.select__wrapper {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.select__wrapper::after {
+  content: "⯆";
+  z-index: 99;
+  position: absolute;
+  top: 30%;
+  right: 2%;
+  color: #C4C4C4;
 }
 
 .popupanimation {
