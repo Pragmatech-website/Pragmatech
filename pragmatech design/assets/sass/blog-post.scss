@@ -51,23 +51,7 @@ button, input, select, textarea {
     color: #fff;
 }
 
- .loader{
-    @extend %loader;
-}
-.wrapper-finish{
-    display: none;
- }
- .wrapper-animation{
-     animation: wrapperanima 1s linear;
- }
- @keyframes wrapperanima{
-     0%{
-         opacity: 1;
-     }
-     100%{
-         opacity: 0;
-     }
- }
+
 
  i{
     color: $gray82;
@@ -287,7 +271,7 @@ header{
             };
             .blog-post-name{
                 color: $darkgrey;
-                width: 7.08rem;
+                width:max-content;
                 height: 1.438rem;
                 font-size: $font-size16;
                 font-weight: $weight700;

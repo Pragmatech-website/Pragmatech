@@ -3,15 +3,6 @@
 @import "./reset.scss";
 @import "./extend.scss";
 @import "./breakpoint.scss";
-@import "./about.scss";
-@import "./blog-post.scss";
-@import "./blog.scss";
-@import "./contact.scss";
-@import "./group_details.scss";
-@import "./groups.scss";
-@import "./program_details.scss";
-@import "./programs.scss";
-
 * {
     box-sizing: border-box;
 }
@@ -59,23 +50,7 @@ textarea {
     color: #fff;
 }
 
-.loader {
-    @extend %loader;
-}
-.wrapper-finish {
-    display: none;
-}
-.wrapper-animation {
-    animation: wrapperanima 1s linear;
-}
-@keyframes wrapperanima {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+
 
 header {
     width: 100%;
@@ -812,22 +787,7 @@ header {
         }
     }
     @extend %double;
-    .double__main__box__item {
-        min-height: unset !important;
-        height: max-content !important;
-        a{
-            width:100%;
-            height: 100%;
-            text-decoration: none;
-            display: inline-block;
-        }
-        h3 {
-            
-            height: max-content !important;
-            margin-top:2.5rem !important;
-            margin-bottom:2.5rem !important;
-        }
-    }
+    
 
     .double__main__box__wrapper {
         width: 73.125rem;
@@ -1526,3 +1486,5 @@ header {
 footer {
     @extend %footer;
 }
+
+

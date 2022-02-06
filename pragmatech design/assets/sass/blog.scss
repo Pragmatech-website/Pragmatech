@@ -52,23 +52,6 @@ button, input, select, textarea {
     font-family: $font;
 }
 
-.loader{
-    @extend %loader;
-}
-.wrapper-finish{
-    display: none;
- }
- .wrapper-animation{
-     animation: wrapperanima 1s linear;
- }
- @keyframes wrapperanima{
-     0%{
-         opacity: 1;
-     }
-     100%{
-         opacity: 0;
-     }
- }
 
 // nav bar extend
 

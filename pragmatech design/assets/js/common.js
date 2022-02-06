@@ -15,13 +15,6 @@
 
 
 
-  
-
- 
-
-
-
-
 // navbar
 let burger = document.querySelector(".burger")
 let x__icon = document.querySelector(".x__icon")
@@ -459,9 +452,6 @@ document.querySelector(".popup .dropdown").addEventListener("focus",()=>{
           document.querySelector(".popup .dropdown").style.color="black";
 
 })
-
-
-
 
 
 
