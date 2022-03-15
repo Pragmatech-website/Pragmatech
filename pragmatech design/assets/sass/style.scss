@@ -65,7 +65,9 @@ header {
 .navbar {
     @extend %navbar;
 }
-
+.slick-track{
+    padding: 5px 0;
+}
 // swiper
 .mySwiper {
     width: 100%;
@@ -820,7 +822,7 @@ header {
     width: 100%;
     height: max-content;
     position: relative;
-
+    
     @include respond(laptop) {
         padding-bottom: 80px;
         .slick-slide {
@@ -1027,7 +1029,7 @@ header {
             width: 18.688rem;
             height: 16.875rem;
             border-top: none;
-            border-bottom: 1px solid #3636364d;
+           
         }
         .box-img {
             height: 16.875rem;
@@ -1042,7 +1044,7 @@ header {
         margin-top: 0;
         grid-row: 2 / 4;
         margin-bottom: 0;
-        border: 1px solid #3636364d;
+    
         .box-text {
             border-left: none;
             border-right: none;
